@@ -1,181 +1,216 @@
 {
  "date": "2026-11-19",
  "title": "Security brief - Thursday 19 November 2026",
- "generated": "2026-11-19T13:49:54Z",
+ "generated": "2026-11-19T14:11:06Z",
  "top": [
   {
-   "headline": "Java4Shell: critical OpenJDK Base64 flaw (CVE-2026-114938) patched; exploitation probing under way",
-   "summary": "Calif disclosed CVE-2026-114938, a heap overflow in OpenJDK's AVX-512 Base64 decoder, on 17 Nov; Oracle and OpenJDK shipped fixes and CISA issued an alert. Sensor operators report probing from 17-19 Nov, with no confirmed compromise.",
+   "headline": "Java4Shell: critical OpenJDK Base64 flaw (CVE-2026-114938) patched; scanning and exploitation attempts reported",
+   "summary": "Calif disclosed CVE-2026-114938, a heap overflow in OpenJDK's AVX-512 Base64 decoder, on 17 November after a leak; OpenJDK and Oracle shipped fixes the same day. Honeypot operators report probing and blind exploit attempts from 17-19 November, but no confirmed intrusion.",
    "label": "CONFIRMED",
    "severity": "High",
-   "coverage": "Covered by 14 outlets",
+   "coverage": "Covered by 15 outlets",
    "ref": "java4shell-openjdk"
   },
   {
-   "headline": "Rakuten Securities test-environment breach may expose up to 15.72 million accounts",
-   "summary": "Japanese brokerage Rakuten Securities says customer data in a test environment may have leaked externally. About 4.47 million accounts had personal and financial details; passwords and PINs were not confirmed exposed.",
+   "headline": "Five critical NGINX 'NGINX2Root' flaws disclosed with public PoC exploits",
+   "summary": "Researchers disclosed five critical NGINX flaws (CVSS 4.0 9.2) enabling unauthenticated remote code execution under ASLR bypass conditions. F5 fixed them in 1.30.7 and 1.31.9. Public PoCs exist.",
    "label": "CONFIRMED",
-   "severity": "High",
-   "coverage": "Covered by 3 outlets",
-   "ref": "rakuten-securities-breach"
+   "severity": "Critical",
+   "coverage": "Covered by 4 outlets",
+   "ref": "nginx2root-flaws"
   },
   {
-   "headline": "Microsoft's official agent-framework PyPI package published with credential stealer in versions 1.26.1 and 1.26.2",
-   "summary": "Two malicious releases of Microsoft's agent-framework (about 190,000 downloads a month) were uploaded to PyPI on 17 November and quarantined within an hour. A Python startup hook harvested Azure, CI/CD and developer credentials. How the attacker obtained publishing access is not established.",
+   "headline": "Apache Roller RCE flaw CVE-2026-129448 actively exploited",
+   "summary": "Apache says CVE-2026-129448, an unauthenticated deserialization flaw in Roller's XML-RPC endpoint (CVSS 9.8), is being actively exploited. Fixed in 6.1.6.",
    "label": "CONFIRMED",
-   "severity": "High",
-   "coverage": "Covered by 12 outlets",
-   "ref": "ms-agent-framework-pypi"
+   "severity": "Critical",
+   "coverage": "Covered by 3 outlets",
+   "ref": "apache-roller-rce"
   }
  ],
- "ongoing": [],
- "items": [
+ "ongoing": [
   {
-   "id": "us-outages-nsa-network",
-   "headline": "US outages across NSA, FAA, Microsoft 365 and Apple draw official 'not an attack' statements; causes cited are maintenance, updates and legacy kit",
-   "summary": "NSA's classified internal network (NSANet) was disrupted on 17 November during maintenance. It followed Microsoft 365, FAA and Apple outages. Officials told Congress on 18 November they found no sign of cyber attack; FAA and Microsoft have published technical causes, NSA has not.",
+   "headline": "Crimean Bridge strikes and Russian retaliation threats",
    "label": "CONFIRMED",
-   "labelBasis": "The NSA, FAA, Apple and Microsoft each acknowledged their own disruption, and the FAA and Microsoft gave technical causes. The 'no cyber attack' finding is a statement by US officials (DNI, DHS, FBI) and company statements, not an independently published investigation.",
    "severity": "Medium",
-   "category": "outage",
-   "uk": false,
-   "microsoft": false,
-   "sections": {
-    "happened": "NSA's classified internal network, NSANet, was disrupted on Tuesday 17 November at Fort Meade. The agency called it 'temporary degradation during scheduled routine maintenance' and said mission-critical capabilities stayed operational. The Record, citing sources, said staff arrivals were staggered, non-essential staff received a 'Code Gray' notice, and disruption continued into 18 November, with full restoration possibly taking another day or two.\n\nIt followed a Microsoft 365 outage (12–13 Nov), an FAA nationwide ground stop (13 Nov), JPMorgan Chase and Zelle problems, a United Airlines outage, and Apple service outages on 17 Nov that Apple attributed to an internal update.",
-    "technical": "NSA has published no technical cause. DNI Jay Clayton said the outage was maintenance affecting PHP; a source told The Record that was correct. Whether the vulnerability was AI- or human-derived is unknown.\n\nFAA (Q&A page): legacy equipment destabilised when data flooded its FTI network at about 1,000 connection attempts every 4–5 seconds; 17 of 22 en route centres were affected. Suspected origins were a radar site in Amarillo, Texas and a radio site in El Dorado, Arkansas, where L3Harris was deploying a new Juniper router.\n\nMicrosoft (preliminary report, via BleepingComputer): a July gateway-server bug, a Teams failover traffic surge and about 14% capacity already offline left over 80% of gateway servers unresponsive.",
-    "guidance": "No fixes or workarounds apply to NSANet. FAA says it disabled the originating Juniper routers' functionality, disabled it on over 60 others, paused installations and will reevaluate maintenance timing. Microsoft says it added capacity, monitoring and safeguards, with a final report due. DHS Secretary Mullin said a call with private-sector representatives would discuss notifying customers before upgrades.",
-    "differing": "Clayton, Mullin and FBI Deputy Director Raia told the House Homeland Security Committee they have seen no indication of a coordinated or foreign attack; Mullin said he was 98 percent confident. Earlier, Mullin said AI may have been responsible. Schumer called the timing 'too coincidental' and urged a red team review, reporting by 1 December.",
-    "unknown": "NSA's root cause beyond 'maintenance' and PHP, the restoration date, and whether any data was affected are unpublished. FAA and L3Harris root cause, Microsoft's final report, and any link between incidents remain open."
-   },
-   "sources": [
+   "since": "2026-11-16",
+   "status": "open",
+   "latest": "Third reported Ukrainian strike on the bridge's rail section this week; Putin has vowed a response.",
+   "ref": "crimean-bridge-strikes",
+   "log": [
     {
-     "title": "NSA statement on network issues (NSA)",
-     "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/4650245/nsa-statement-on-network-issues/"
-    },
-    {
-     "title": "Nationwide Ground Stop: Questions and Answers (FAA)",
-     "url": "https://www.faa.gov/newsroom/faa-statement-nationwide-ground-stop"
-    },
-    {
-     "title": "NSA continues response to interruptions in classified internal network (The Record)",
-     "url": "https://therecord.media/nsa-continues-response-to-nsa-net-problems"
-    },
-    {
-     "title": "Trump administration officials size-up a bad stretch for tech (The Record)",
-     "url": "https://therecord.media/tech-disruptions-house-homeland-committee-testimony"
-    },
-    {
-     "title": "Microsoft says months-old bug caused global Microsoft 365 outage (BleepingComputer)",
-     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-says-months-old-bug-caused-global-microsoft-365-outage/"
-    },
-    {
-     "title": "Classified US National Security Agency communications network suffers outage (ABC News)",
-     "url": "https://www.abc.net.au/news/2026-11-18/classified-us-national-security-communications-network-outage/107397306"
-    },
-    {
-     "title": "Yet more tech outages in the US - hitting top spy agency and Apple (Sky News, syndicated copy)",
-     "url": "https://greatdriffieldradio.co.uk/technology/yet-more-tech-outages-in-the-us-hitting-top-spy-agency-and-apple/"
-    },
-    {
-     "title": "WATCH: Intelligence official pressed to explain cause of NSA outage (PBS News)",
-     "url": "https://www.pbs.org/newshour/politics/watch-intelligence-official-pressed-to-explain-cause-of-national-security-agency-outage"
+     "date": "2026-11-19",
+     "text": "Rail traffic halted after third strike in a week; Russia vows retaliation."
     }
-   ],
-   "coverage": "Covered by 7 outlets"
+   ]
   },
   {
-   "id": "eggstreme-philippines",
-   "headline": "Suspected Chinese APT rebuilds EggStreme malware to target Philippine government",
-   "summary": "Bitdefender's November 2026 update says a suspected Chinese APT rebuilt parts of the EggStreme framework after its 2025 exposure, still targeting Philippine government bodies; Taiwan targeting is low-to-medium confidence.",
-   "label": "VENDOR-ACKNOWLEDGED",
-   "labelBasis": "Vendor research; victims not named; no independent confirmation found.",
+   "headline": "Microsoft agent-framework PyPI compromise",
+   "label": "CONFIRMED",
+   "severity": "High",
+   "since": "2026-11-19",
+   "status": "open",
+   "latest": "Versions 1.26.1 and 1.26.2 pulled; root cause unconfirmed.",
+   "ref": "agent-framework-pypi",
+   "log": [
+    {
+     "date": "2026-11-19",
+     "text": "Credential-stealing releases reported and removed from the feed."
+    }
+   ]
+  },
+  {
+   "headline": "NVIDIA breach claim by Gentlemen ransomware",
+   "label": "UNCONFIRMED CLAIM",
+   "severity": "Low",
+   "since": "2026-11-19",
+   "status": "open",
+   "latest": "NVIDIA says it is investigating; claim unverified.",
+   "ref": "gentlemen-nvidia-claim",
+   "log": [
+    {
+     "date": "2026-11-19",
+     "text": "Group lists NVIDIA on leak site; NVIDIA investigating."
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "optimizely-malware-abtest",
+   "headline": "Optimizely Web abused to inject malware into 178 organisations' sites",
+   "summary": "Attackers injected malicious JavaScript into Optimizely Web customer projects on 16 November 2026, reaching visitors of 178 organisations including Zoom, BBC and CNN. Optimizely says the flaw is fixed.",
+   "label": "CONFIRMED",
+   "labelBasis": "Optimizely acknowledged the incident; Report URI published independent analysis of 188 infected snippets.",
    "severity": "High",
    "category": "attack",
    "uk": false,
    "microsoft": false,
-   "firstReported": "18 Nov 2026 (UK time not stated), Bitdefender blog update; Infosecurity Magazine and The Hacker News same day",
+   "firstReported": "16 Nov 2026, first injection seen 04:21 UTC per Report URI (reported via Infosecurity Magazine)",
    "sections": {
-    "happened": "Bitdefender published an update to its September 2025 EggStreme research on 18 November 2026. It says a suspected Chinese APT rebuilt parts of the framework after exposure, possibly triggered by its report. It assesses with high confidence that Philippine government organisations, with multiple victims, remain targeted. Taiwan is a lead at low to medium confidence.",
-    "technical": "DLL sideloading, file-share lateral movement, in-memory execution and mutual TLS persist. Changes: new config protection, RC4 to RC5 then custom loader cipher, raw TCP agent protocol, passive listener builds, and no keylogger in newer agents. No CVEs cited.",
-    "guidance": "Bitdefender recommends restricting unneeded built-in Windows tools, detecting DLL sideloading by library name and location, finding unmanaged machines that reach workstations, and watching for new inbound listeners.",
-    "differing": "Palo Alto Networks tracks CL-STA-1048, which used EggStremeFuel and Loader from March to September 2025. Bitdefender says this is consistent with its observations but has not compared infrastructure or victims, so the link is unconfirmed.",
-    "unknown": "Initial access vector is unknown. Bitdefender could not determine how the logon script or valid credentials were obtained. Victim identities and Taiwan targeting remain unconfirmed."
+    "happened": "On 16 November 2026, an unauthorised party exploited a vulnerability in Optimizely Experimentation and injected malicious JavaScript into customer Project JavaScript fields. Report URI found it in 188 snippets across 178 organisations, including Zoom, the BBC and CNN. Optimizely says it has remediated the flaw.",
+    "technical": "Injected code runs on every page from Optimizely's CDN. It monitors pages for crypto wallet addresses to swap, skims card form fields, steals cookies and screenshots, and on iPhone and iPad loads Coruna and DarkSword iOS exploit kits. No CVE or ATT&CK mapping published.",
+    "guidance": "Per Report URI: check Project JavaScript for 1688360.cc and atob(; update iOS to 18.7.3 or later, or 26.3 or later; deploy a Content Security Policy.",
+    "differing": "Crypto losses reported as $7,040 (Infosecurity Magazine), $7,150 (Help Net Security), about $7,000 (The Register). Clean-up time given as 23:11 UTC (Infosecurity) and 11:11 p.m. UTC (Search Engine Journal).",
+    "unknown": "How attackers gained access to customer projects, attacker identity, true victim count (likely higher), and card-skimming volume."
    },
    "sources": [
     {
-     "title": "Bitdefender: EggStreme Malware: Rebuilt Under Scrutiny (primary)",
+     "title": "Report URI: World's Largest Brands Infected With Malware Via Optimizely (Scott Helme)",
+     "url": "https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/"
+    },
+    {
+     "title": "Krebs on Security: Attackers Used Optimizely to A/B Test Malware on Top Websites",
+     "url": "https://krebsonsecurity.com/2026/11/attackers-used-optimizely-to-a-b-test-malware-on-top-websites/"
+    },
+    {
+     "title": "Infosecurity Magazine: Optimizely Flaw Exploited to Serve Malicious Code to Visitors of 178 Organizations",
+     "url": "https://www.infosecurity-magazine.com/news/optimizely-hack-malware-178-orgs/"
+    },
+    {
+     "title": "Help Net Security: Malware spread through Optimizely hits 178 organizations",
+     "url": "https://www.helpnetsecurity.com/2026/11/17/optimizely-vulnerability-malicious-javascript/"
+    },
+    {
+     "title": "The Register: Optimizely hack turns world's biggest websites into malware dispensers",
+     "url": "https://www.theregister.com/cyber-crime/2026/11/17/optimizely-hack-turns-worlds-biggest-websites-into-malware-dispensers/5310448"
+    },
+    {
+     "title": "Search Engine Journal: A Trusted Optimizely Script Carried Malware To 178 Organizations",
+     "url": "https://www.searchenginejournal.com/optimizely-signup-flaw-malware/597839/"
+    }
+   ],
+   "coverage": "Covered by 6 outlets"
+  },
+  {
+   "id": "star-blizzard-cloud",
+   "headline": "Russian Cold Relic (Star Blizzard) uses cloud identity abuse to pivot between two US organisations",
+   "summary": "Google GTIG and Mandiant report Russian group Cold Relic (Star Blizzard) chained two US cloud intrusions: super admin MFA-fatigue compromise, then Entra ID SSO phishing to reach a second organisation.",
+   "label": "VENDOR-ACKNOWLEDGED",
+   "labelBasis": "Google GTIG/Mandiant analysis; victims unnamed; primary blog not directly read.",
+   "severity": "High",
+   "category": "attack",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "Google blog dated 17 Nov 2026 (time not stated); first press coverage Infosecurity Magazine, 18 Nov 2026",
+   "sections": {
+    "happened": "Google Threat Intelligence Group (GTIG) and Mandiant published a 17 November 2026 analysis of Russian group Cold Relic (Star Blizzard). It describes two US intrusions: a late-2025 Google Workspace super admin compromise, then a 2026 Entra ID SSO-based breach at a second organisation. Google says the group remains active, with phishing observed in November 2026. Victims are unnamed.",
+    "technical": "Initial access: stolen super admin credentials plus MFA push fatigue, via a US residential proxy near the victim (late 2025). Persistence: rogue MFA devices, passkeys, backup codes. Exfiltration: bulk cloud drive download, employee lists, Workspace Takeout. Second intrusion: phishing links harvested Entra ID credentials and tokens. No CVEs reported.",
+    "guidance": "Google recommends phishing-resistant MFA, restricting and auditing passkey registrations, enriching logs with proxy/VPN reputation feeds, cloud DLP policies, and revoking all sessions when an intrusion is identified.",
+    "differing": "Vendor and secondary write-ups differ in detail: Aviatrix cites UNC4057 and audit-log exfiltration, which the GTIG text excerpts do not show. Google's account is treated as primary.",
+    "unknown": "Victims unnamed; total data volume unknown; full GTIG blog not directly readable, so excerpts were used."
+   },
+   "sources": [
+    {
+     "title": "COLD RELIC: A Case Study in Impersonation and Compromise (Google Cloud Blog, GTIG/Mandiant)",
+     "url": "https://cloud.google.com/blog/topics/threat-intelligence/cold-relic-a-case-study-in-impersonation-and-compromise"
+    },
+    {
+     "title": "Russian Espionage Actor Star Blizzard Focuses on Cloud Identities for Mass Data Theft (Infosecurity Magazine)",
+     "url": "https://www.infosecurity-magazine.com/news/russian-star-blizzard-cloud-data/"
+    },
+    {
+     "title": "Russia's Cold Relic APT Turns One Cloud Breach Into Another (Dark Reading)",
+     "url": "https://www.darkreading.com/cyberattacks-data-breaches/cold-relic-turns-one-cloud-breach-into-another"
+    },
+    {
+     "title": "Cold Relic Hackers Exploit Google Workspace to Chain U.S. Breaches (Aviatrix, vendor blog)",
+     "url": "https://aviatrix.ai/threat-research-center/russian-cold-relic-hackers-stolen-google-workspace-data-breach-second-us-organization/"
+    }
+   ],
+   "coverage": "Covered by 4 outlets"
+  },
+  {
+   "id": "eggstreme-philippines",
+   "headline": "Suspected Chinese APT rebuilds EggStreme malware after exposure, still targeting Philippine government",
+   "summary": "Bitdefender says a suspected Chinese APT rebuilt its EggStreme malware after public exposure and still targets multiple Philippine government organisations. New builds use a new protocol, passive backdoors and no keylogger.",
+   "label": "VENDOR-ACKNOWLEDGED",
+   "labelBasis": "Single vendor research update; victims unnamed; no attribution change.",
+   "severity": "Medium",
+   "category": "attack",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "18 Nov 2026 (time not stated); Bitdefender blog, same day as The Hacker News and Infosecurity Magazine coverage",
+   "sections": {
+    "happened": "Bitdefender published an 18 November 2026 update to its September 2025 EggStreme research. It says a suspected Chinese APT rebuilt parts of the framework after exposure, with its report a likely trigger. It assesses with high confidence that multiple Philippine government organisations are targeted; Taiwan is a low-to-medium-confidence lead. No new attribution.",
+    "technical": "DLL sideloading under system library names, file-share staging over SMB with valid credentials, in-memory execution, mutual TLS. Agent moved to raw TCP with mutual TLS; some builds are passive listeners; newer builds lack the keylogger. Loader cipher changed from RC4 to RC5 to a custom cipher. Initial access unknown.",
+    "guidance": "Bitdefender recommends restricting unneeded built-in Windows tools, detecting DLL sideloading by library name and location, finding unmanaged machines that reach workstations, and watching for new inbound listeners on workstations.",
+    "differing": "Palo Alto Networks tracks CL-STA-1048, which used EggStremeFuel and EggStremeLoader from March to September 2025. Bitdefender says it has not compared infrastructure or victims to test whether these are one cluster.",
+    "unknown": "Initial access vector; victim identities and count; whether EggStremeWizard is still deployed; whether campaign-specific certificate authorities are confirmed; Taiwan targeting."
+   },
+   "sources": [
+    {
+     "title": "EggStreme Malware: Rebuilt Under Scrutiny (Bitdefender, primary)",
      "url": "https://www.bitdefender.com/en-us/blog/businessinsights/eggstreme-malware-revises-architecture-infrastructure"
     },
     {
-     "title": "The Hacker News: New EggStreme Malware Variant Goes Silent to Evade Security Tools in Government Attacks",
+     "title": "New EggStreme Malware Variant Goes Silent to Evade Security Tools in Government Attacks (The Hacker News)",
      "url": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html"
     },
     {
-     "title": "Infosecurity Magazine: Suspected Chinese APT Rebuilds EggStreme Malware After Exposure",
+     "title": "Suspected Chinese APT Rebuilds EggStreme Malware After Exposure (Infosecurity Magazine)",
      "url": "https://www.infosecurity-magazine.com/news/eggstreme-malware-rebuilt-after/"
     }
    ],
    "coverage": "Covered by 3 outlets"
   },
   {
-   "id": "eu-commission-cyberattack",
-   "headline": "European Commission confirms cyber campaign disrupted HR systems for about 10 days",
-   "summary": "The European Commission confirmed a detected cyber campaign that disrupted HR systems for about 10 days. Officials say most of the attack is contained; whether staff personal data was accessed is unconfirmed.",
-   "label": "CONFIRMED",
-   "labelBasis": "Commission spokesperson confirmed a detected cyber campaign; data exposure unconfirmed.",
-   "severity": "High",
-   "category": "attack",
-   "uk": false,
-   "microsoft": false,
-   "firstReported": "19 Nov 2026, c.11:30 UK time (Politico report, relayed by Reuters/JPost)",
-   "sections": {
-    "happened": "Politico reported on 19 November 2026 that the European Commission was hit by a cyberattack lasting about 10 days, which may have compromised personal data. Sysper, MyPMO (medical reimbursements) and translation services were disrupted. Spokesperson Thomas Regnier confirmed a detected cyber campaign. The Commission's top crisis body met; Henna Virkkunen briefed commissioners on 18 November.",
-    "technical": "Reported as an AI-assisted campaign. Techzine and Cybersecuritynews, citing Politico, name the publicly available AI tool ARTEX used to find IT vulnerabilities; the spokesperson did not name a tool. No CVEs, IOCs, ATT&CK mapping or attacker attribution published. CERT-EU and the EDPS were informed.",
-    "guidance": "",
-    "differing": "Politico-based reports say the campaign ran about 10 days; Alarabiya says it occurred in October. The spokesperson said no evidence yet of a breach affecting staff as a whole; Euronews says data exposure is still being assessed.",
-    "unknown": "Whether staff data was accessed or exfiltrated, attacker identity, initial access vector, and full scope remain unknown. JSIS remained unavailable per Euronews."
-   },
-   "sources": [
-    {
-     "title": "Politico Brussels Playbook: Cyberattack hits the Commission (original report, not readable)",
-     "url": "https://www.politico.eu/newsletter/brussels-playbook/cyberattack-hits-the-commission/"
-    },
-    {
-     "title": "Euronews: EU Commission hit by large-scale cyberattack with data leakage unknown",
-     "url": "https://www.euronews.com/2026/11/19/eu-commission-hit-by-large-scale-cyberattack-with-data-leakage-unknown"
-    },
-    {
-     "title": "Techzine: Cyberattack shuts down European Commission's HR systems",
-     "url": "https://www.techzine.eu/news/security/145921/cyberattack-shuts-down-european-commissions-hr-systems/"
-    },
-    {
-     "title": "Jerusalem Post (Reuters): European Commission targeted in cyberattack lasting 10 days",
-     "url": "https://www.jpost.com/international/article-915477"
-    },
-    {
-     "title": "Cybersecuritynews: Hackers Target European Commission with ARTEX AI Tool",
-     "url": "https://cybersecuritynews.com/european-commission-cyberattack/"
-    }
-   ],
-   "coverage": "Covered by 5 outlets"
-  },
-  {
    "id": "rakuten-securities-breach",
-   "headline": "Rakuten Securities test-environment breach may expose up to 15.72 million accounts",
-   "summary": "Japanese brokerage Rakuten Securities says customer data in a test environment may have leaked externally. About 4.47 million accounts had personal and financial details; passwords and PINs were not confirmed exposed.",
+   "headline": "Rakuten Securities discloses possible leak of customer data from test environment",
+   "summary": "Japanese online broker Rakuten Securities says production customer data in a test environment may have leaked; up to 15.72M accounts potentially involved.",
    "label": "CONFIRMED",
-   "labelBasis": "Company published apology and notice; figures are company-stated ceilings, leak unconfirmed.",
+   "labelBasis": "Company's own 17 Nov disclosure; leak described as possible, not confirmed.",
    "severity": "High",
    "category": "breach",
    "uk": false,
    "microsoft": false,
-   "firstReported": "Nov 17 2026 (UK time not stated in sources; company notice published 17 Nov, Japan time), via Rakuten Securities notice, reported by Infosecurity Magazine and Japan Times",
+   "firstReported": "17 Nov 2026 (UK time not stated in sources); company detected possible access 16 Nov, Infosecurity Magazine and Japan Times reported same period",
    "sections": {
-    "happened": "Rakuten Securities, a Tokyo-based online broker, detected possible unauthorised access on 16 November and cut access. Its investigation found information in a test environment may have leaked externally on 11 November. It announced this on 17 November. Up to 4.47m accounts had personal and financial details; up to 11.25m had only branch/customer codes and login IDs.",
-    "technical": "Production customer data was present in a test environment, which normally uses dummy data. The company has not disclosed the attack vector, attacker, or cause; the investigation is ongoing. No CVE or ATT&CK mapping has been published.",
-    "guidance": "Rakuten Securities urges customers to switch to passkey (FIDO2) login, reports over 90% already use it, warns of phishing, and says its emails contain no links.",
-    "differing": "Reports sum the tiers to 15.72m; the company says there is no overlap and that 15.72m is a maximum including former customers. One blog says the tiers overlap, which the company's spokesperson account contradicts.",
-    "unknown": "Cause, attacker, entry method and why production data was in test are unknown. Whether data left the network is unconfirmed. Regulator notification is not reported."
+    "happened": "Rakuten Securities detected possible unauthorised access to part of its systems on 16 Nov and blocked it. Its 17 Nov notice says test-environment information may have left the company on 11 Nov. Up to about 4.47M accounts had personal and financial details exposed; about 11.25M had branch codes and login IDs. Passwords and PINs were not reported exposed.",
+    "technical": "Company has not disclosed the attacker, entry method or cause; investigation ongoing. Production customer data was in a test environment, which usually holds dummy data, because of an internal system update. Mallory aggregator says an undisclosed vulnerability was exploited; not corroborated by the company.",
+    "guidance": "Company urges customers to switch to FIDO2 passkeys (over 90% of daily users already use them), warns of phishing, and says its emails contain no links. Customers can temporarily freeze trading and withdrawals in security settings.",
+    "differing": "Japan Times and Reuters-based reports give a 15.72M total; the company gives two separate tiers with no overlap per a spokesperson. Aggregators say the total double-counts overlapping accounts.",
+    "unknown": "Attacker, entry method, root cause and whether data was exfiltrated are unconfirmed. No regulator statement reported. Final affected count may change."
    },
    "sources": [
     {
@@ -187,6 +222,10 @@
      "url": "https://www.japantimes.co.jp/business/2026/11/19/companies/rakuten-securities-data-breach/"
     },
     {
+     "title": "Japan Times: Rakuten Securities account information compromised in major data breach",
+     "url": "https://www.japantimes.co.jp/business/2026/11/18/companies/rakuten-securities-unauthorized-access/"
+    },
+    {
      "title": "ASCII.jp English: Rakuten Securities: Up to 15.72 Million Accounts Potentially Leaked",
      "url": "https://ascii.jp/en/elem/000/004/452/4452471/"
     }
@@ -194,150 +233,217 @@
    "coverage": "Covered by 3 outlets"
   },
   {
-   "id": "tfl-oyster-breach",
-   "headline": "TfL takes Oyster photocard website offline after compromise; about 265,000 customers' account details may be exposed",
-   "summary": "TfL says around 265,000 Oyster photocard customers may have had account details (names, contact details, dates of birth, security answers) compromised. Passwords and payment data are said to be unaffected. The site is offline; the ICO has been notified.",
-   "label": "CONFIRMED",
-   "labelBasis": "TfL (Shashi Verma, director of technology strategy and revenue) acknowledged the incident, the 265,000 figure and the data categories in statements carried by BBC, The Register, Infosecurity Magazine and others; the TfL portal notice is also quoted. TfL's own pages could not be fetched directly.",
-   "severity": "Medium",
+   "id": "tfl-oyster-photocard",
+   "headline": "TfL takes Oyster photocard website offline after account compromise affecting ~265,000 customers",
+   "summary": "Transport for London took its photocard website offline after attackers compromised customer accounts, potentially affecting around 265,000 people. The ICO has been notified.",
+   "label": "VENDOR-ACKNOWLEDGED",
+   "labelBasis": "TfL confirmed the incident via press statements; technical details thin.",
+   "severity": "High",
    "category": "breach",
    "uk": true,
    "microsoft": false,
-   "firstReported": "18 Nov 2026 (BBC and Telegraph reports, evening UK time); The Register and Infosecurity Magazine followed on 19 Nov (Register 11:01 UK)",
+   "firstReported": "19 Nov 2026, 11:01 UK (The Register); TfL says it first became aware 16 Nov 2026",
    "sections": {
-    "happened": "Transport for London says it became aware on Monday 16 November 2026 that Oyster photocard customers were receiving emails asking them to create accounts they already held. TfL said the emails came from its own systems but were generated as a result of the compromise. It took the photocard website offline and later said around 265,000 customers may have had account details compromised. Card types: Zip Oyster, 18+ Student, 18–25 Care Leaver, 60+ London, Apprentice and Veterans. TfL says the incident is contained and affected customers have been contacted, with ianVisits reporting this began on Wednesday 18 November. The ICO is notified. Existing cards still work; renewals go through customer services. The site was still offline on 19 November.",
-    "technical": "TfL has not disclosed the entry method, actor, tooling or any IOCs, and no CVE or ATT&CK mapping has been published. Per TfL, data that may have been accessed: names, email and home addresses, phone numbers, dates of birth, and security questions and answers. TfL's current assessment is that passwords, bank or payment card details, journey information, and names and dates of birth of children with Zip Oyster cards were not compromised; ianVisits also reports TfL said photo copies were not leaked. The unsolicited account-creation emails were sent from TfL's own systems, which TfL linked to the compromise. TfL says there is no evidence yet that the data has been misused.",
-    "guidance": "TfL says it will ask all photocard customers to change their password, security question and answer, and says customers who reuse the same details on other services should change them there. TfL states existing photocards remain valid at ticket barriers, and customer services handles renewals and journey-history queries while the site is offline.",
-    "differing": "No competing accounts. Wording varies: BBC reports details were \"accessed\" after \"suspicious activity\"; TfL says details \"may have\" been compromised. The Register's headline refers to compromised customer accounts, while TfL's quoted statements refer to account details. The Register notes nothing currently suggests a link to the September 2024 incident.",
-    "unknown": "The intrusion method and timing, whether the 265,000 figure will change, the attackers' identity, whether data has been copied or sold, and when the website will return."
+    "happened": "On 16 November 2026, Oyster photocard customers received emails from TfL systems asking them to create accounts they already held. TfL says the emails resulted from the compromise. It took the photocard website down and says the incident is contained. Around 265,000 customers may have had account details compromised. TfL has notified the ICO and contacted affected customers. The website had no restoration date.",
+    "technical": "Entry route not disclosed. No CVE, ATT&CK mapping, malware or IOCs published. Attackers used TfL's own email systems to send account-creation messages to customers.",
+    "guidance": "TfL says all photocard customers will be asked to change passwords, security questions and answers, and advises changing reused passwords on other services. Customers should verify messages via TfL's official website or customer services.",
+    "differing": "TfL says no passwords, payment details or journey history were accessed. Infosecurity quotes CyberSmart's comment on phishing risk; this is third-party commentary, not an official finding.",
+    "unknown": "Entry method, attacker identity, exact data fields accessed, and when the website will return remain unconfirmed."
    },
    "sources": [
     {
-     "title": "TfL photocard portal notice (TfL; snippet seen, page not fetchable; full text quoted by Infosecurity Magazine)",
-     "url": "https://photocard.tfl.gov.uk/basket"
-    },
-    {
-     "title": "TfL takes Oyster photocard website offline after attackers compromise customer accounts (The Register)",
+     "title": "The Register: TfL takes Oyster photocard website offline after attackers compromise customer accounts",
      "url": "https://www.theregister.com/security/2026/11/19/tfl-takes-oyster-photocard-website-offline-after-attackers-compromise-customer-accounts/5310985"
     },
     {
-     "title": "TfL Warns 265,000 Photocard Customers May Have Had Personal Data Exposed (Infosecurity Magazine)",
+     "title": "Infosecurity Magazine: TfL Warns 265,000 Photocard Customers May Have Had Personal Data Exposed",
      "url": "https://www.infosecurity-magazine.com/news/tfl-customers-personal-data-exposed/"
-    },
-    {
-     "title": "TfL photocard breach exposes 265,000 customers (BBC, via Yahoo)",
-     "url": "https://www.yahoo.com/news/world/articles/tfl-photocard-breach-exposes-265-204958448.html"
-    },
-    {
-     "title": "TfL website hackers steal customers' names and dates of birth (Telegraph, via Yahoo)",
-     "url": "https://www.yahoo.com/news/us/articles/tfl-website-hackers-steal-customers-222655483.html"
-    },
-    {
-     "title": "TfL cyber attack may have exposed data of 265,000 Oyster photocard users (ianVisits)",
-     "url": "https://www.ianvisits.co.uk/articles/tfl-cyber-attack-may-have-exposed-data-of-265000-oyster-photocard-users-94247/"
-    },
-    {
-     "title": "TfL Oyster Photocard Breach Exposes Names, Home Addresses and Security Answers (IBTimes UK)",
-     "url": "https://www.ibtimes.co.uk/tfl-oyster-photocard-data-breach-265000-customers-1833421"
     }
    ],
-   "coverage": "Covered by 6 outlets"
+   "coverage": "Covered by 2 outlets"
   },
   {
-   "id": "ms-agent-framework-pypi",
-   "headline": "Microsoft's official agent-framework PyPI package published with credential stealer in versions 1.26.1 and 1.26.2",
-   "summary": "Two malicious releases of Microsoft's agent-framework (about 190,000 downloads a month) were uploaded to PyPI on 17 November and quarantined within an hour. A Python startup hook harvested Azure, CI/CD and developer credentials. How the attacker obtained publishing access is not established.",
+   "id": "wellington-it-credit-unions",
+   "headline": "Wellington IT attack exposes payee data at around 40 Irish credit unions",
+   "summary": "Attack on Belfast IT supplier Wellington IT exposed saved payee details (names, IBANs, BICs, sort codes) of members at about 40 Irish credit unions. Passwords and funds reportedly unaffected.",
    "label": "CONFIRMED",
-   "labelBasis": "A Microsoft spokesperson told The Register it had made some repositories private 'while we investigate malicious content' (the statement does not name the package). PyPI quarantined both versions, and StepSecurity, Wiz, Aikido, OX, Socket and others independently analysed the wheels and reported the same payload, file names and exfiltration URL. No Microsoft advisory or post-incident write-up was found.",
+   "labelBasis": "Vendor, affected credit unions and minister confirm incident; technical cause unverified.",
+   "severity": "High",
+   "category": "breach",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "17 Nov 2026 (Tuesday, per The Register; UK time not stated). BleepingComputer 18 Nov 2026, 14:39.",
+   "sections": {
+    "happened": "Attackers exploited an online banking platform weakness between 2 and 4 October 2026; the flaw was closed on 6 October. Wellington IT, owned by Vencora, notified credit unions only in mid-November. Minister Robert Troy called the delay not acceptable.",
+    "technical": "Reported as an automated script making five million requests against an authorisation flaw, using valid credentials. The Register reports a platform vulnerability. No CVE, ATT&CK mapping or IOCs published. Logs insufficient to confirm which records were accessed.",
+    "guidance": "Members advised to remain vigilant for phishing and impersonation. St Canice's warned members not to transfer money in response to anyone claiming funds must be moved for safety.",
+    "differing": "The Register describes a platform vulnerability; notices cited by BleepingComputer describe valid-credential abuse. Counts: about 40 Irish (Register, minister); 50 total, 43 Irish (BleepingComputer).",
+    "unknown": "Total individuals affected is unknown. Attacker and vector unattributed. Investigation ongoing with DPC, NCSC and Garda GNCCB."
+   },
+   "sources": [
+    {
+     "title": "BleepingComputer: Data breach impacts 40 Irish credit unions in reported IT provider hack",
+     "url": "https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack/"
+    },
+    {
+     "title": "The Register: Cyberattack on service provider exposes payee data at 40 Irish credit unions",
+     "url": "https://www.theregister.com/security/2026/11/19/cyberattack-on-service-provider-exposes-payee-data-at-40-irish-credit-unions/5310979"
+    },
+    {
+     "title": "iThome (Chinese-language): Wellington IT breach, about 40 Irish credit unions",
+     "url": "https://www.ithome.com.tw/news/180665"
+    }
+   ],
+   "coverage": "Covered by 3 outlets"
+  },
+  {
+   "id": "ethiopian-airlines-attack",
+   "headline": "Ethiopian Airlines confirms cyber incident possibly exposing ShebaMiles customer data",
+   "summary": "Ethiopian Airlines warned ShebaMiles loyalty members on 18 November 2026 that a limited-scope cyber incident may have exposed some customer information. No financial data evidence found; scale unknown.",
+   "label": "VENDOR-ACKNOWLEDGED",
+   "labelBasis": "Airline notice confirmed via multiple outlets; scope, date and data types undisclosed.",
+   "severity": "Medium",
+   "category": "breach",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "18 November 2026, Wednesday (UK time not stated); first seen via TechCabal and ShebaMiles member email",
+   "sections": {
+    "happened": "On 18 November 2026 Ethiopian Airlines emailed ShebaMiles frequent-flyer members a 'Data Breach Public Notice' describing a cybersecurity incident of 'limited scope' that may have exposed some customer information. It said there was 'currently no evidence' financial information was accessed. Ethiopian has not disclosed intrusion date, data types, member numbers or the attacker. ShebaMiles had over 5.38 million members in 2025.",
+    "technical": "Vector, technique, malware and actor are not disclosed. No CVEs, IOCs or affected system details published. The airline did not say whether bookings or flight operations were affected. Air Botswana reported a suspected ransomware incident on 3 November 2026, but no link to Ethiopian has been stated.",
+    "guidance": "Ethiopian Airlines urged members to 'remain vigilant against any suspicious or unsolicited communications' and said it would share updates as the investigation continues. It gave no password-reset advice.",
+    "differing": "Ethiopian describes the incident as 'limited scope'. Reporters note the notice omits scale, data categories and timing, so the limitation cannot yet be verified.",
+    "unknown": "Intrusion date, detection method, affected systems, data categories, member count, attacker identity, and whether regulators were notified are all unstated."
+   },
+   "sources": [
+    {
+     "title": "TechCabal: Ethiopian Airlines reports cyberattack a week after Air Botswana",
+     "url": "https://techcabal.com/2026/11/18/ethiopian-airlines-reports-cyberattack/"
+    },
+    {
+     "title": "Reuters via TimesLIVE: Ethiopian Airlines investigates data breach affecting its loyalty programme",
+     "url": "https://www.timeslive.co.za/news/africa/2026-11-19-ethiopian-airlines-investigates-data-breach-affecting-its-loyalty-programme/"
+    },
+    {
+     "title": "Capital Newspaper: Ethiopian Airlines' ShebaMiles reports data breach",
+     "url": "https://capitalethiopia.com/2026/11/18/ethiopian-airlines-shebamiles-reports-data-breach/"
+    }
+   ],
+   "coverage": "Covered by 3 outlets"
+  },
+  {
+   "id": "gentlemen-nvidia-claim",
+   "headline": "Gentlemen ransomware group lists NVIDIA on leak site; NVIDIA investigates possible third-party incident",
+   "summary": "The Gentlemen ransomware group listed NVIDIA on its leak site with a countdown to 28 November and no proof. NVIDIA says it found no indication its own systems were affected and is investigating an incident that may have involved a third-party partner.",
+   "label": "UNCONFIRMED CLAIM",
+   "labelBasis": "Rests on a ransomware group's leak-site listing that shows no samples. NVIDIA's statement acknowledges an investigation of a possible third-party incident but denies finding any NVIDIA system impact. No independent verification has been published.",
+   "severity": "Low",
+   "category": "claim",
+   "sections": {
+    "happened": "The Gentlemen ransomware group added NVIDIA to its dark-web data leak site on 18 November 2026, according to trackers and researcher Dominic Alvieri's post on X as relayed by secondary outlets. The listing carries a countdown of about 234 hours ending on 28 November and threatens to publish data. BleepingComputer and iThome reported on 19 November that the listing includes no stolen files, no intrusion date and no description of the data. An NVIDIA spokesperson told BleepingComputer the company is investigating an incident that may have affected a third-party partner and has found no indication that NVIDIA systems or networks were affected.",
+    "technical": "No technical details of an intrusion have been published. iThome reported that the listing gives a brief company description, Tox contact details for negotiation and the countdown, and does not state the data type or time of access. Secondary reports describe the data field as marked \"SOON\". The Gentlemen operates double extortion (exfiltration then encryption) and, per BleepingComputer, moved from a closed group to a RaaS model offering affiliates up to 90% of ransom proceeds. BleepingComputer says it has claimed more than 1,100 victims. No CVEs, ATT&CK techniques or IOCs were published for this claim.",
+    "guidance": "NVIDIA's published position, via a spokesperson to BleepingComputer: it is investigating an incident that may have affected a third-party partner, has found no indication that NVIDIA systems or networks were affected, and continues to monitor the situation. No advisory has been published.",
+    "differing": "The Gentlemen's listing implies it holds NVIDIA data but offers no proof. NVIDIA says it found no sign its own systems were compromised. Gadget Review and Digit report trackers list the claim as pending validation. Cybernews researcher Aras Nazarovas, quoted by Sportskeeda, said the group has a history of inflated claims. The claim is better described as unverified.",
+    "unknown": "Whether any data was stolen, and from whom, is unknown. Whether the partner incident NVIDIA mentions is the one behind the listing is unconfirmed. It is also unknown whether data will be published when the countdown ends."
+   },
+   "sources": [
+    {
+     "title": "BleepingComputer: NVIDIA investigating Gentlemen ransomware breach claims",
+     "url": "https://www.bleepingcomputer.com/news/security/nvidia-investigating-gentlemen-ransomware-breach-claims/"
+    },
+    {
+     "title": "iThome: 勒索軟體駭客The Gentlemen聲稱入侵Nvidia，疑為合作夥伴遭駭受到波及",
+     "url": "https://www.ithome.com.tw/news/180664"
+    },
+    {
+     "title": "Gadget Review: The Gentlemen adds Nvidia to its dark web leak site",
+     "url": "https://www.gadgetreview.com/the-ransomware-group-the-gentlemen-adds-nvidia-to-its-dark-web-leak-site-with-a-countdown-of-just-under-10-days"
+    },
+    {
+     "title": "Digit: Nvidia hit by ransomware attack, hackers threaten to leak data in 10 days",
+     "url": "https://www.digit.in/news/general/nvidia-hit-by-ransomware-attack-hackers-threaten-to-leak-data-in-10-days-report.html"
+    }
+   ],
+   "coverage": "Covered by 4 outlets"
+  },
+  {
+   "id": "agent-framework-pypi",
+   "headline": "Microsoft agent-framework 1.26.1 and 1.26.2 on PyPI carried a credential stealer; versions pulled, root cause unconfirmed",
+   "summary": "Two PyPI releases of Microsoft's agent-framework (about 190,000 downloads a month), uploaded 17 November, ran a stealer at every Python start targeting Azure, Azure DevOps and GitHub Actions credentials. Both were removed within minutes; how the attacker got publishing access is unconfirmed.",
+   "label": "CONFIRMED",
+   "labelBasis": "A Microsoft member commented on the project's GitHub issue that the compromised versions were pulled and an investigation is under way, and a Microsoft spokesperson spoke to The Register about repositories made private. Multiple firms (Wiz, StepSecurity, OX, SafeDep, Upwind) independently analysed the wheels. Root cause is not confirmed.",
    "severity": "High",
    "category": "supply-chain",
    "uk": false,
    "microsoft": true,
-   "firstReported": "17 Nov 2026 (UK time = UTC): 1.26.1 uploaded 20:35; vendor write-ups from that evening (Socket 23:05); press from 18 Nov (BleepingComputer, SecurityWeek, The Register, The Hacker News), Help Net Security 19 Nov",
+   "firstReported": "21:35",
    "sections": {
-    "happened": "Versions 1.26.1 and 1.26.2 of Microsoft's `agent-framework` meta-package on PyPI carried a credential stealer. Per StepSecurity's registry timestamps (UTC, same as UK time in November), 1.26.1 was uploaded at 20:35:20 on 17 November and quarantined at 21:06:16. Version 1.26.2 followed at 21:08:39 and was quarantined at 21:16:44. Wiz reported both gone from PyPI by 21:30. The last clean release is 1.26.0 (12 November). The package has about 192,534 monthly downloads (OX) or about 41,000 weekly (Wiz); how many installs were of the malicious versions has not been published. Microsoft told The Register it had made some repositories private while investigating malicious content.",
-    "technical": "Both wheels add a `.pth` file that runs at every Python start, without importing the package: `agent_framework_meta.pth` with `_telemetry.py` (1.26.1), `af_runtime_diag.pth` with `af_runtime_diag.py` (1.26.2). They keep the genuine `agent-framework-core==1.26.0` dependency. The payload harvests matching environment variables, up to 300 other processes' `/proc` environments, and credential files (Azure CLI, pip, npm, Git, Docker, Hugging Face, `.env`). It requests Azure managed-identity and Azure DevOps OIDC tokens; 1.26.2 adds GitHub Actions OIDC. Data is zlib/base64-encoded and POSTed to `webhook.site/d381fd80-ec62-42ad-8f5c-d1b15103c9bb`. Wheel SHA-256 for 1.26.1: `d27fa344…e110`; 1.26.2: `3d20a8bc…e0a9`. No CVE assigned; no actor attributed. Likely ATT&CK (brief's mapping): T1195.002, T1552.001, T1552.005, T1528, T1567.",
-    "guidance": "StepSecurity, Wiz, OX and Aikido advise isolating affected hosts before running Python or pip, rebuilding from a clean base pinned to 1.26.0, rotating reachable credentials, and searching egress logs for the webhook UUID path. StepSecurity notes rotation does not revoke already-issued identity tokens. No Microsoft advisory was found; PyPI lists 1.26.0 as latest.",
-    "differing": "Entry vector is disputed. The Register's standfirst suggests a compromised GitHub org admin account. StepSecurity says evidence does not establish the vector or account, though its flow chart mentions a newly added maintainer account; PyPI lists two maintainers. OX suggests the wheel-build flow was hijacked; Aikido's metadata analysis points to a hand-edited wheel uploaded with valid credentials.",
-    "unknown": "How the attacker obtained publishing rights, their identity, and whether access was revoked are unknown. Install counts, credentials actually exfiltrated and tokens actually issued are unpublished; StepSecurity says static analysis shows attempts only. Microsoft has given no root cause."
+    "happened": "Versions 1.26.1 and 1.26.2 of Microsoft's agent-framework PyPI package, the meta-package for its open-source AI agent toolkit (about 190,000 downloads a month), carried a credential stealer. Per StepSecurity, 1.26.1 was uploaded at 20:35 UTC (same as UK time) on 17 November and quarantined at 21:06; 1.26.2 was uploaded at 21:08, after that quarantine, and quarantined at 21:16. The last clean release is 1.26.0 (12 November). A Microsoft member wrote on GitHub that the versions were pulled and an investigation is under way. Wiz found 17 of 50 retained exfiltration requests came from three distinct victims. Microsoft told The Register it made some repositories private while investigating malicious content; the agent-framework repository was offline.",
+    "technical": "The wheels add .pth startup hooks (agent_framework_meta.pth in 1.26.1; af_runtime_diag.pth and .py in 1.26.2) that run at every Python start without importing the package; the genuine agent-framework-core 1.26.0 dependency kept the framework working. A detached child collects environment variables, up to 60 (80 in 1.26.2) credential files (Azure CLI, .npmrc, .netrc, Git, Docker, Hugging Face, .env), and /proc/*/environ of up to 300 processes. It requests Azure managed-identity, Azure DevOps OIDC and, in 1.26.2, GitHub Actions OIDC tokens, then sends one zlib/base64 POST to a webhook.site URL. Researchers found no second stage. No CVE assigned. ATT&CK mapping (not vendor-published): T1195.002, T1546.018, T1552, T1528, T1567. Actor unattributed.",
+    "guidance": "The Microsoft member said the versions were pulled from the feed. Upwind's issue states 1.26.0 is clean, copies persist in pip/uv caches, CI caches and mirrors, and credential revocation was unconfirmed. StepSecurity advises isolating affected hosts, rebuilding from a clean base, pinning 1.26.0 and reviewing OIDC and managed-identity permissions.",
+    "differing": "Root cause is disputed. Wiz says the attacker appears to have compromised a client certificate and key for Microsoft's ESRP release pipeline, publishing from Microsoft-owned IP space after an AWS attempt failed. Upwind says a PyPI upload credential outside Microsoft's control, with hand-repacked wheels. SafeDep flags same-day maintainer account vibiret, unconfirmed. Microsoft has not confirmed any.",
+    "unknown": "How the attacker obtained publishing access, who uploaded the files, whether the credential is revoked, total installs and victim count, and the reason for offline Microsoft repositories remain unconfirmed."
    },
    "sources": [
     {
-     "title": "StepSecurity: Microsoft agent-framework PyPI Package Compromised (primary technical analysis, timestamps, IOCs)",
-     "url": "https://www.stepsecurity.io/blog/microsoft-agent-framework-pypi-package-compromised"
-    },
-    {
-     "title": "PyPI project page: agent-framework (1.26.0 latest; 2 maintainers listed)",
-     "url": "https://pypi.org/project/agent-framework/"
-    },
-    {
-     "title": "The Register: Microsoft's official Python agent framework hijacked to distribute malware (Microsoft spokesperson statement)",
-     "url": "https://www.theregister.com/security/2026/11/18/microsofts-official-python-agent-framework-hijacked-to-distribute-malware/5310858"
+     "title": "microsoft/agent-framework issue #10411 (Upwind report, Microsoft member comment)",
+     "url": "https://github.com/microsoft/agent-framework/issues/10411"
     },
     {
      "title": "Wiz: Microsoft agent-framework Compromised",
      "url": "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi"
     },
     {
+     "title": "StepSecurity: Microsoft agent-framework PyPI Package Compromised",
+     "url": "https://www.stepsecurity.io/blog/microsoft-agent-framework-pypi-package-compromised"
+    },
+    {
      "title": "OX Security: Hijacked Releases of Microsoft's Official agent-framework",
      "url": "https://www.ox.security/blog/breaking-hijacked-releases-of-microsofts-official-agent-framework-steals-azure-and-ci-credentials/"
     },
     {
-     "title": "Aikido: Two malicious agent-framework releases hit PyPI in 33 minutes",
-     "url": "https://www.aikido.dev/blog/two-malicious-agent-framework-releases-hit-pypi-in-33-minutes"
+     "title": "SafeDep: Microsoft agent-framework PyPI compromise",
+     "url": "https://safedep.io/blog/microsoft-agent-framework-pypi-compromise"
     },
     {
-     "title": "Socket: Microsoft's agent-framework PyPI package Compromised with Credential Stealer",
-     "url": "https://socket.dev/blog/agent-framework-pypi-package-compromised-with-credential-stealer"
+     "title": "SecurityWeek: Microsoft Agent Framework Releases Poisoned With Credential Stealer",
+     "url": "https://www.securityweek.com/microsoft-agent-framework-releases-poisoned-with-credential-stealer/"
     },
     {
-     "title": "OpenSourceMalware: Official Microsoft agent-framework PyPI package compromised",
-     "url": "https://opensourcemalware.com/blog/agent-framework-pypi-compromised"
-    },
-    {
-     "title": "BleepingComputer: Microsoft's Agent Framework PyPI package compromised to steal credentials",
-     "url": "https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/"
+     "title": "The Register: Microsoft's official Python agent framework hijacked",
+     "url": "https://www.theregister.com/security/2026/11/18/microsofts-official-python-agent-framework-hijacked-to-distribute-malware/5310858"
     },
     {
      "title": "Help Net Security: Credential stealer slipped into Microsoft's official Python agent framework",
      "url": "https://www.helpnetsecurity.com/2026/11/19/microsoft-agent-framework-package-pypi-compromised/"
     },
     {
-     "title": "The Hacker News: Attackers Compromise Microsoft's Agent Framework PyPI Package to Steal Cloud Credentials",
+     "title": "The Hacker News: Attackers Compromise Microsoft's Agent Framework PyPI Package",
      "url": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html"
-    },
-    {
-     "title": "SecurityWeek: Microsoft Agent Framework Releases Poisoned With Credential Stealer",
-     "url": "https://www.securityweek.com/microsoft-agent-framework-releases-poisoned-with-credential-stealer/"
     }
    ],
-   "coverage": "Covered by 12 outlets"
+   "coverage": "Covered by 9 outlets"
   },
   {
    "id": "apache-roller-rce",
-   "headline": "Critical Apache Roller RCE CVE-2026-129448 under active exploitation",
-   "summary": "Apache says unauthenticated deserialization flaw CVE-2026-129448 (CVSS 9.8) in Roller XML-RPC is being actively exploited. Exploitation details and victims not disclosed.",
-   "label": "VENDOR-ACKNOWLEDGED",
-   "labelBasis": "ASF advisory reported by several outlets; advisory itself not read",
+   "headline": "Apache Roller RCE flaw CVE-2026-129448 actively exploited",
+   "summary": "Apache says CVE-2026-129448, an unauthenticated deserialization flaw in Roller's XML-RPC endpoint (CVSS 9.8), is being actively exploited. Fixed in 6.1.6.",
+   "label": "CONFIRMED",
+   "labelBasis": "Apache advisory quoted by three outlets; primary advisory not opened.",
    "severity": "Critical",
    "category": "vuln",
    "uk": false,
    "microsoft": false,
-   "firstReported": "Advisory dated 17 Nov 2026 (Apache, per SecurityWeek); first press report 18 Nov 2026 05:35 per BleepingComputer (time zone not stated). UK time not confirmed.",
+   "firstReported": "Apache advisory dated 17 Nov 2026 (time not stated); first press report BleepingComputer, 18 Nov 2026, 05:35 AM stamp (zone not stated)",
    "sections": {
-    "happened": "The Apache Software Foundation said CVE-2026-129448 (CVSS 9.8) in Apache Roller is being actively exploited. Versions 4.0.0 through 6.1.4 are affected. It is the same flaw as CVE-2026-82384, which was fixed in September 2026 and listed only 6.1.5. Apache has not described attacks, attackers or victim counts.",
-    "technical": "Unsafe deserialization in the XML-RPC endpoint: vendor extension types are deserialized before the requester authenticates, allowing unauthenticated remote code execution. Disabling XML-RPC in the admin UI does not prevent it. Credited to researcher n0mi1k; reported by Matt Raible. No MITRE ATT&CK mapping published.",
-    "guidance": "Apache recommends upgrading to Roller 6.1.6 or later. Where that is not possible, Apache describes setting enabledForExtensions to false in WEB-INF/web.xml or removing the /roller-services/xmlrpc servlet mapping, then restarting Roller.",
-    "differing": "Press reports state the flaw was fixed in 6.1.6; SecurityWeek adds that 6.1.7 (11 Nov) addresses 15 further flaws. No conflicting accounts of the facts found.",
-    "unknown": "Exploitation methods, threat actor, number of compromised servers and targets are not disclosed. No IOCs published. Whether CISA has listed it is not confirmed."
+    "happened": "The Apache Software Foundation said in a 17 November 2026 advisory that CVE-2026-129448 in Apache Roller is being actively exploited, allowing unauthenticated code execution. Apache has not said who is attacking or how many servers are compromised.",
+    "technical": "Unsafe deserialization in the XML-RPC endpoint (/roller-services/xmlrpc): vendor extension types are deserialized before the requester is authenticated. CVSS 9.8. Affects 4.0.0 through 6.1.4; fixed in 6.1.6. Same flaw as CVE-2026-82384, patched September 2026. Disabling XML-RPC in the admin UI does not block it.",
+    "guidance": "Upgrade to Apache Roller 6.1.6 or later. If upgrading is not possible, set \"enabledForExtensions\" to \"false\" in WEB-INF/web.xml, remove the /roller-services/xmlrpc servlet mapping, and restart Roller.",
+    "differing": "Outlets agree on the facts. BleepingComputer gives the advisory as Tuesday; SecurityWeek and The Hacker News give 17 November, which is the same day.",
+    "unknown": "Attackers, targets, attack method, number of compromised servers and published IOCs are not given by Apache in the sources reviewed."
    },
    "sources": [
     {
-     "title": "Apache Software Foundation security notice (via Apache mailing list, as reported by Security Affairs)",
-     "url": "https://securityaffairs.com/203419/security/apache-roller-rce-flaw-cve-2026-129448-under-active-attack.html"
-    },
-    {
-     "title": "The Hacker News: Critical Apache Roller RCE Flaw Under Active Exploitation, No Authentication Required",
+     "title": "The Hacker News: Critical Apache Roller RCE Flaw Under Active Exploitation",
      "url": "https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html"
     },
     {
@@ -349,65 +455,141 @@
      "url": "https://www.securityweek.com/critical-apache-roller-axis-vulnerabilities-exploited-in-attacks/"
     }
    ],
+   "coverage": "Covered by 3 outlets"
+  },
+  {
+   "id": "nginx2root-flaws",
+   "headline": "Five critical NGINX 'NGINX2Root' flaws disclosed with public PoC exploits",
+   "summary": "Researchers disclosed five critical NGINX flaws (CVSS 4.0 9.2) enabling unauthenticated remote code execution under ASLR bypass conditions. F5 fixed them in 1.30.7 and 1.31.9. Public PoCs exist.",
+   "label": "CONFIRMED",
+   "labelBasis": "F5 acknowledged and patched; multiple outlets report the same CVEs",
+   "severity": "Critical",
+   "category": "vuln",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "18 November 2026, UK time; first source: Infosecurity Magazine (researcher disclosures by Wiz, Ikotas Labs, Metnir, Rapid7, Xint)",
+   "sections": {
+    "happened": "On 18 November 2026, researchers at Wiz, Ikotas Labs, Metnir, Rapid7 and Xint disclosed five critical NGINX flaws, branded NGINX2Root, rated 9.2 on CVSS 4.0. F5 fixed them in NGINX Open Source 1.30.7 and 1.31.9 and NGINX Plus 37.0.8.1 and 37.3.0.1. Public proof-of-concept exploits are available. No exploitation in the wild has been reported.",
+    "technical": "CVE-2026-123007: HTTP/2 integer underflow leading to heap overflow (CWE-191), affecting versions since 1.9.5. CVE-2026-123633: HTTP/2 use-after-free. CVE-2026-121810: HTTP/3 use-after-free. CVE-2026-123634: resolver, proxy_pass and mirror setup. CVE-2026-113425: mail proxy. Code execution requires ASLR disabled or bypassed.",
+    "guidance": "F5 and CIRCL advise upgrading to 1.31.9 or 1.30.7 and fully restarting NGINX, not just reloading. CIRCL advises disabling HTTP/2 until patched. F5 lists workarounds only for CVE-2026-123634 and CVE-2026-113425.",
+    "differing": "Wiz says CVE-2026-123007 and CVE-2026-123633 can bypass ASLR; F5 says code execution requires ASLR disabled or bypassed. Disclosures differ on flaw count: Ikotas reports one, Wiz two, Xint five.",
+    "unknown": "Whether exploitation occurs in the wild. Ubuntu and Debian had no fixed packages at publication. Rapid7's exploit needs about 128 GB of HTTP/2 traffic."
+   },
+   "sources": [
+    {
+     "title": "F5 security advisory K000163926: NGINX ngx_http_v2_module vulnerability CVE-2026-123007",
+     "url": "https://my.f5.com/manage/s/article/K000163926"
+    },
+    {
+     "title": "10-Year-Old NGINX HTTP/2 Flaw Lets Unauthenticated Attackers Execute Code on Servers (The Hacker News)",
+     "url": "https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html"
+    },
+    {
+     "title": "F5 Patches Critical NGINX2Root Flaws as PoC Exploits Go Public (SecurityWeek)",
+     "url": "https://www.securityweek.com/f5-patches-critical-nginx2root-flaws-as-poc-exploits-go-public/"
+    },
+    {
+     "title": "Five Critical Vulnerabilities Found in NGINX (Infosecurity Magazine)",
+     "url": "https://www.infosecurity-magazine.com/news/five-critical-vulnerabilities/"
+    }
+   ],
    "coverage": "Covered by 4 outlets"
   },
   {
-   "id": "java4shell-openjdk",
-   "headline": "Java4Shell: critical OpenJDK Base64 flaw (CVE-2026-114938) patched; exploitation probing under way",
-   "summary": "Calif disclosed CVE-2026-114938, a heap overflow in OpenJDK's AVX-512 Base64 decoder, on 17 Nov; Oracle and OpenJDK shipped fixes and CISA issued an alert. Sensor operators report probing from 17-19 Nov, with no confirmed compromise.",
+   "id": "perforce-puppet-kev",
+   "headline": "CISA adds exploited Perforce Puppet Enterprise RCE CVE-2026-115731 to KEV",
+   "summary": "CISA added Perforce Puppet Enterprise flaw CVE-2026-115731 (CVSS 9.4), a deserialization remote code execution bug in Puppet Server, to its KEV catalog. Federal fix deadline is 1 December 2026.",
    "label": "CONFIRMED",
-   "labelBasis": "Oracle and OpenJDK published fixes, CISA, Canada and Switzerland issued alerts, Cisco/Red Hat/Elastic/Atlassian published advisories; probing is reported independently by GreyNoise, Previdian, watchTowr and Cloudflare. Successful in-the-wild compromise is not confirmed.",
+   "labelBasis": "CISA KEV listing; Perforce reports no known exploitation; no public attack details",
+   "severity": "Critical",
+   "category": "vuln",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "Date only (17 Nov 2026 KEV addition per Help Net Security; time not stated); Security Affairs article dated 18 Nov 2026",
+   "sections": {
+    "happened": "Perforce released fixes for CVE-2026-115731 on 3 November 2026. CISA added the flaw to its Known Exploited Vulnerabilities catalog on Tuesday 17 November and ordered federal civilian agencies to fix it by 1 December 2026. Perforce says it knows of no attacks and no customer data access.",
+    "technical": "Deserialization of untrusted data in Puppet Server report processing. A client holding a Puppet CA-signed certificate can send a crafted report via HTTP PUT for code execution as the Puppet Server service account. Autosigning allows unauthenticated certificate acquisition. Fixed in PE 2026.0.1, 2025.12.1, 2023.8.13; Puppet Core 9.1.3, 8.22.2.",
+    "guidance": "Perforce: upgrade to the fixed versions and restart the server as soon as possible. If unable, review autosign configuration and authorization rules as a temporary mitigation.",
+    "differing": "Perforce says it is not aware of attacks; Help Net Security says attackers are exploiting the flaw. Security Affairs reports no confirmed exploitation. The KEV listing indicates exploitation.",
+    "unknown": "Attack details, victims, threat actor and IOCs are unpublished. The CISA KEV entry and Perforce advisory were not retrieved directly."
+   },
+   "sources": [
+    {
+     "title": "Help Net Security: Exploited Puppet flaw puts the server that configures your endpoint fleet at risk (CVE-2026-115731)",
+     "url": "https://www.helpnetsecurity.com/2026/11/19/puppet-enterprise-vulnerability-cve-2026-115731-exploited/"
+    },
+    {
+     "title": "SecurityAffairs: U.S. CISA adds Perforce Puppet Enterprise flaw to its Known Exploited Vulnerabilities catalog",
+     "url": "https://securityaffairs.com/203377/hacking/u-s-cisa-adds-perforce-puppet-enterprise-flaw-to-its-known-exploited-vulnerabilities-catalog.html"
+    }
+   ],
+   "coverage": "Covered by 2 outlets"
+  },
+  {
+   "id": "java4shell-openjdk",
+   "headline": "Java4Shell: critical OpenJDK Base64 flaw (CVE-2026-114938) patched; scanning and exploitation attempts reported",
+   "summary": "Calif disclosed CVE-2026-114938, a heap overflow in OpenJDK's AVX-512 Base64 decoder, on 17 November after a leak; OpenJDK and Oracle shipped fixes the same day. Honeypot operators report probing and blind exploit attempts from 17-19 November, but no confirmed intrusion.",
+   "label": "CONFIRMED",
+   "labelBasis": "Oracle's CVE record and advisory, the OpenJDK advisory (cited by Calif, VulnCheck and GreyNoise), CISA's alert (via The Hacker News and The Record) and Canada's Cyber Centre alert acknowledge the flaw and fixes. VulnCheck independently reproduced the overflow. Exploitation attempts rest on GreyNoise, watchTowr, Cloudflare and Previdian telemetry; successful compromise is unconfirmed.",
    "severity": "High",
    "category": "vuln",
    "uk": false,
    "microsoft": false,
-   "firstReported": "21:00",
+   "firstReported": "17 Nov 2026, before 16:59 UK time (The Hacker News reported the leak); fixes released 21:00 UK time, Calif write-up about 21:13",
    "sections": {
-    "happened": "Calif disclosed Java4Shell (CVE-2026-114938), a memory-corruption flaw in OpenJDK's Base64 decoder, on 17 November 2026. The Hacker News reported Calif saying the flaw had leaked before disclosure. OpenJDK and Oracle released fixed builds at 13:00 PT (21:00 UK); Calif's write-up followed, and CISA issued an alert that evening. Calif demonstrated unauthenticated RCE on Keycloak, Jira, Confluence, Artifactory, Jenkins and PingFederate, and authenticated RCE on Kafka, Solr, Elasticsearch, Gerrit and Spinnaker. From 17 to 19 November GreyNoise, Previdian, watchTowr and Cloudflare reported probing; none reported confirmed intrusions. Cisco, Siemens, Elastic, Red Hat, Atlassian, Keycloak and Jenkins have published advisories; several fixes are still pending.",
-    "technical": "Heap buffer overflow (CWE-122) in HotSpot's x86-64 Base64 intrinsic using AVX-512 VBMI. Per Calif, padded tail input underflows the output length, the store mask becomes all ones, and 64 bytes are written to a 50-byte buffer. Trigger: 64 'A' characters plus '='. Preconditions: OpenJDK 17.0.6 or later (17, 21, 25, 27); Intel Ice Lake onward or AMD Zen 4 onward; ARM unaffected. Oracle scores CVSS 3.1 8.1; Calif 4.0 9.2. RCE needs heap grooming, a heap leak and a per-application chain. Calif's PoC only triggers corruption; VulnCheck says a full exploit is available to its customers. Observed probes used 'java4shell-recon' User-Agents; Cloudflare saw one IP use both Artex and Java4Shell. No ATT&CK IDs published; vector resembles T1190.",
-    "guidance": "Oracle fixed builds, per Canada's Cyber Centre: 8u513-perf, 17.0.21.1, 21.0.13.1, 25.0.5.1, 27.0.1.1. Calif, Talos and Canada list -XX:UseAVX=2; Calif also lists -XX:-UseBASE64Intrinsics. CISA lists Base64 input validation and size limits. Cisco lists no workarounds; Atlassian cites disabling AVX-512 for Data Center. Keycloak 26.8.2-3 images carry a patched runtime.",
-    "differing": "Oracle rates it 8.1 (High complexity); Calif and Talos 9.2. Calif says chains were built with AI assistance; VulnCheck and watchTowr call RCE hardware- and application-specific and expect no indiscriminate exploitation. OX Security's headline estimates under 0.12% of JVMs at RCE risk (page unread). Early reports predicted only a crash; 18 November 'no exploitation' statements were superseded by sensor data.",
-    "unknown": "Whether any probing led to compromise. Origin of the pre-disclosure leak. Fix dates for Cisco, Siemens, Elastic and Atlassian Data Center. Whether Calif publishes its withheld product exploit chains. Previdian lists the CVE as not in CISA KEV."
+    "happened": "Calif, a California security firm, disclosed Java4Shell (CVE-2026-114938) on 17 November 2026, after details leaked ahead of coordinated disclosure. OpenJDK and Oracle released fixes at 21:00 UK time; GreyNoise's timeline puts Calif's write-up at 21:13 and Oracle's CVE record shows publication at 21:32. CISA and Canada's Cyber Centre issued alerts that evening. Cisco, Siemens, Elastic, Red Hat, Atlassian and Keycloak have since published impact notices, while Amazon, Microsoft and Azul released patched builds (SecurityWeek). By early 19 November GreyNoise had logged 150+ matching requests from five IPs; watchTowr, Cloudflare and Previdian also report probing. None has confirmed a successful intrusion.",
+    "technical": "Root cause: an integer underflow in HotSpot's x86-64 AVX-512 VBMI Base64 decode intrinsic (CWE-122). Input of 64 'A' plus '=' (128 on JDK 17) makes a 64-byte store land 62 bytes past a 50-byte buffer. Affected: OpenJDK 17.0.6 and later (17, 21, 25, 27) and downstream builds, only on x86-64 CPUs with AVX-512 VBMI; ARM is unaffected. Oracle scores CVSS 3.1 8.1 (AV:N/AC:H/PR:N); Calif scores CVSS 4.0 9.2. Calif demonstrated pre-auth RCE in Keycloak, Jira, Confluence, Artifactory, Jenkins and PingFederate, and authenticated RCE in Kafka, Solr, Elasticsearch, Gerrit and Spinnaker, using bespoke heap grooming. No actor attributed; no ATT&CK IDs or malware published.",
+    "guidance": "Oracle's fixed builds per Canada's Cyber Centre: 8u513-perf, 17.0.21.1, 21.0.13.1, 25.0.5.1, 27.0.1.1. Calif, Red Hat and VulnCheck list the workarounds -XX:-UseBASE64Intrinsics or -XX:UseAVX=2. Atlassian suggests disabling AVX-512 for Data Center; Cisco has no workaround; Siemens suggests taking Industrial Edge instances offline; Keycloak published 26.8.2-3.",
+    "differing": "Severity: Oracle rates it 8.1 (High, AC:H); Calif 9.2 and Red Hat Critical. Exploitability: Calif reports default-configuration RCE; VulnCheck found a crash trivial but RCE needing heap grooming and an application-specific leak, yet says its own RCE exploit exists. Pre-disclosure Upwind and Equixly predicted only a crash, unreproduced. The RCE claims are better supported: vendor-confirmed impact, VulnCheck's exploit.",
+    "unknown": "Whether any probing has compromised a system is unconfirmed. Calif's product-specific chains remain unpublished, timing unknown. Cisco IOS XE and UCS Central status, remaining vendor patches and exposed-host numbers are unreported."
    },
    "sources": [
+    {
+     "title": "Oracle Critical Security Patch Update Advisory - November 2026",
+     "url": "https://www.oracle.com/security-alerts/cspunov2026.html"
+    },
+    {
+     "title": "CVE-2026-114938 record (Oracle CNA data, via OpenCVE)",
+     "url": "https://app.opencve.io/cve/CVE-2026-114938"
+    },
     {
      "title": "Calif: Java4Shell write-up",
      "url": "https://calif.io/java4shell"
     },
     {
-     "title": "Oracle Critical Security Patch Update Advisory, November 2026",
-     "url": "https://www.oracle.com/security-alerts/cspunov2026.html"
-    },
-    {
-     "title": "OpenJDK Vulnerability Advisory 2026/11/17",
-     "url": "https://openjdk.org/groups/vulnerability/advisories/2026-11-17"
-    },
-    {
-     "title": "CISA alert: Critical Java Vulnerability Requires Immediate Patching",
-     "url": "https://www.cisa.gov/news-events/alerts/2026/11/17/critical-java-vulnerability-requires-immediate-patching"
-    },
-    {
-     "title": "Cisco Security Advisory cisco-sa-nov2026-java-rce-eCa6ss9z",
-     "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nov2026-java-rce-eCa6ss9z"
-    },
-    {
-     "title": "Canadian Centre for Cyber Security AL26-029",
+     "title": "Canadian Centre for Cyber Security alert AL26-029",
      "url": "https://www.cyber.gc.ca/en/alerts-advisories/al26-029-critical-vulnerability-impacting-oracle-java-cve-2026-114938"
     },
     {
-     "title": "GreyNoise Java4Shell activity dashboard",
+     "title": "OpenJDK vulnerability advisory, 17 Nov 2026 (not opened: inaccessible)",
+     "url": "https://openjdk.org/groups/vulnerability/advisories/2026-11-17"
+    },
+    {
+     "title": "CISA alert: Critical Java Vulnerability Requires Immediate Patching (not opened: inaccessible)",
+     "url": "https://www.cisa.gov/news-events/alerts/2026/11/17/critical-java-vulnerability-requires-immediate-patching"
+    },
+    {
+     "title": "Red Hat bulletin RHSB-2026-018",
+     "url": "https://access.redhat.com/security/vulnerabilities/RHSB-2026-018"
+    },
+    {
+     "title": "Keycloak: Java4Shell vulnerability notice",
+     "url": "https://www.keycloak.org/2026/11/java4shell-vulnerability-cve-2026-114938"
+    },
+    {
+     "title": "VulnCheck: Java4Shell CVE-2026-114938",
+     "url": "https://www.vulncheck.com/blog/java4shell"
+    },
+    {
+     "title": "GreyNoise: Java4Shell activity dashboard",
      "url": "https://java4shell.events.greynoise.io/"
     },
     {
-     "title": "Previdian CVE-2026-114938 exploitation record",
+     "title": "Previdian: CVE-2026-114938 exploitation attempts",
      "url": "https://previdian.com/CVE-2026-114938"
     },
     {
-     "title": "Cisco Talos: CVE-2026-114938 threat advisory",
-     "url": "https://blog.talosintelligence.com/java4shell/"
-    },
-    {
-     "title": "SecurityWeek: Java4Shell exploitation attempts begin as vendors rush out advisories",
+     "title": "SecurityWeek: Java4Shell Exploitation Attempts Begin as Vendors Rush Out Advisories",
      "url": "https://www.securityweek.com/java4shell-exploitation-attempts-begin-as-vendors-rush-out-advisories/"
     },
     {
@@ -415,257 +597,565 @@
      "url": "https://www.infosecurity-magazine.com/news/java4shell-vulnerability-remote/"
     },
     {
-     "title": "The Hacker News: CISA Urges Immediate Patching of Java4Shell Flaw",
-     "url": "https://thehackernews.com/2026/11/cisa-urges-immediate-patching-of.html"
-    },
-    {
      "title": "The Hacker News: Oracle to Patch 11 Java Flaws Today as Critical OpenJDK RCE Report Emerges",
      "url": "https://thehackernews.com/2026/11/oracle-to-patch-11-java-flaws-today-as.html"
     },
     {
-     "title": "The Record: CISA warns of Java4Shell",
-     "url": "https://therecord.media/cisa-issues-java4shell-alert"
+     "title": "The Hacker News: CISA Urges Immediate Patching of Java4Shell Flaw",
+     "url": "https://thehackernews.com/2026/11/cisa-urges-immediate-patching-of.html"
     },
     {
-     "title": "Help Net Security: Java4Shell exploitation is tricky and hinges on specific CPUs",
-     "url": "https://www.helpnetsecurity.com/2026/11/18/java4shell-openjdk-vulnerability-cve-2026-114938/"
+     "title": "The Record: CISA warns of Java4Shell",
+     "url": "https://therecord.media/cisa-issues-java4shell-alert"
     }
    ],
-   "coverage": "Covered by 14 outlets"
+   "coverage": "Covered by 15 outlets"
   },
   {
-   "id": "php-critical-release",
-   "headline": "PHP schedules critical security release for 19 November; PHP2Shell flaws already exploited",
-   "summary": "PHP announced security releases for all supported versions on 19 November (14:00–14:30 UTC), top severity CRITICAL, in non-default or uncommon setups. CVE-2026-115560, an RCE vector, is expected. Details unpublished. The October PHP2Shell flaws are under exploitation, including on PAN-OS and Check Point gateways.",
-   "label": "VENDOR-ACKNOWLEDGED",
-   "labelBasis": "PHP's own php.net notice (18 Nov) confirms the release window and CRITICAL ceiling but names no CVEs, versions or scores; CVE-2026-115560 is tied to the release only by PHP's 23 Oct statement and outlet reporting. Exploitation of the earlier PHP2Shell flaws is separately confirmed (CISA KEV, Palo Alto, Check Point).",
+   "id": "php-critical-rce-release",
+   "headline": "PHP schedules critical security release for 19 November, including RCE flaw CVE-2026-115560",
+   "summary": "The PHP security team said releases for all supported versions would ship 19 November, 14:00-14:30 UTC, with highest severity Critical but needing non-default setups. CVE-2026-115560, a session-handling RCE, is expected in it. Fixed versions and details were unpublished at last check.",
+   "label": "CONFIRMED",
+   "labelBasis": "Rests on the PHP project's own 18 November notice and 23 October informational advisory on php.net, both read, plus consistent reporting by The Register, The Hacker News and SecurityWeek. Fixed versions and the full CVE list were not yet published at last check.",
    "severity": "High",
    "category": "vuln",
    "uk": false,
    "microsoft": false,
-   "firstReported": "22:33",
+   "firstReported": "18 Nov 2026 (PHP notice on php.net, time not stated); The Register published 22:38 UTC (22:38 UK time)",
    "sections": {
-    "happened": "PHP's security team announced on 18 November that security releases for all supported PHP versions are scheduled for Thursday 19 November, 14:00–14:30 UTC (same as GMT in the UK). It said the highest severity is CRITICAL, that critical issues need non-default configuration or uncommon setups, and that details and fixed versions will come with the releases. php.net listed no release entry at the time of research. Outlets link the release to CVE-2026-115560, an RCE vector in session upload progress that PHP described on 23 October; the 18 November notice names no CVEs. It follows the 21 October PHP2Shell fixes (CVE-2026-109618, CVE-2026-109619), since exploited, including against PAN-OS and Check Point gateways.",
-    "technical": "CVE-2026-115560 (CVSS and affected versions unpublished) needs session.serialize_handler set to php_binary or php_serialize, code switching it to php with ini_set() before session_start(), and session upload progress enabled (the default). PHP2Shell: CVE-2026-109618 (out-of-memory handling leaves request data uninitialised) and CVE-2026-109619 (stale request state after memory is freed); both CVSS v4.0 9.2, unauthenticated, fixed in 8.5.12, 8.4.27, 8.3.36, 8.2.35. Palo Alto reported exploitation of exposed PAN-OS management interfaces (T1190). Dream reported chaining with kernel flaw CVE-2026-46300 to root 25 systems. Check Point Research reported attacks from 30 October on Mobile Access portals: privilege escalation via CVE-2026-123039, web shells, TSGA/TSProxy backdoor, destroy_v6 wiper on ESXi.",
-    "guidance": "PHP (23 Oct): set session.upload_progress.enabled=0 until the next regular release and restart workers; applications never switching the serialize handler at runtime can keep it enabled. PHP (18 Nov): details and fixed versions will accompany the releases. PHP2Shell fixes: 8.5.12, 8.4.27, 8.3.36, 8.2.35. Palo Alto: patched customers are not affected. CISA added both PHP2Shell CVEs to KEV on 26 October.",
-    "differing": "PHP Foundation (to The Register, October): CVE-2026-115560 needs a very unlikely combination, not expected in practice. A GitHub repository describes a proof of concept on php:8.4.27-apache; not independently run. PHP2Shell scores vary: PHP 9.2 (CVSS 4.0), Fortinet 9.8 (v3), Palo Alto 8.7 then 9.2. Check Point says attribution is uncertain; ESET linked the malware family to China-nexus UNC5221.",
-    "unknown": "CVE list, affected and fixed versions and scores for the 19 November release were unpublished. That CVE-2026-115560 is the critical issue is inferred. No exploitation of the new flaws is reported. Number of affected deployments is unknown."
+    "happened": "On 18 November 2026 the PHP security team posted a notice on php.net that security releases would be published on Thursday 19 November between 14:00 and 14:30 UTC (the same as UK time on that date). It said they are part of the regular four-week cycle, affect all supported PHP versions, and carry a highest severity of Critical. Issues rated Critical need non-default configuration or uncommon setups. Technical details and fixed version numbers are to be published with the releases. The notice follows the 21 October PHP2Shell emergency fixes (CVE-2026-109618, CVE-2026-109619). At the time of research (about 14:10 UTC on 19 November) php.net's news archive still showed only the advance notice.",
+    "technical": "CVE-2026-115560 is a remote code execution vector in session upload progress, disclosed in a 23 October informational advisory. Preconditions: the application sets session.serialize_handler to php_binary or php_serialize in configuration, switches it to php with ini_set() before session_start(), and session.upload_progress.enabled is still on. PHP has not published CVSS, affected versions or root cause; sources say it is not fixed in 8.5.12, 8.4.27, 8.3.36 or 8.2.35. The notice does not say which flaws are rated Critical, so linking that rating to this CVE is the outlets' inference. No exploitation of CVE-2026-115560 reported. PHP2Shell (CVSS 9.2 each, per CERT-EU) was added to CISA's KEV catalogue on 26 October per The Register.",
+    "guidance": "PHP's notice says users are strongly encouraged to prepare to upgrade promptly once releases are available; fixed versions will be published with them. Its 23 October advisory suggests session.upload_progress.enabled=0 until the next regular bugfix release; nothing further for those who already applied it for CVE-2026-109619. The Hacker News adds PHP workers must be restarted.",
+    "differing": "No dispute found. PHP says the 23 October RCE needs a very unlikely configuration and code combination (executive director Elizabeth Barron to The Register), so it was handled in the regular cycle. The Hacker News and SecurityWeek link CVE-2026-115560 to the Critical rating; PHP's notice does not name which issue is Critical.",
+    "unknown": "Fixed version numbers, the full CVE list, CVSS scores and which issue is rated Critical are unpublished. Whether other flaws in the release are exploitable by default, and whether exploitation will follow, is unknown."
    },
    "sources": [
     {
-     "title": "PHP.net news archive 2026 (18 Nov pre-release notice; 23 Oct informational advisory; 21 Oct security advisory)",
+     "title": "PHP.net news archive 2026: Upcoming Critical PHP Security Release (18 Nov) and Informational advisory (23 Oct)",
      "url": "https://www.php.net/archive/2026.php"
-    },
-    {
-     "title": "oss-sec: Upcoming Critical PHP Security Release (18 Nov)",
-     "url": "https://seclists.org/oss-sec/2026/q4/780"
     },
     {
      "title": "The Register: Get ready for another critical PHP security release to drop",
      "url": "https://www.theregister.com/patches/2026/11/18/get-ready-for-another-critical-php-security-release-to-drop/5310911"
     },
     {
-     "title": "SecurityWeek: PHP Readies Critical Security Updates to Patch Another RCE Flaw",
-     "url": "https://www.securityweek.com/php-readies-critical-security-updates-to-patch-another-rce-flaw/"
-    },
-    {
      "title": "The Hacker News: PHP Warns of Critical Security Flaws Affecting All Supported Versions",
      "url": "https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html"
     },
     {
-     "title": "The Hacker News: Everything Is a Web Application, Including Your Firewall",
-     "url": "https://thehackernews.com/2026/11/everything-is-web-application-including.html"
+     "title": "SecurityWeek: PHP Readies Critical Security Updates to Patch Another RCE Flaw",
+     "url": "https://www.securityweek.com/php-readies-critical-security-updates-to-patch-another-rce-flaw/"
     },
     {
-     "title": "Check Point Research: PHP2Shell Exploitation on Check Point Gateway (12 Nov)",
-     "url": "https://research.checkpoint.com/2026/php2shell-exploitation-on-check-point-gateway/"
-    },
-    {
-     "title": "Unit 42: Threat Brief on CVE-2026-109618 / CVE-2026-109619 (updated 29 Oct)",
-     "url": "https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/"
-    },
-    {
-     "title": "The Register: CISA confirms PHP2Shell under attack",
-     "url": "https://www.theregister.com/cyber-crime/2026/10/27/cisa-confirms-php2shell-under-attack-as-researchers-clock-successful-exploits/5305681"
-    },
-    {
-     "title": "The Register: There's a third PHP2Shell bug, but it won't get an emergency fix",
-     "url": "https://www.theregister.com/security/2026/10/23/theres-a-third-php2shell-bug-but-it-wont-get-an-emergency-fix/5305208"
+     "title": "CERT-EU Security Advisory 2026-018: Critical Vulnerabilities in PHP",
+     "url": "https://cert.europa.eu/publications/security-advisories/2026-018"
     }
    ],
-   "coverage": "Covered by 7 outlets"
+   "coverage": "Covered by 5 outlets"
   },
   {
-   "id": "ukraine-fbi-ransomware-arrests",
-   "headline": "Ukraine and FBI arrest four ransomware group members tied to $40.5M in ransoms",
-   "summary": "Ukrainian police, working with the FBI, detained four key suspects of a ransomware group that police say took over $40.5M from at least 28 companies.",
+   "id": "palantir-stalking-charge",
+   "headline": "Russian national charged with stalking Palantir employees for Moscow",
+   "summary": "US prosecutors charged Igor D'iu, allegedly recruited by Russian government handlers, with acting as an unregistered agent and stalking employees of a Palantir-described defence software firm.",
    "label": "CONFIRMED",
-   "labelBasis": "Police acknowledged arrests and figures; reported by two outlets; primary statement second-hand.",
+   "labelBasis": "US Attorney and FBI statements reported by two outlets; Palantir has not commented.",
    "severity": "Medium",
    "category": "law",
    "uk": false,
    "microsoft": false,
-   "firstReported": "18 Nov 2026, c.18:08 (timezone unstated), BleepingComputer; Help Net Security followed 19 Nov 2026",
+   "firstReported": "19 Nov 2026 (UK time not stated in sources); first source The Record (Recorded Future News), with Moscow Times same day",
    "sections": {
-    "happened": "Ukrainian police, working with the FBI, detained four key suspects of an international ransomware group after a two-year investigation. Police say at least 28 companies paid over $40.5M in ransoms. Authorities ran 66 searches in Kyiv and 11 regions. Suspects are charged with participation in a criminal organisation and unauthorised interference with information systems.",
-    "technical": "Attackers impersonated IT support by phone, using a platform with AI-generated voice messages, to obtain credentials or get remote-access software installed. Court records describe phishing pages mimicking corporate VPNs, spoofed numbers, and TeamViewer or AnyDesk. Court records name Chaos as the ransomware used. Data was stolen before encryption.",
-    "differing": "Reporting links members to former Conti members and BlackSuit; Ukrainian authorities have not confirmed individual affiliations with Conti or BlackSuit.",
-    "unknown": "Full extent of damage is still being established. Arrest locations are undisclosed. Further members are being identified."
+    "happened": "A federal grand jury indicted Igor Andreevich D'iu, charged with conspiracy to act as a Russian agent, unregistered foreign agent, interstate stalking and document fraud. Filings allege he surveilled Palantir employees near its Palo Alto office for Moscow handlers.",
+    "technical": "",
+    "guidance": "",
+    "differing": "Bloomberg and Reuters identified Palantir from unnamed sources; the indictment does not name it. Palantir and Russia's embassy did not respond to requests for comment.",
+    "unknown": "Whether employee data was obtained is not stated. Handlers' identities remain unnamed. Court appearance was scheduled for the following Tuesday."
    },
    "sources": [
     {
-     "title": "Ukraine, FBI arrest ransomware gang members tied to $40M in ransoms (BleepingComputer)",
-     "url": "https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/"
+     "title": "Russian charged with spying on Palantir employees for Moscow (The Record)",
+     "url": "https://therecord.media/russian-charged-with-spying-on-palantir-for-moscow"
     },
     {
-     "title": "Ukraine arrests key members of ransomware gang that extorted $40.5 million posing as IT support (Help Net Security)",
-     "url": "https://www.helpnetsecurity.com/2026/11/19/ukraine-ransomware-gang-arrests-fake-it-support-calls/"
+     "title": "U.S. Indicts Russian National for Stalking Palantir Employees as 'Foreign Agent' (The Moscow Times)",
+     "url": "https://www.themoscowtimes.com/2026/11/19/us-indicts-russian-national-for-stalking-palantir-employees-as-foreign-agent-a94313"
     }
    ],
    "coverage": "Covered by 2 outlets"
   },
   {
-   "id": "france-iran-fridge-attribution",
-   "headline": "France attributes fridge cyberattack to Iran",
-   "summary": "Schneier on Security reports US intelligence reached a 'low confidence' assessment that Iran was behind attacks in France. The French attribution and CERT report were not read.",
-   "label": "UNCONFIRMED CLAIM",
-   "labelBasis": "Anonymous US officials via one blog; French CERT report not accessed.",
-   "severity": "Awareness",
-   "category": "geopolitics",
+   "id": "ukraine-fbi-ransomware-arrests",
+   "headline": "Ukraine and FBI arrest four suspected members of ransomware group tied to $40.5M in ransoms",
+   "summary": "Ukrainian police, working with the FBI, detained four key suspects of a ransomware group linked to at least 28 companies paying over $40.5M in ransoms.",
+   "label": "CONFIRMED",
+   "labelBasis": "Ukrainian police and Prosecutor General announced arrests; ransom figures are police statements.",
+   "severity": "Medium",
+   "category": "law",
    "uk": false,
    "microsoft": false,
-   "firstReported": "18 November 2026, 7:05 AM UK time (approx.; Schneier on Security post, US time not stated), first source Schneier on Security",
+   "firstReported": "18 Nov 2026, 6:08 PM UK time (BleepingComputer); Prosecutor General's Office announcement reported by The Record on Wednesday 18 Nov 2026",
    "sections": {
-    "happened": "On 18 November 2026 Schneier on Security reported that U.S. intelligence agencies recently reached a 'low confidence' assessment that Iran was responsible for attacks in France, citing three anonymous U.S. officials. Iran was also seen as probably responsible for similar attacks elsewhere in Europe; those probes are early-stage.",
-    "technical": "Reported as involving internet-exposed device interfaces, tagged 'Internet of Things' and 'infrastructure' by the blog. No ATT&CK IDs, CVEs or IOCs were read. The French CERT report CERTFR-2026-CTI-009 was not accessible.",
-    "differing": "The US assessment is 'low confidence' and names Iran generally, not a specific group. Reader comments claim a French CERT report cites Farsi code strings; this is unverified and false-flag is raised.",
-    "unknown": "The French government's own attribution statement, CERT report content, victims, scale and vendor response are unverified."
+    "happened": "Ukrainian police and the Prosecutor General's Office, working with the FBI, ran 66 searches in Kyiv and 11 regions and detained four suspected key members of a ransomware group of at least 27 people. Police say at least 28 companies paid over $40.5M. Suspects face charges carrying up to 15 years.",
+    "technical": "Attackers posed as IT support by phone, using an AI-generated voice platform to obtain credentials or get remote-access tools installed. Court records describe a fake corporate VPN login page and a relayed 2FA code. Data was stolen, files encrypted, and victims extorted. Court records name Chaos ransomware; police did not.",
+    "differing": "Court records, reported by LeMagIT, say BlackSuit claimed Maxxis in 2024; police have not tied suspects to BlackSuit or confirmed Conti membership individually.",
+    "unknown": "Full damages, ransomware strain confirmation, identities of the suspects, and whether further arrests follow remain unconfirmed."
    },
    "sources": [
     {
-     "title": "Schneier on Security: France Is Blaming Iran for the Fridge Cyberattack (blog, citing anonymous US officials)",
-     "url": "https://www.schneier.com/blog/archives/2026/11/france-is-blaming-iran-for-the-fridge-cyberattack.html"
+     "title": "BleepingComputer: Ukraine, FBI arrest ransomware gang members tied to $40M in ransoms",
+     "url": "https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/"
+    },
+    {
+     "title": "Help Net Security: Ukraine arrests key members of ransomware gang that extorted $40.5 million posing as IT support",
+     "url": "https://www.helpnetsecurity.com/2026/11/19/ukraine-ransomware-gang-arrests-fake-it-support-calls/"
+    },
+    {
+     "title": "The Record: Ukraine exposes ransomware network extorting US oil, healthcare firms",
+     "url": "https://therecord.media/ukraine-ransomware-arrests-cyber"
     }
    ],
-   "coverage": "Covered by 1 outlet"
+   "coverage": "Covered by 3 outlets"
   },
   {
-   "id": "us-chip-curbs-china",
-   "headline": "Nvidia halts H200 sales to China as US tightens chip export rules",
-   "summary": "Nvidia said it is no longer shipping licensed H200 data-center chips to China, as Washington tightened export reviews and remote-access limits. Tencent's president said the clampdown 'sets everyone back'.",
-   "label": "VENDOR-ACKNOWLEDGED",
-   "labelBasis": "Nvidia earnings-call remarks as reported by secondary outlets; transcript not read.",
-   "severity": "Awareness",
-   "category": "geopolitics",
+   "id": "us-ai-chip-curbs-china",
+   "headline": "US rule curbs Chinese remote access to AI chips in overseas data centres; Tencent, Beijing and Nvidia respond",
+   "summary": "The US Commerce Department's BIS issued an interim final rule on 16 November requiring licences for AI chips going to data centres serving China-headquartered firms, and to five more countries. Tencent says it sets Chinese firms back; Beijing condemned it.",
+   "label": "CONFIRMED",
+   "labelBasis": "The US Bureau of Industry and Security published the interim final rule and a press release, and the rule text was read directly. Tencent, Singapore's ministries and China's foreign ministry on-record responses are reported or published.",
+   "severity": "Medium",
+   "category": "law",
    "uk": false,
    "microsoft": false,
-   "firstReported": "18 Nov 2026, 22:33 UK time (Semafor, 5:33pm EST); earnings call 17 Nov US time",
+   "firstReported": "00:55",
    "sections": {
-    "happened": "On its Q3 FY2027 earnings call (17 Nov, US time), Nvidia said it is no longer shipping licensed Hopper data-center products to China and excluded China Hopper sales from Q4 guidance. Washington tightened export reviews on 16 Nov.",
-    "unknown": "Nvidia gave no official reason for the halt. Reports say about 600,000 H200s are held in Hong Kong, and Beijing has withheld approval for large imports.",
-    "differing": "Kress says the backlog means revenue is unaffected; Jefferies estimates a $44–62bn cut to next-year data-center revenue."
+    "happened": "On 16 November 2026 the US Commerce Department's Bureau of Industry and Security (BIS) released an interim final rule, \"Addressing Remote Access to Advanced Semiconductors\" (RIN 0694-AK50). BIS said it was \"written by and at the direction of\" the Treasury Department and National Security Council. It requires licences for advanced AI chips destined for data centres, anywhere, that supply large compute to China-headquartered companies. It also adds a licence requirement for five countries and formally rescinds the Biden-era AI Diffusion Rule. It takes effect on Federal Register publication, scheduled for 19 November. Tencent's president said it \"sets everyone back in China\". Al Jazeera reported Nvidia shares fell 4.1% on 17 November.",
+    "technical": "BIS rule text: new §744.24 requires a licence where an exporter knows items are going to a data centre that gives companies headquartered in China, Macau or other D:5 countries access to more than 12,000,000 aggregate TPP, at one site or \"linked\" sites. Commercial recommender systems are excluded. Existing providers must obtain a licence within 90 days of the effective date. Licences are also required for Indonesia, Malaysia, Singapore, Thailand and Brazil, case by case, with an exemption for US-headquartered recipients who report. BIS says §744.23(a)(3) always covered transactions made \"on behalf of\" such firms, for example where they use over 50% of capacity. Comments are due 60 days after publication. CSIS puts the threshold at roughly 750 H200 GPUs.",
+    "guidance": "BIS states that entities in violation of the existing §744.23(a)(3) requirement \"should submit a voluntary self-disclosure\". It also says exporters should obtain data-centre know-your-customer information, treating refusal as a red flag. Commerce says it will monitor countries that tolerate evasion. Singapore's ministries say they are engaging affected companies and US authorities, and exploring trusted access for Singapore firms.",
+    "differing": "China's foreign ministry (state position) called the rule \"economic coercion and long-arm jurisdiction\". BIS says it closes circumvention via third-country data centres. Tom's Hardware and The Hill reported a 90-day delay to taking effect; the rule text and law-firm analyses say effective on publication, with 90 days only for existing providers.",
+    "unknown": "Federal Register publication was not confirmed here. The 12,000,000 TPP measurement basis is unclear. Enforcement scope is open. Whether China retaliates is unknown; presidents Trump and Xi are due to meet in Shenzhen on 19 November."
    },
    "sources": [
     {
-     "title": "Semafor: Nvidia halts sale of US-approved H200 chips to China",
-     "url": "https://www.semafor.com/article/11/18/2026/nvidia-halts-sale-of-us-approved-h200-chips-to-china"
+     "title": "BIS interim final rule, Addressing Remote Access to Advanced Semiconductors (RIN 0694-AK50), PDF",
+     "url": "https://www.bis.gov/media/documents/rin-0694-ak50.pdf"
     },
     {
-     "title": "BigGo Finance: Nvidia Halts H200 Shipments to China",
-     "url": "https://finance.biggo.com/news/55fb0cd7-baad-42a8-b86f-83b0e47fe9c8"
+     "title": "BIS press release: BIS Issues Rule Addressing Remote Access to American Super Intelligence Technology (16 Nov 2026)",
+     "url": "https://www.bis.gov/press-release/bis-issues-rule-addressing-remote-access-american-super-intelligence-technology"
     },
     {
-     "title": "GSMArena: Nvidia halts its H200 chip sales to China",
-     "url": "https://www.gsmarena.com/nvidia_halts_its_h200_chip_sales_to_china_-news-75528.php"
+     "title": "Chinese Foreign Ministry press conference, 17 Nov 2026 (state media/official transcript)",
+     "url": "https://ee.china-embassy.gov.cn/eng/fyrth/202611/t20261117_12061159.htm"
     },
     {
-     "title": "The Register (not readable: paywall/script)",
+     "title": "The Register: Tencent says new US GPU ban 'sets everyone back in China'",
      "url": "https://www.theregister.com/systems/2026/11/19/chinese-web-giant-tencent-says-new-us-gpu-ban-sets-everyone-back-in-china/5310927"
     },
     {
-     "title": "The Information (not readable: HTTP 403)",
-     "url": "https://www.theinformation.com/articles/u-s-commerce-department-rushed-clear-nvidia-h200-exports-china"
+     "title": "The Register: US extends chip sale restrictions to more Asian countries",
+     "url": "https://www.theregister.com/off-prem/2026/11/17/us-extends-chip-sale-restrictions-to-more-asian-countries-to-reduce-risk-of-diversion-to-china/5310307"
+    },
+    {
+     "title": "Al Jazeera: US moves to block China's remote access to AI chips",
+     "url": "https://www.aljazeera.com/economy/2026/11/17/us-moves-to-block-chinas-remote-access-to-ai-chips-amid-nvidia-scandal"
+    },
+    {
+     "title": "Gibson Dunn client alert on the rule (18 Nov 2026)",
+     "url": "https://www.gibsondunn.com/bis-expands-advanced-computing-controls-to-address-data-center-remote-access-and-third-country-diversion/"
+    },
+    {
+     "title": "CSIS: New Export Controls on Remote Access",
+     "url": "https://www.csis.org/analysis/new-export-controls-remote-access-implications-industry-and-competition-china"
+    },
+    {
+     "title": "Tom's Hardware: New US rules aim to restrict remote access to AI servers",
+     "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/new-us-rules-aim-to-restrict-remote-access-to-ai-servers-and-infrastructure-seeks-to-combat-cloud-rental-workarounds-to-gpu-export-controls"
+    },
+    {
+     "title": "Business Model Analyst: Nvidia stops H200 sales to China (Jefferies estimate)",
+     "url": "https://businessmodelanalyst.com/nvidia-h200-china-exit-remote-access-rule-queue/"
     }
    ],
-   "coverage": "Covered by 5 outlets"
+   "coverage": "Covered by 8 outlets"
   },
   {
-   "id": "anthropic-ipo",
-   "headline": "Anthropic prices IPO at $83 a share, raising about $81.3B, largest on record",
-   "summary": "Anthropic priced its Nasdaq IPO at $83 a share, above the $70–$78 range, selling 980M shares for about $81.3B; trading set for 19 November.",
+   "id": "scattered-spider-sentence",
+   "headline": "Scattered Spider member Tyler Buchanan sentenced to six years in US federal prison",
+   "summary": "A Scottish national linked to Scattered Spider received 72 months for SMS phishing and SIM-swap thefts of at least $11.6M in cryptocurrency from US individuals. Restitution hearing set for 11 December.",
    "label": "CONFIRMED",
-   "labelBasis": "Company press release; multiple outlets report same figures.",
+   "labelBasis": "US DOJ press release (primary) with sentence, plea and co-defendant details.",
+   "severity": "Awareness",
+   "category": "law",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "17 Nov 2026 (US time, Tuesday) via US Attorney's Office, Central District of California press release; reported 18 Nov",
+   "sections": {
+    "happened": "Tyler Robert Buchanan, 24, of Dundee, was sentenced to 72 months by Judge John W. Holcomb in Santa Ana, California, on 17 November 2026. He pleaded guilty on 17 April to wire fraud conspiracy and aggravated identity theft. He is the fifth and final defendant sentenced.",
+    "technical": "Between September 2021 and April 2023, the group sent hundreds of smishing texts impersonating employers or IT/BPO suppliers to employees at at least a dozen companies. A phishing kit relayed credentials to a Telegram channel. SIM swaps bypassed SMS two-factor authentication to drain individual crypto wallets.",
+    "differing": "Securityaffairs and Malwarebytes give the Spanish arrest in Palma de Mallorca as May 2024; MLQ says June 2024. The DOJ release gives no arrest date. Plea-stage proceeds were $8M; the DOJ figure is $11.6M.",
+    "unknown": "Restitution amount is undetermined until the 11 December hearing. Cryptocurrencies stolen have not been identified publicly."
+   },
+   "sources": [
+    {
+     "title": "US Attorney's Office, Central District of California: British National Sentenced to 6 Years in Federal Prison (US DOJ press release, 17 Nov 2026)",
+     "url": "https://www.justice.gov/usao-cdca/pr/british-national-sentenced-6-years-federal-prison-hacking-companies-and-stealing-least"
+    },
+    {
+     "title": "Security Affairs: Scattered Spider Member Gets Six Years for Phishing and SIM-Swapping Attacks",
+     "url": "https://securityaffairs.com/203408/cyber-crime/scattered-spider-member-gets-six-years-for-phishing-and-sim-swapping-attacks.html"
+    },
+    {
+     "title": "Malwarebytes: Scattered Spider's phishing and SIM-swap tactics led to six-year sentence",
+     "url": "https://www.malwarebytes.com/blog/news/2026/11/scattered-spiders-phishing-and-sim-swap-tactics-led-to-six-year-sentence"
+    }
+   ],
+   "coverage": "Covered by 3 outlets"
+  },
+  {
+   "id": "trump-xi-putin-summit",
+   "headline": "Trump, Xi and Putin hold first trilateral summit in Shenzhen; four-point 'peace declaration' published",
+   "summary": "The US, Chinese and Russian presidents met for roughly 80 minutes in Shenzhen on 19 November. Xinhua published a four-point declaration on UN reform, refined-fuel supply, ICC jurisdiction and nuclear-risk dialogue; it does not mention Ukraine or Iran.",
+   "label": "CONFIRMED",
+   "labelBasis": "Meeting and declaration text are reported by multiple outlets (Al Jazeera, AFP via Korea Herald, Semafor, Kyiv Post, Euronews) with agency pool photographs, and the Kremlin spokesperson commented. The declaration text was published by Chinese state media (Xinhua); no US or Russian government release of the text was found.",
+   "severity": "Awareness",
+   "category": "geopolitics",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "10:58",
+   "sections": {
+    "happened": "Presidents Donald Trump, Xi Jinping and Vladimir Putin held what outlets describe as their first three-way meeting on 19 November 2026 in Shenzhen, on the sidelines of the APEC summit. Xi chaired. Semafor and Euronews put the length at about 80 minutes; CCTV, cited by CNN, said about an hour and a half. Trump said the three countries hold the largest nuclear arsenals and that they were \"making history\". Xi called for shedding a \"Cold War mentality\". Xinhua published the declaration at 18:58 Beijing time (10:58 UK). Euronews reported Trump and Putin left Shenzhen soon after. Reuters, per a secondary summary, reported no closing statements by the leaders.",
+    "technical": "Xinhua's text, titled \"China-Russia-U.S. Heads of State Declaration toward Peace\", has four points. (1) The three UN Security Council permanent members commit to reform the UN. (2) They plan to increase production and supply of refined petroleum products and reaffirm stable energy flows. (3) State consent and immunities of state officials are \"of paramount importance\"; the ICC and similar bodies must not abuse their jurisdiction. (4) A nuclear war cannot be won and must never be fought; the three will hold a dialogue on reducing nuclear risks and preventing proliferation. No dates, mechanisms or figures are given. Kyiv Post notes no mention of Ukraine; Al Jazeera notes none of the Iran war.",
+    "differing": "Semafor calls the summit long on symbolism and short on substance. Peskov said Ukraine was not the \"central topic\"; Trump had said he asked Xi to help on Ukraine. Trump said Xi agreed Hormuz must stay open and Iran must not obtain nuclear weapons; that is reported only through Trump. Al Jazeera says the energy pledge's delivery is unclear.",
+    "unknown": "No US or Russian government release of the text was found; wording rests on Xinhua. Unclear: whether it is binding, when the nuclear dialogue starts, and whether Putin attends next month's Miami G20."
+   },
+   "sources": [
+    {
+     "title": "Full text: China-Russia-U.S. Heads of State Declaration toward Peace (Xinhua, state media)",
+     "url": "https://english.news.cn/20261119/c15631ea3f054a278e3a3f592021f0da/c.html"
+    },
+    {
+     "title": "‘Groundbreaking’ Trump-Xi-Putin summit: Five key takeaways (Al Jazeera)",
+     "url": "https://www.aljazeera.com/news/2026/11/19/groundbreaking-trump-xi-putin-summit-five-key-takeaways"
+    },
+    {
+     "title": "Trump, Xi and Putin hold landmark talks in Shenzhen (Semafor)",
+     "url": "https://www.semafor.com/article/11/19/2026/trump-xi-and-putin-hold-landmark-talks-in-shenzhen"
+    },
+    {
+     "title": "Putin, Trump and Xi Call for UN Reform, Nuclear Dialogue in ‘Declaration on Peace’ (Kyiv Post)",
+     "url": "https://www.kyivpost.com/post/90605"
+    },
+    {
+     "title": "China, US, Russia leaders issue 'peace declaration' after summit (AFP via Korea Herald)",
+     "url": "https://www.koreaherald.com/article/10943254"
+    },
+    {
+     "title": "Trilateral summit ends with 'peace declaration' but no mention of Ukraine and Iran (Euronews)",
+     "url": "https://www.euronews.com/2026/11/19/us-and-china-want-to-help-end-ukraine-war-trump-says-ahead-of-trilateral-with-russia"
+    }
+   ],
+   "coverage": "Covered by 6 outlets"
+  },
+  {
+   "id": "gemini-4-neon",
+   "headline": "Google releases Gemini 4 Neon model",
+   "summary": "Google released Gemini 4 Neon on 18 November 2026, priced at $3 per million input and $15 per million output tokens, with a 1-million-token context window, for API, Gemini app and Antigravity users.",
+   "label": "CONFIRMED",
+   "labelBasis": "Google's own announcement and API release notes; multiple outlets report the same details.",
    "severity": "Awareness",
    "category": "ai",
    "uk": false,
    "microsoft": false,
-   "firstReported": "18 Nov 2026, US evening (approx. 23:00–00:00 UK) via Anthropic press release and Reuters pre-pricing reports",
+   "firstReported": "18 Nov 2026 (Google blog and Gemini API release notes); The Register, 19 Nov 2026 08:30 UTC",
    "sections": {
-    "happened": "Anthropic, PBC priced its IPO of Class A common stock at $83.00 per share on 18 November 2026, selling 980,000,000 shares (956,351,354 by the company). Shares are set to trade on Nasdaq as ANT on 19 November. Reported proceeds are about $81.3B, the largest IPO on record, above SpaceX's June offering.",
-    "technical": "Not a cyber item.",
-    "guidance": "",
-    "differing": "Valuation: about $1.5T on a fully diluted basis (CNBC, TechCrunch, AP); Globe and Mail reports about $1.1T non-diluted. Figures are consistent across outlets otherwise.",
-    "unknown": "First-day trading price and closing outcome; whether the 30-day underwriter option of 147M shares is exercised."
+    "happened": "Google announced Gemini 4 Neon on 18 November 2026, rolling it out in the Gemini API and AI Studio, Gemini for business, Antigravity for paid AI Pro and Ultra subscribers, and the Gemini app for Pro and Ultra subscribers. It sits between Hydrogen and Carbon in the Gemini 4 family. A cyber-focused variant is going to eligible Fairwind Program members.",
+    "technical": "Priced at $3 per million input tokens ($0.15 cached) and $15 per million output, with a 1M-token context window. Four thinking levels; default is high. Google cites 61 on the Artificial Analysis Intelligence Index at xhigh and 58.6 on its Coding Agent Index. Model code gemini-4-neon.",
+    "guidance": "Per Google: Fairwind Program members should contact their Cloud account team to request access to the cyber variant. Google recommends testing thinking levels and choosing the lowest that meets quality needs.",
+    "differing": "Scores are Google's own claims or third-party indices it cites; independent verification is limited. Notebookcheck notes Neon is not available to free users. Unite.AI notes the 32% saving is per task at default thinking, not per token.",
+    "unknown": "Full Safety & Security Report was promised in coming days. Fairwind rollout timing and scope beyond eligible members are not detailed."
    },
    "sources": [
     {
-     "title": "Anthropic prices initial public offering (Anthropic, primary)",
+     "title": "Introducing Gemini 4 Neon (Google blog)",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+    },
+    {
+     "title": "Gemini 4 Neon model card (Google DeepMind)",
+     "url": "https://deepmind.google/models/model-cards/gemini-4-neon/"
+    },
+    {
+     "title": "The Register: Google continues model chemistry experiment with Neon",
+     "url": "https://www.theregister.com/ai-and-ml/2026/11/19/google-continues-model-chemistry-experiment-with-neon/5310934"
+    },
+    {
+     "title": "Unite.AI: Google Launches Gemini 4 Neon",
+     "url": "https://www.unite.ai/google-launches-gemini-4-neon-for-coding-knowledge-work-and-science/"
+    }
+   ],
+   "coverage": "Covered by 4 outlets"
+  },
+  {
+   "id": "crimean-bridge-strikes",
+   "headline": "Ukraine strikes Crimean Bridge rail section for third time in a week; Putin rules out partial ceasefires and vows retaliation",
+   "summary": "Ukraine said Neptune missiles hit the Crimean Bridge's rail section overnight on 18–19 November, after strikes on 16 and 17 November collapsed a road span. Russia briefly halted trains. Putin later ruled out partial truces and promised a response.",
+   "label": "CONFIRMED",
+   "labelBasis": "Both Ukraine (General Staff, Defence Ministry) and Russia (Transport Ministry, Crimea's Moscow-installed head, Putin) acknowledge the strikes and the suspension of rail traffic; reported by multiple outlets. Damage extent is contested.",
+   "severity": "Medium",
+   "category": "infra-attack",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "Overnight 18–19 Nov 2026 (Aksyonov confirmed just after midnight local time; Kyiv Independent published 00:04 GMT on 19 Nov)",
+   "sections": {
+    "happened": "Ukraine struck the 19 km Kerch (Crimean) Bridge overnight on 18–19 November, the third attack in a week after strikes on 16 and 17 November. The 17 November strike destroyed a metal arch and road span; road traffic has been impossible since. Ukraine's Defence Ministry said Neptune missiles hit near the arch and on the rail tracks, halting trains. Russia's Transport Ministry said no one was hurt and rail services were temporarily suspended. Crimea's Moscow-installed head, Sergei Aksyonov, said rail would resume around 16:00 local time (13:00 GMT). Speaking after a Shenzhen summit with Trump and Xi, Putin said Russia would not negotiate partial ceasefires and that its response would be \"far more painful\".",
+    "technical": "Kinetic strike, not a cyber incident. Ukraine's General Staff attributed the 19 November attack to Ukrainian Navy Neptune coastal-defence missiles. For 17 November, Zelensky said Palianytsia drones hit the road section, while Neptune missiles, Ruta and FP-5 (Flamingo) weapons hit the rail section, as the seventh phase of a multi-week operation that first targeted air defences, radars and electronic-warfare assets. Ukraine's SBU said it destroyed one arch and the road span beneath it. Ukraine stated the weapons were domestically produced. Russia's Investigative Committee opened a terrorism case on 17 November. No ATT&CK, CVE or IOC data apply.",
+    "guidance": "Russian officials published: Deputy PM Marat Khusnullin said a restoration plan with three options was agreed, timelines would be assessed within a week, and parts could reopen in one to two months. Crimea's government said free boats run from 20 November between Crimea and Port Kavkaz; fuel in canisters is not allowed aboard. Peskov said the bridge would be rebuilt.",
+    "differing": "Ukraine's General Staff calls the bridge the main route for Russian fuel, ammunition and equipment. Putin says it has long not been used for military equipment, ammunition or fuel; Reuters notes Russian forces rely more on a land corridor. Krymsky Veter eyewitnesses said the rail arch looked undamaged; Putin said the rail section was already restored.",
+    "unknown": "Extent of rail damage, whether services have normalised, and the nature and timing of Russia's promised response remain unknown. Reconstruction estimates differ: one Ukrainian expert said a year or more; Russian officials cite one to two months for parts."
+   },
+   "sources": [
+    {
+     "title": "Ukrinform: Neptune missile strike damages railway track on Crimean Bridge -- General Staff (quoting General Staff Facebook post)",
+     "url": "https://www.ukrinform.net/rubric-ato/4186350-neptune-missile-strike-damages-railway-track-on-crimean-bridge-general-staff.html"
+    },
+    {
+     "title": "Interfax: Putin says Russia's response to Crimean Bridge strikes will be more painful (Russian)",
+     "url": "https://www.interfax.ru/russia/1130160"
+    },
+    {
+     "title": "Gazeta.Ru via Mail.ru: Putin, Khusnullin, Nikitin on bridge response and restoration (Russian)",
+     "url": "https://news.mail.ru/economics/73162642/"
+    },
+    {
+     "title": "Moscow Times (Reuters): Traffic suspended over Crimean Bridge after attack",
+     "url": "https://www.themoscowtimes.com/2026/11/19/traffic-suspended-over-crimean-bridge-after-attack-moscow-installed-official-says-a94306"
+    },
+    {
+     "title": "Euronews: Ukraine strikes key bridge linking Russia and Crimea for third time this week, halting rail traffic",
+     "url": "https://www.euronews.com/2026/11/19/ukraine-strikes-key-bridge-linking-russia-and-crimea-for-third-time-this-week-halting-rail"
+    },
+    {
+     "title": "Meduza: Train traffic across Crimean Bridge suspended after another Ukrainian strike",
+     "url": "https://meduza.io/en/news/2026/11/19/ukraine-strikes-crimean-bridge-again-halting-train-traffic"
+    },
+    {
+     "title": "Meduza: Putin: Russia refuses to negotiate ceasefire with Ukraine after strikes on Crimean Bridge",
+     "url": "https://meduza.io/en/news/2026/11/19/putin-russia-refuses-to-negotiate-ceasefire-with-ukraine-after-strikes-on-crimean-bridge"
+    },
+    {
+     "title": "Kyiv Independent: Entire section of Crimean Bridge collapses after 'seven-phase operation,' Zelensky reveals",
+     "url": "https://kyivindependent.com/ukrainian-forces-reportedly-strike-crimean-bridge-after-russian-missiles-hit-kyiv-bridges/"
+    },
+    {
+     "title": "Kyiv Independent: Ukrainian forces once more hit Russia's Crimean Bridge, days after devastating strike",
+     "url": "https://kyivindependent.com/ukrainian-forces-once-more-hit-russias-crimean-bridge-days-after-devastating-strike/"
+    }
+   ],
+   "coverage": "Covered by 7 outlets"
+  },
+  {
+   "id": "anthropic-ipo",
+   "headline": "Anthropic prices record IPO at $83 a share, raising $81.3bn; Nasdaq trading as ANT due 19 November",
+   "summary": "Anthropic priced its IPO at $83 a share, above the $70–$78 range, selling 980 million shares for about $81.3bn, the largest listing on record. With a $26bn private placement the total is $107.3bn. Nasdaq trading as ANT is due today.",
+   "label": "CONFIRMED",
+   "labelBasis": "Anthropic's own pricing announcement (18 Nov) gives price, share count, listing venue and ticker; Reuters, CNBC, CNN, Bloomberg and others report the same figures and the $81.3bn proceeds. SEC 424(b)(4) prospectus could not be opened by the researcher.",
+   "severity": "Awareness",
+   "category": "tech",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "22:11",
+   "sections": {
+    "happened": "Anthropic, PBC announced on 18 November that it priced its IPO of Class A common stock at $83.00 a share, above the $70–$78 range set when the roadshow launched on 10 November (825 million shares). The offering was upsized to 980 million shares: 956,351,354 sold by Anthropic and 23,648,646 by selling stockholders. At $83 that is about $81.3bn, which Reuters and CNN report as exceeding SpaceX's $75bn June IPO. A separate $26bn private placement brings the total to $107.3bn (Reuters, Bloomberg). Shares are due to start trading on Nasdaq under \"ANT\" on 19 November (US market open is 14:30 UK); closing is expected 20 November.",
+    "technical": "Figures from Anthropic's announcement and Reuters. The registration statement was declared effective by the SEC on 18 November. Underwriters hold a 30-day option on up to 147 million more shares. Goldman Sachs and Morgan Stanley lead a 22-bank syndicate (Reuters). Reuters reports a fully diluted valuation of about $1.5tn and about $1.1tn undiluted. Calcalist reports the placement is non-voting shares sold to AMD, Broadcom, Google, Micron, Microsoft, Nvidia and TSMC. Reuters, citing the filing, reports $81bn annualised revenue run-rate at 31 October, Q3 revenue of $16.96bn, an operating loss of $567m, and nearly $900bn of compute commitments.",
+    "guidance": "Anthropic's announcement says the offering is made only by means of a prospectus, available from Goldman Sachs and Morgan Stanley, and that closing is subject to customary conditions. It states it will not receive proceeds from the selling stockholders' shares.",
+    "differing": "Headline totals differ by basis: $81.3bn is the public offering including selling stockholders' shares; $107.3bn adds the $26bn private placement (Semafor leads with $107bn). Valuation is quoted as about $1.5tn fully diluted by Reuters and about $1.1tn non-diluted. Reuters notes Anthropic faces questions on growth and spending; Semafor cites US regulation and infrastructure-funding risks.",
+    "unknown": "The opening price and first-day performance were not known at time of writing. Bloomberg reported gray-market indications of a 22–26% rise, which are not trading results. The researcher could not open the SEC 424(b)(4) filing."
+   },
+   "sources": [
+    {
+     "title": "Anthropic: Anthropic prices initial public offering (18 Nov 2026)",
      "url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering"
     },
     {
-     "title": "Anthropic prices IPO at $83 a share, above projected range (TechCrunch)",
+     "title": "Anthropic: roadshow launch (10 Nov 2026)",
+     "url": "https://www.anthropic.com/news/roadshow-launch"
+    },
+    {
+     "title": "SEC EDGAR: Anthropic, PBC 424(b)(4) prospectus (not opened)",
+     "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm"
+    },
+    {
+     "title": "Reuters via Euronext Live: Anthropic raises record $81 billion in IPO at $1.5 trillion valuation",
+     "url": "https://live.euronext.com/en/financial-news/anthropic-raises-record-81-billion-ipo-15-trillion-valuation"
+    },
+    {
+     "title": "Semafor: Anthropic raises record sums in IPO",
+     "url": "https://www.semafor.com/article/11/19/2026/anthropic-poised-for-record-ipo-in-bellwether-for-ai-boom"
+    },
+    {
+     "title": "TechCrunch: Anthropic prices IPO at $83 a share, above projected range",
      "url": "https://techcrunch.com/2026/11/18/anthropic-reportedly-prices-ipo-at-83-a-share-above-projected-range/"
     },
     {
-     "title": "Anthropic IPO raises over $81 billion in largest offering on record (CNBC)",
-     "url": "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html"
+     "title": "RTÉ (Reuters): Anthropic raises record $81 billion in IPO",
+     "url": "https://www.rte.ie/news/business/2026/1119/1599784-anthropic-raises-81-billion-in-ipo/"
     },
     {
-     "title": "Anthropic prices its IPO at $83 per share (PBS NewsHour/AP)",
-     "url": "https://www.pbs.org/newshour/economy/anthropic-prices-its-ipo-at-83-per-share-valuing-the-ai-giant-at-1-5-trillion"
+     "title": "Calcalist: Anthropic prices IPO at $83",
+     "url": "https://www.calcalistech.com/ctechnews/article/ddyq1vva9"
     },
     {
-     "title": "Anthropic prices IPO at $83 a share (Globe and Mail)",
-     "url": "https://www.theglobeandmail.com/business/article-anthropic-prices-ipo-at-83-a-share-above-targeted-range-source-says/"
+     "title": "France 24: AI lab Anthropic sets stock market record with $81 billion IPO (not opened)",
+     "url": "https://www.france24.com/en/tv-shows/business/20261119-ai-lab-anthropic-sets-stock-market-record-with-81-billion-ipo"
+    },
+    {
+     "title": "The Information: Anthropic prices IPO at $83 a share (not opened)",
+     "url": "https://www.theinformation.com/briefings/anthropic-prices-ipo-83-share"
     }
    ],
-   "coverage": "Covered by 5 outlets"
+   "coverage": "Covered by 9 outlets"
   }
  ],
- "analysis": [],
- "patchWatch": [
+ "analysis": [
   {
-   "product": "OpenJDK (Java4Shell)",
-   "cve": "CVE-2026-114938",
-   "cvss": "unknown",
-   "exploited": "unknown",
-   "fixed": "Patched per OpenJDK; see item",
-   "ref": "java4shell-openjdk"
+   "title": "Server-side flaws clustered",
+   "text": "Java4Shell, the NGINX2Root set, Apache Roller and the Perforce Puppet flaw all concern widely deployed server software, and each has public exploit detail or reported exploitation. They are separate disclosures with no reported link between them."
+  }
+ ],
+ "alsoReported": [
+  {
+   "headline": "GTA VI launch scams and British hacker prosecution over GTA data breach",
+   "url": "https://www.computerweekly.com/news/366654629/The-cyber-threats-to-businesses-from-Grand-Theft-Auto-VI",
+   "outlets": 5,
+   "category": "claim",
+   "regions": [
+    "americas",
+    "europe",
+    "global",
+    "uk",
+    "us"
+   ]
   },
   {
-   "product": "Apache Roller",
+   "headline": "Palo Alto Networks to buy Applied Compute for \\$4.5B",
+   "url": "https://www.securityweek.com/palo-alto-networks-to-buy-ai-startup-applied-compute-for-4-5-billion/",
+   "outlets": 3,
+   "category": "tech",
+   "regions": [
+    "europe",
+    "global"
+   ]
+  },
+  {
+   "headline": "US tech outages hit spy agency, Apple and others; resilience debate",
+   "url": "https://www.computerweekly.com/news/366654898/US-tech-outages-spark-conversation-on-resilience-in-the-age-of-AI",
+   "outlets": 4,
+   "category": "outage",
+   "regions": [
+    "global",
+    "uk",
+    "us"
+   ]
+  },
+  {
+   "headline": "AI models find vulnerabilities; autonomous AI attacks warnings",
+   "url": "https://www.infosecurity-magazine.com/news/ai-models-vulnerability-findings/",
+   "outlets": 5,
+   "category": "ai",
+   "regions": [
+    "americas",
+    "europe",
+    "uk",
+    "us"
+   ]
+  },
+  {
+   "headline": "Nvidia leadership change and staff retention",
+   "url": "https://www.theinformation.com/briefings/hands-nvidia-interim-ceo-tried-reassure-employees-prevent-talent-loss",
+   "outlets": 3,
+   "category": "tech",
+   "regions": [
+    "east-asia",
+    "global"
+   ]
+  },
+  {
+   "headline": "Germany and Austria push EU to force TikTok local owner",
+   "url": "https://www.techmeme.com/261119/p21#a261119p21",
+   "outlets": 2,
+   "category": "law",
+   "regions": [
+    "global"
+   ]
+  },
+  {
+   "headline": "Surveillance: ALPR and automotive data access by intelligence agencies",
+   "url": "https://www.eff.org/deeplinks/2026/11/voters-reject-alprs-and-surveillance-tech-ballot-box",
+   "outlets": 2,
+   "category": "surveillance",
+   "regions": [
+    "europe",
+    "us"
+   ]
+  },
+  {
+   "headline": "France blames Iran for fridge cyberattack",
+   "url": "https://www.schneier.com/blog/archives/2026/11/france-is-blaming-iran-for-the-fridge-cyberattack.html",
+   "outlets": 1,
+   "category": "geopolitics",
+   "regions": [
+    "us"
+   ]
+  }
+ ],
+ "patchWatch": [
+  {
+   "product": "Apache Roller 4.0.0-6.1.4",
    "cve": "CVE-2026-129448",
-   "cvss": "unknown",
+   "cvss": "9.8",
    "exploited": "yes",
-   "fixed": "See item",
+   "fixed": "6.1.6",
    "ref": "apache-roller-rce"
   },
   {
-   "product": "PHP",
-   "cve": "PHP2Shell flaws",
+   "product": "OpenJDK 17+ (x86-64 AVX-512 VBMI)",
+   "cve": "CVE-2026-114938",
+   "cvss": "8.1 (Oracle) / 9.2 (Calif)",
+   "exploited": "unknown",
+   "fixed": "17.0.21.1, 21.0.13.1, 25.0.5.1, 27.0.1.1",
+   "ref": "java4shell-openjdk"
+  },
+  {
+   "product": "NGINX (HTTP/2, HTTP/3, resolver, mail)",
+   "cve": "CVE-2026-123007 and four others",
+   "cvss": "unknown",
+   "exploited": "unknown",
+   "fixed": "1.31.9 / 1.30.7",
+   "ref": "nginx2root-flaws"
+  },
+  {
+   "product": "Perforce Puppet Enterprise",
+   "cve": "CVE-2026-115731",
    "cvss": "unknown",
    "exploited": "yes",
-   "fixed": "Release scheduled 19 Nov",
-   "ref": "php-critical-release"
+   "fixed": "PE 2026.0.1, 2025.12.1, 2023.8.13",
+   "ref": "perforce-puppet-kev"
+  },
+  {
+   "product": "PHP session upload progress",
+   "cve": "CVE-2026-115560",
+   "cvss": "unknown",
+   "exploited": "unknown",
+   "fixed": "release scheduled 19 Nov",
+   "ref": "php-critical-rce-release"
   }
  ],
  "comingUp": [
   {
    "date": "2026-11-19",
-   "text": "PHP critical security release scheduled, 14:00-14:30 UTC, per php.net."
+   "text": "PHP critical security release scheduled."
   }
  ],
  "watching": [
-  "Five critical NGINX flaws ('nginx2root') with public proofs of concept reported by several outlets; not researched in this brief."
+  "Whether Wellington IT's breach is linked to wider incidents at other Irish financial service providers."
  ]
 }
