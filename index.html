@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security Brief</title>
+<meta name="description" content="Daily cybersecurity and major-outage briefing.">
+<link rel="stylesheet" href="style.css">
+<link rel="alternate" type="application/rss+xml" title="Security Brief" href="data/feed.xml">
+</head>
+<body>
+
+<div class="ticker" role="region" aria-label="Breaking headlines">
+  <div class="ticker-label">LIVE</div>
+  <div class="ticker-viewport"><div class="ticker-track" id="tickerTrack"><span class="ticker-empty">Loading headlines…</span></div></div>
+  <div class="ticker-updated" id="tickerUpdated"></div>
+</div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#" id="brand">Security Brief</a>
+    <div class="header-actions">
+      <a class="head-link" href="about.html">About and method</a>
+      <button id="themeBtn" class="icon-btn" aria-label="Toggle light or dark theme" title="Toggle theme">◐</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="datenav" aria-label="Brief history">
+    <button id="olderBtn" class="nav-btn">← Older</button>
+    <div class="datenav-mid">
+      <select id="dateSelect" aria-label="Choose a brief"></select>
+    </div>
+    <button id="newerBtn" class="nav-btn">Newer →</button>
+  </nav>
+
+  <div id="status" class="status" hidden></div>
+
+  <article id="brief" hidden>
+    <div class="brief-head">
+      <h1 id="briefTitle"></h1>
+      <p class="muted" id="briefMeta"></p>
+      <div id="sampleBanner" class="sample-banner" hidden>Sample data: this page is showing placeholder content so you can check the layout. Real briefs replace it.</div>
+    </div>
+
+    <section aria-labelledby="top-h">
+      <h2 id="top-h">Top stories</h2>
+      <div class="top3" id="top3"></div>
+    </section>
+
+    <section id="ongoingSection" aria-labelledby="ong-h" hidden>
+      <h2 id="ong-h">Ongoing issues</h2>
+      <div class="ongoing" id="ongoing"></div>
+    </section>
+
+
+    <nav id="sectionNav" class="section-nav" aria-label="Jump to section" hidden></nav>
+
+    <div class="filterbar" id="filterbar" hidden>
+      <span class="muted">Show:</span>
+      <div class="filters" id="filters" role="group" aria-label="Filter stories by confidence"></div>
+    </div>
+
+    <div id="categoriesCyber"></div>
+
+    <section id="microsoftSection" aria-labelledby="ms-h" hidden>
+      <h2 id="ms-h">Microsoft</h2>
+      <div id="microsoft"></div>
+    </section>
+
+    <section id="ukSection" aria-labelledby="uk-h" hidden>
+      <h2 id="uk-h">UK focus</h2>
+      <div id="uk"></div>
+    </section>
+
+    <section id="patchSection" aria-labelledby="patch-h" hidden>
+      <h2 id="patch-h">Patch watch</h2>
+      <div class="table-wrap"><table class="patch" id="patchTable"></table></div>
+    </section>
+
+    <section id="comingSection" aria-labelledby="coming-h" hidden>
+      <h2 id="coming-h">Coming up</h2>
+      <ul class="coming" id="coming"></ul>
+    </section>
+
+    <div id="globalHeader" class="group-head" hidden><h2 class="group-title">Global tech</h2></div>
+    <div id="categoriesGlobal"></div>
+
+    <section id="claimsSection" aria-labelledby="claims-h" hidden>
+      <h2 id="claims-h">Claim tracker</h2>
+      <div class="table-wrap"><table class="patch" id="claimsTable"></table></div>
+    </section>
+
+    <section id="watchingSection" aria-labelledby="watch-h" hidden>
+      <h2 id="watch-h">Watching</h2>
+      <ul class="plain" id="watching"></ul>
+    </section>
+
+    <section id="sweptSection" aria-labelledby="swept-h" hidden>
+      <h2 id="swept-h">Sources swept</h2>
+      <p class="muted" id="swept"></p>
+    </section>
+  </article>
+</main>
+
+<footer class="wrap site-footer">
+  <p class="muted">Generated automatically. Labels: <b class="tag t-confirmed">CONFIRMED</b> verified by the affected party or multiple reputable outlets · <b class="tag t-vendor">VENDOR-ACKNOWLEDGED</b> vendor has said something, details thin · <b class="tag t-unconfirmed">UNCONFIRMED CLAIM</b> a claim or rumour, not verified.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

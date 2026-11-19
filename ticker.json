@@ -1,0 +1,25 @@
+{
+ "updated": "2026-11-19T09:00:00Z",
+ "items": [
+  {
+   "time": "2026-11-19T08:40:00Z",
+   "severity": "High",
+   "label": "CONFIRMED",
+   "text": "Sample: Optimizely says malicious script injection is patched, scope still unclear",
+   "url": "#2026-11-18/optimizely"
+  },
+  {
+   "time": "2026-11-19T08:10:00Z",
+   "severity": "Medium",
+   "label": "CONFIRMED",
+   "text": "Sample: Apple outage root cause attributed to an internal update",
+   "url": "#2026-11-17/apple-outage"
+  },
+  {
+   "time": "2026-11-19T07:30:00Z",
+   "label": "UNCONFIRMED CLAIM",
+   "text": "Sample: example ransomware claim against a large company, not verified",
+   "url": "#2026-11-18/example-claim"
+  }
+ ]
+}
