@@ -25,11 +25,6 @@
   "region": "uk"
  },
  {
-  "name": "UKAuthority",
-  "url": "https://www.ukauthority.com/feed/",
-  "region": "uk"
- },
- {
   "name": "BleepingComputer",
   "url": "https://www.bleepingcomputer.com/feed/",
   "region": "global"
@@ -93,11 +88,6 @@
   "name": "Report URI",
   "url": "https://blog.report-uri.com/rss/",
   "region": "uk"
- },
- {
-  "name": "Risky Business",
-  "url": "https://risky.biz/feeds/risky-bulletin/",
-  "region": "global"
  },
  {
   "name": "Citizen Lab",
@@ -192,7 +182,7 @@
  },
  {
   "name": "OCCRP",
-  "url": "https://www.occrp.org/en/rss",
+  "url": "https://www.occrp.org/en/news/feed",
   "region": "global"
  },
  {
@@ -339,11 +329,6 @@
   "region": "east-asia"
  },
  {
-  "name": "KrASIA",
-  "url": "https://kr-asia.com/feed",
-  "region": "east-asia"
- },
- {
   "name": "iThome",
   "url": "https://www.ithome.com.tw/rss",
   "region": "east-asia"
@@ -419,11 +404,6 @@
   "url": "https://www.scmp.com/rss/92/feed",
   "region": "east-asia",
   "max": 8
- },
- {
-  "name": "CnTechPost",
-  "url": "https://cntechpost.com/feed/",
-  "region": "east-asia"
  },
  {
   "name": "Sixth Tone",
@@ -558,7 +538,7 @@
  },
  {
   "name": "Kyiv Independent",
-  "url": "https://kyivindependent.com/feed/",
+  "url": "https://kyivindependent.com/feed/rss/",
   "region": "russia-ukraine",
   "max": 6
  },
@@ -591,5 +571,155 @@
   "url": "https://www.batimes.com.ar/feed",
   "region": "americas",
   "max": 5
+ },
+ {
+  "name": "Nature",
+  "url": "https://www.nature.com/nature.rss",
+  "region": "global",
+  "max": 8
+ },
+ {
+  "name": "Science (AAAS) News",
+  "url": "https://www.science.org/rss/news_current.xml",
+  "region": "us",
+  "max": 8
+ },
+ {
+  "name": "New Scientist",
+  "url": "https://www.newscientist.com/feed/home/",
+  "region": "uk",
+  "max": 8
+ },
+ {
+  "name": "Scientific American",
+  "url": "http://rss.sciam.com/ScientificAmerican-Global",
+  "region": "us",
+  "max": 6
+ },
+ {
+  "name": "Quanta Magazine",
+  "url": "https://api.quantamagazine.org/feed/",
+  "region": "us",
+  "max": 5
+ },
+ {
+  "name": "Ars Technica Science",
+  "url": "https://feeds.arstechnica.com/arstechnica/science",
+  "region": "us",
+  "max": 6
+ },
+ {
+  "name": "Phys.org",
+  "url": "https://phys.org/rss-feed/breaking/",
+  "region": "global",
+  "max": 6
+ },
+ {
+  "name": "MIT Technology Review",
+  "url": "https://www.technologyreview.com/feed/",
+  "region": "us",
+  "max": 6
+ },
+ {
+  "name": "The Conversation UK",
+  "url": "https://theconversation.com/uk/articles.atom",
+  "region": "uk",
+  "max": 6
+ },
+ {
+  "name": "ESA",
+  "url": "https://www.esa.int/rssfeed/Our_Activities/Space_Science",
+  "region": "europe",
+  "max": 4
+ },
+ {
+  "name": "NASA",
+  "url": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+  "region": "us",
+  "max": 4
+ },
+ {
+  "name": "UKRI",
+  "url": "https://www.ukri.org/news/feed/",
+  "region": "uk",
+  "max": 6
+ },
+ {
+  "name": "UK DSIT",
+  "url": "https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology.atom",
+  "region": "uk",
+  "max": 6
+ },
+ {
+  "name": "Times Higher Education",
+  "url": "https://www.timeshighereducation.com/rss",
+  "region": "uk",
+  "max": 6
+ },
+ {
+  "name": "Science|Business",
+  "url": "https://sciencebusiness.net/rss.xml",
+  "region": "europe",
+  "max": 6
+ },
+ {
+  "name": "AIP FYI",
+  "url": "https://www.aip.org/fyi/feed",
+  "region": "us",
+  "max": 5
+ },
+ {
+  "name": "CORDIS EU Research",
+  "url": "https://cordis.europa.eu/news/rss",
+  "region": "europe",
+  "max": 5
+ },
+ {
+  "name": "Euractiv",
+  "url": "https://www.euractiv.com/feed/",
+  "region": "europe",
+  "max": 6
+ },
+ {
+  "name": "National Geographic",
+  "url": "https://www.nationalgeographic.com/pages/feed",
+  "region": "global",
+  "max": 6
+ },
+ {
+  "name": "Smithsonian Magazine",
+  "url": "https://www.smithsonianmag.com/rss/latest_articles/",
+  "region": "us",
+  "max": 5
+ },
+ {
+  "name": "Atlas Obscura",
+  "url": "https://www.atlasobscura.com/feeds/latest",
+  "region": "global",
+  "max": 5
+ },
+ {
+  "name": "Mongabay",
+  "url": "https://news.mongabay.com/feed/",
+  "region": "global",
+  "max": 6
+ },
+ {
+  "name": "Yale E360",
+  "url": "https://e360.yale.edu/feed.xml",
+  "region": "us",
+  "max": 4
+ },
+ {
+  "name": "The Guardian Travel",
+  "url": "https://www.theguardian.com/travel/rss",
+  "region": "uk",
+  "max": 5
+ },
+ {
+  "name": "The Guardian Environment",
+  "url": "https://www.theguardian.com/environment/rss",
+  "region": "uk",
+  "max": 6
  }
 ]

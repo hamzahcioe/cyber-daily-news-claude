@@ -17,7 +17,7 @@ Add `"sample": true` to an entry to show the sample-data banner. Remove sample e
   "top": [ {headline, summary, label, severity, coverage, ref} ],        // exactly 3, ref = item id
   "ongoing": [ {headline, label, severity, since, status, latest, ref, log:[{date,text}]} ], // carried over from earlier days until closed
   "items": [ {
-      "id": "unique-slug", "category": "outage|attack|breach|leak|claim|supply-chain|vuln|law|geopolitics|ai|infra-attack|surveillance|world|economy|energy|tech|other",
+      "id": "unique-slug", "category": "outage|attack|breach|leak|claim|supply-chain|vuln|law|geopolitics|ai|infra-attack|surveillance|world|economy|energy|science|research-policy|nature|tech|other",
       "uk": false, "microsoft": false,   // focus flags; flagged items are also listed in the UK / Microsoft sections "headline": "...", "summary": "one-line summary shown when collapsed",
       "label": "CONFIRMED | VENDOR-ACKNOWLEDGED | UNCONFIRMED CLAIM",
       "severity": "Critical|High|Medium|Low|Awareness", "coverage": "Covered by N outlets",

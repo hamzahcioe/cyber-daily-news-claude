@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0f0e0d">
 <title>Security Brief</title>
-<meta name="description" content="Daily cybersecurity, outage, technology and major international news, with analysis of the news.">
+<meta name="description" content="Daily cybersecurity, outage, technology, science and major international news. News only.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,500..900&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
@@ -18,7 +18,7 @@
 <div class="shell">
   <aside class="rail" aria-label="Navigation">
     <div class="rail-inner">
-      <a class="brand" href="#" id="brand">Security Brief<span class="brand-sub">Cyber, outages, tech and world news</span></a>
+      <a class="brand" href="#" id="brand">Security Brief<span class="brand-sub">Cyber, tech, science and world news</span></a>
 
       <nav class="datenav" aria-label="Brief history">
         <select id="dateSelect" aria-label="Choose a brief"></select>
@@ -57,11 +57,6 @@
         <div class="top3" id="top3"></div>
       </section>
 
-      <section id="analysisSection" data-nav="Analysis" aria-labelledby="an-h" hidden>
-        <h2 id="an-h">Analysis</h2>
-        <ul class="analysis" id="analysis"></ul>
-      </section>
-
       <section id="ongoingSection" data-nav="Ongoing issues" aria-labelledby="ong-h" hidden>
         <h2 id="ong-h">Ongoing issues</h2>
         <div class="ongoing" id="ongoing"></div>
@@ -78,6 +73,8 @@
         <h2 id="uk-h">UK focus</h2>
         <div id="uk"></div>
       </section>
+
+      <div id="categoriesVuln"></div>
 
       <section id="patchSection" data-nav="Patch watch" aria-labelledby="patch-h" hidden>
         <h2 id="patch-h">Patch watch</h2>
@@ -100,10 +97,7 @@
         <ul class="also" id="also"></ul>
       </section>
 
-      <section id="watchingSection" data-nav="Watching" aria-labelledby="watch-h" hidden>
-        <h2 id="watch-h">Watching</h2>
-        <ul class="plain" id="watching"></ul>
-      </section>
+      <div id="categoriesNature"></div>
     </article>
 
     <footer class="site-footer">

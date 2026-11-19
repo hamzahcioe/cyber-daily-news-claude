@@ -66,23 +66,14 @@ h2 .count{font:500 .85rem var(--body);color:var(--muted);font-variant-numeric:ta
 [data-sev="Critical"]{--sevc:var(--crit)} [data-sev="High"]{--sevc:var(--high)} [data-sev="Medium"]{--sevc:var(--med)} [data-sev="Low"]{--sevc:var(--low)} [data-sev="Awareness"]{--sevc:var(--aware)}
 
 /* ---------- top stories ---------- */
-.top3{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:.9rem}
+.top3{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem}
 .top-card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1.1rem 1.3rem 1.2rem}
 .top-card .rank{font:800 1.5rem/1 var(--display);color:var(--sevc,var(--muted));display:block;margin-bottom:.45rem}
 .top-card h3{margin:0 0 .65rem;font-size:1.2rem;line-height:1.2;font-weight:700}
 .top-card p{margin:.7rem 0 0;color:#d6cfc7}
 .top-card .item-meta{padding:0}
-.top-card.lead{grid-row:span 2;padding:1.6rem 1.8rem 1.7rem;background:linear-gradient(180deg,var(--accent-bg),transparent 55%),var(--surface);border-color:#4a2a17}
-.top3[data-n="4"] .top-card.lead{grid-row:span 3}
-.top-card.lead .rank{color:var(--accent)}
-.top-card.lead h3{font-size:clamp(1.6rem,2.6vw,2.2rem);line-height:1.1;font-weight:800;font-stretch:85%;letter-spacing:-.02em}
-.top-card.lead p{font-size:1.05rem}
 .top-card a{font-weight:500}
 
-/* ---------- analysis ---------- */
-.analysis{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.8rem 2.2rem}
-.analysis li{border-top:2px solid var(--accent);padding-top:.8rem;max-width:62ch}
-.analysis strong{display:block;font:700 1.12rem/1.25 var(--display);font-stretch:90%;margin-bottom:.35rem}
 
 /* ---------- ongoing ---------- */
 .ongoing{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:.8rem}
@@ -149,7 +140,6 @@ table.patch tr:last-child td{border-bottom:0}
 /* ---------- narrow screens ---------- */
 @media (max-width:1100px){
   .top3{grid-template-columns:1fr}
-  .top-card.lead{grid-row:auto}
   .item-body{grid-template-columns:1fr}
   .col-side{border-left:0;padding-left:0;border-top:1px solid var(--line);margin-top:.6rem}
 }

@@ -13,7 +13,7 @@
     { id: 'leak',         title: 'Data leaks and exposures' },
     { id: 'claim',        title: 'Ransomware and unconfirmed claims' },
     { id: 'supply-chain', title: 'Supply chain' },
-    { id: 'vuln',         title: 'Vulnerabilities and active exploitation' },
+    { id: 'vuln',         title: 'Major vulnerabilities and active exploitation' },
     { id: 'law',          title: 'Law enforcement and policy' },
     { id: 'other',        title: 'Other' }
   ];
@@ -23,11 +23,14 @@
     { id: 'geopolitics',  title: 'Geopolitics and tech' },
     { id: 'ai',           title: 'AI developments' },
     { id: 'energy',       title: 'Energy and climate tech' },
+    { id: 'science',      title: 'Science and discovery' },
+    { id: 'research-policy', title: 'Research and innovation policy' },
     { id: 'infra-attack', title: 'Physical and infrastructure attacks' },
     { id: 'surveillance', title: 'State spying and surveillance' },
     { id: 'tech',         title: 'Major tech news' }
   ];
-  var CATEGORIES = CYBER.concat(GLOBAL);
+  var NATURE = [{ id: 'nature', title: 'Travel and nature' }];
+  var CATEGORIES = CYBER.concat(GLOBAL, NATURE);
   var LABELS = {
     'CONFIRMED': { cls: 't-confirmed', text: 'CONFIRMED' },
     'VENDOR-ACKNOWLEDGED': { cls: 't-vendor', text: 'VENDOR-ACKNOWLEDGED' },
@@ -131,7 +134,7 @@
     $('top3').setAttribute('data-n', String((b.top || []).length));
     $('top3').innerHTML = (b.top || []).map(function (t, i) {
       var link = t.ref ? '<a href="#' + esc(state.current) + '/' + esc(t.ref) + '" data-jump="' + esc(t.ref) + '">Read full story →</a>' : '';
-      return '<div class="top-card' + (i === 0 ? ' lead' : '') + '" data-sev="' + esc(t.severity || '') + '"><span class="rank">' + (i + 1) + '</span><h3>' + esc(t.headline) + '</h3>' +
+      return '<div class="top-card" data-sev="' + esc(t.severity || '') + '"><span class="rank">' + (i + 1) + '</span><h3>' + esc(t.headline) + '</h3>' +
         '<div class="item-meta nopad">' + labelTag(t.label) + sevTag(t.severity) + (t.coverage ? '<span class="cov">' + esc(t.coverage) + '</span>' : '') + '</div>' +
         '<p>' + esc(t.summary) + '</p>' + (link ? '<p>' + link + '</p>' : '') + '</div>';
     }).join('') || '<p class="muted">Nothing major today.</p>';
@@ -168,12 +171,14 @@
       return html;
     }
     var TAIL = { law: 1, other: 1 };
-    var cyberHtml = renderGroup(CYBER.filter(function (c) { return !TAIL[c.id]; }));
+    var cyberHtml = renderGroup(CYBER.filter(function (c) { return !TAIL[c.id] && c.id !== 'vuln'; }));
+    $('categoriesVuln').innerHTML = renderGroup(CYBER.filter(function (c) { return c.id === 'vuln'; }));
     $('categoriesCyber').innerHTML = cyberHtml || '<p class="muted">No cyber stories in this brief.</p>';
     $('categoriesCyberTail').innerHTML = renderGroup(CYBER.filter(function (c) { return TAIL[c.id]; }));
     var globalHtml = renderGroup(GLOBAL);
     $('categoriesGlobal').innerHTML = globalHtml;
     $('globalHeader').hidden = !globalHtml;
+    $('categoriesNature').innerHTML = renderGroup(NATURE);
 
     // focus sections (cross-listed)
     function focusRows(list) {
@@ -206,10 +211,6 @@
     $('comingSection').hidden = !cu.length;
     $('coming').innerHTML = cu.map(function (c) { return '<li><span class="when">' + esc(c.date) + '</span><div>' + esc(c.text) + '</div></li>'; }).join('');
 
-    // analysis
-    var an = b.analysis || [];
-    $('analysisSection').hidden = !an.length;
-    $('analysis').innerHTML = an.map(function (x) { return '<li><strong>' + esc(x.title || '') + '</strong> ' + esc(x.text || '') + '</li>'; }).join('');
 
     // filters
     var labels = {}; items.forEach(function (it) { if (it.label) labels[it.label] = 1; });
@@ -229,10 +230,6 @@
         '<span class="cov">' + esc(host) + (x.outlets > 1 ? ' · ' + esc(x.outlets) + ' outlets' : '') + '</span></li>';
     }).join('');
 
-    // watching
-    var w = b.watching || [];
-    $('watchingSection').hidden = !w.length;
-    $('watching').innerHTML = w.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('');
 
     $('brief').hidden = false;
     $('status').hidden = true;

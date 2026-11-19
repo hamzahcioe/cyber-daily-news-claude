@@ -7,7 +7,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 
-UA = "Mozilla/5.0 (compatible; NewsBriefBot/1.0; +https://github.com/hamzahcioe/cyber-daily-news-claude)"
+UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
 
 def get(url, timeout=20):
     import time

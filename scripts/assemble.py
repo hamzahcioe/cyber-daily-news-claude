@@ -7,7 +7,7 @@ import argparse, glob, json, re, sys
 from urllib.parse import urlparse
 from datetime import datetime, timezone
 
-CATS = ["outage", "attack", "breach", "leak", "claim", "supply-chain", "vuln", "law", "other", "geopolitics", "ai", "infra-attack", "surveillance", "tech", "world", "economy", "energy"]
+CATS = ["outage", "attack", "breach", "leak", "claim", "supply-chain", "vuln", "law", "other", "geopolitics", "ai", "infra-attack", "surveillance", "tech", "world", "economy", "energy", "science", "research-policy", "nature"]
 LABELS = {"CONFIRMED", "VENDOR-ACKNOWLEDGED", "UNCONFIRMED CLAIM"}
 SEVS = ["Critical", "High", "Medium", "Low", "Awareness"]
 PRIVATE = ["evidence", "outlets", "primarySourceRead", "unreadable"]
@@ -95,12 +95,12 @@ def main():
     mon = d.weekday() == 0
     brief = {"date": a.date, "title": ("Security digest - " if mon else "Security brief - ") + d.strftime("%A ") + str(d.day) + d.strftime(" %B %Y"),
              "generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-             "top": top, "ongoing": ongoing, "items": out_items, "analysis": meta.get("analysis", []),
-             "alsoReported": also, "patchWatch": meta.get("patchWatch", []), "comingUp": meta.get("comingUp", []), "watching": meta.get("watching", [])}
+             "top": top, "ongoing": ongoing, "items": out_items, "analysis": [],
+             "alsoReported": also, "patchWatch": meta.get("patchWatch", []), "comingUp": meta.get("comingUp", []), "watching": []}
     if meta.get("indexTitle"): brief["indexTitle"] = meta["indexTitle"]
     s = json.dumps(brief, ensure_ascii=False, indent=1)
     cap = 40 if len(items) > 20 else 30
-    if len(items) > (46 if mon else 36): warns.append(f"{len(items)} items exceeds the cap")
+    if len(items) > (50 if mon else 40): warns.append(f"{len(items)} items exceeds the cap")
     if len(s) > 120_000: warns.append(f"brief is {len(s)//1000} KB (target under 100 KB)")
     open(a.out, "w").write(s)
     print(f"items {len(out_items)}; size {len(s)//1000} KB; errors {len(errors)}; warnings {len(warns)}")
