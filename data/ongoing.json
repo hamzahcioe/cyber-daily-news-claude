@@ -1,1 +1,47 @@
-[]
+[
+ {
+  "headline": "Crimean Bridge strikes and Russian retaliation threats",
+  "label": "CONFIRMED",
+  "severity": "Medium",
+  "since": "2026-11-16",
+  "status": "open",
+  "latest": "Third reported Ukrainian strike on the bridge's rail section this week; Putin has vowed a response.",
+  "ref": "crimean-bridge-strikes",
+  "log": [
+   {
+    "date": "2026-11-19",
+    "text": "Rail traffic halted after third strike in a week; Russia vows retaliation."
+   }
+  ]
+ },
+ {
+  "headline": "Microsoft agent-framework PyPI compromise",
+  "label": "CONFIRMED",
+  "severity": "High",
+  "since": "2026-11-19",
+  "status": "open",
+  "latest": "Versions 1.26.1 and 1.26.2 pulled; root cause unconfirmed.",
+  "ref": "agent-framework-pypi",
+  "log": [
+   {
+    "date": "2026-11-19",
+    "text": "Credential-stealing releases reported and removed from the feed."
+   }
+  ]
+ },
+ {
+  "headline": "NVIDIA breach claim by Gentlemen ransomware",
+  "label": "UNCONFIRMED CLAIM",
+  "severity": "Low",
+  "since": "2026-11-19",
+  "status": "open",
+  "latest": "NVIDIA says it is investigating; claim unverified.",
+  "ref": "gentlemen-nvidia-claim",
+  "log": [
+   {
+    "date": "2026-11-19",
+    "text": "Group lists NVIDIA on leak site; NVIDIA investigating."
+   }
+  ]
+ }
+]
