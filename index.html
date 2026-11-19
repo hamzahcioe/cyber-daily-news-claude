@@ -3,101 +3,107 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0f0e0d">
 <title>Security Brief</title>
-<meta name="description" content="Daily cybersecurity and major-outage briefing.">
+<meta name="description" content="Daily cybersecurity, outage and global technology news, with analysis of the news.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,500..900&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="style.css">
 <link rel="alternate" type="application/rss+xml" title="Security Brief" href="data/feed.xml">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href="#" id="brand">Security Brief</a>
-    <div class="header-actions">
-      <a class="head-link" href="about.html">About and method</a>
-      <button id="themeBtn" class="icon-btn" aria-label="Toggle light or dark theme" title="Toggle theme">◐</button>
+<div class="shell">
+  <aside class="rail" aria-label="Navigation">
+    <div class="rail-inner">
+      <a class="brand" href="#" id="brand">Security Brief<span class="brand-sub">Cyber, outages and global tech</span></a>
+
+      <nav class="datenav" aria-label="Brief history">
+        <select id="dateSelect" aria-label="Choose a brief"></select>
+        <div class="datenav-btns">
+          <button id="olderBtn" class="nav-btn">Older</button>
+          <button id="newerBtn" class="nav-btn">Newer</button>
+        </div>
+      </nav>
+
+      <nav id="sectionNav" class="section-nav" aria-label="Jump to section" hidden></nav>
+
+      <div class="filterbar" id="filterbar" hidden>
+        <span class="rail-title">Show</span>
+        <div class="filters" id="filters" role="group" aria-label="Filter stories by confidence"></div>
+      </div>
+
+      <div class="rail-links">
+        <a href="about.html">About and method</a>
+        <a href="data/feed.xml">RSS feed</a>
+      </div>
     </div>
-  </div>
-</header>
+  </aside>
 
-<main class="wrap">
-  <nav class="datenav" aria-label="Brief history">
-    <button id="olderBtn" class="nav-btn">← Older</button>
-    <div class="datenav-mid">
-      <select id="dateSelect" aria-label="Choose a brief"></select>
-    </div>
-    <button id="newerBtn" class="nav-btn">Newer →</button>
-  </nav>
+  <main class="content" id="main">
+    <div id="status" class="status" hidden></div>
 
-  <div id="status" class="status" hidden></div>
+    <article id="brief" hidden>
+      <header class="brief-head">
+        <h1 id="briefTitle"></h1>
+        <p class="muted" id="briefMeta"></p>
+        <div id="sampleBanner" class="sample-banner" hidden>Sample data: this page is showing placeholder content so you can check the layout. Real briefs replace it.</div>
+      </header>
 
-  <article id="brief" hidden>
-    <div class="brief-head">
-      <h1 id="briefTitle"></h1>
-      <p class="muted" id="briefMeta"></p>
-      <div id="sampleBanner" class="sample-banner" hidden>Sample data: this page is showing placeholder content so you can check the layout. Real briefs replace it.</div>
-    </div>
+      <section id="topSection" data-nav="Top stories" aria-labelledby="top-h">
+        <h2 id="top-h">Top stories</h2>
+        <div class="top3" id="top3"></div>
+      </section>
 
-    <section aria-labelledby="top-h">
-      <h2 id="top-h">Top stories</h2>
-      <div class="top3" id="top3"></div>
-    </section>
+      <section id="analysisSection" data-nav="Analysis" aria-labelledby="an-h" hidden>
+        <h2 id="an-h">Analysis</h2>
+        <ul class="analysis" id="analysis"></ul>
+      </section>
 
-    <section id="analysisSection" aria-labelledby="an-h" hidden>
-      <h2 id="an-h">Analysis</h2>
-      <ul class="plain" id="analysis"></ul>
-    </section>
+      <section id="ongoingSection" data-nav="Ongoing issues" aria-labelledby="ong-h" hidden>
+        <h2 id="ong-h">Ongoing issues</h2>
+        <div class="ongoing" id="ongoing"></div>
+      </section>
 
-    <section id="ongoingSection" aria-labelledby="ong-h" hidden>
-      <h2 id="ong-h">Ongoing issues</h2>
-      <div class="ongoing" id="ongoing"></div>
-    </section>
+      <div id="categoriesCyber"></div>
 
+      <section id="microsoftSection" data-nav="Microsoft" aria-labelledby="ms-h" hidden>
+        <h2 id="ms-h">Microsoft</h2>
+        <div id="microsoft"></div>
+      </section>
 
-    <nav id="sectionNav" class="section-nav" aria-label="Jump to section" hidden></nav>
+      <section id="ukSection" data-nav="UK focus" aria-labelledby="uk-h" hidden>
+        <h2 id="uk-h">UK focus</h2>
+        <div id="uk"></div>
+      </section>
 
-    <div class="filterbar" id="filterbar" hidden>
-      <span class="muted">Show:</span>
-      <div class="filters" id="filters" role="group" aria-label="Filter stories by confidence"></div>
-    </div>
+      <section id="patchSection" data-nav="Patch watch" aria-labelledby="patch-h" hidden>
+        <h2 id="patch-h">Patch watch</h2>
+        <div class="table-wrap"><table class="patch" id="patchTable"></table></div>
+      </section>
 
-    <div id="categoriesCyber"></div>
+      <section id="comingSection" data-nav="Coming up" aria-labelledby="coming-h" hidden>
+        <h2 id="coming-h">Coming up</h2>
+        <ul class="coming" id="coming"></ul>
+      </section>
 
-    <section id="microsoftSection" aria-labelledby="ms-h" hidden>
-      <h2 id="ms-h">Microsoft</h2>
-      <div id="microsoft"></div>
-    </section>
+      <div id="globalHeader" class="group-head" hidden><h2 class="group-title">Global tech</h2></div>
+      <div id="categoriesGlobal"></div>
 
-    <section id="ukSection" aria-labelledby="uk-h" hidden>
-      <h2 id="uk-h">UK focus</h2>
-      <div id="uk"></div>
-    </section>
+      <section id="watchingSection" data-nav="Watching" aria-labelledby="watch-h" hidden>
+        <h2 id="watch-h">Watching</h2>
+        <ul class="plain" id="watching"></ul>
+      </section>
+    </article>
 
-    <section id="patchSection" aria-labelledby="patch-h" hidden>
-      <h2 id="patch-h">Patch watch</h2>
-      <div class="table-wrap"><table class="patch" id="patchTable"></table></div>
-    </section>
-
-    <section id="comingSection" aria-labelledby="coming-h" hidden>
-      <h2 id="coming-h">Coming up</h2>
-      <ul class="coming" id="coming"></ul>
-    </section>
-
-    <div id="globalHeader" class="group-head" hidden><h2 class="group-title">Global tech</h2></div>
-    <div id="categoriesGlobal"></div>
-
-
-    <section id="watchingSection" aria-labelledby="watch-h" hidden>
-      <h2 id="watch-h">Watching</h2>
-      <ul class="plain" id="watching"></ul>
-    </section>
-
-  </article>
-</main>
-
-<footer class="wrap site-footer">
-  <p class="muted">Generated automatically. Labels: <b class="tag t-confirmed">CONFIRMED</b> verified by the affected party or multiple reputable outlets · <b class="tag t-vendor">VENDOR-ACKNOWLEDGED</b> vendor has said something, details thin · <b class="tag t-unconfirmed">UNCONFIRMED CLAIM</b> a claim or rumour, not verified.</p>
-</footer>
+    <footer class="site-footer">
+      <p><b class="tag t-confirmed">CONFIRMED</b> verified by the affected party, an authority, or multiple reputable outlets. <b class="tag t-vendor">VENDOR-ACKNOWLEDGED</b> the vendor has said something, details thin. <b class="tag t-unconfirmed">UNCONFIRMED CLAIM</b> a claim or rumour, not verified.</p>
+      <p>Generated automatically from public sources. News and analysis of the news only.</p>
+    </footer>
+  </main>
+</div>
 
 <script src="app.js"></script>
 </body>

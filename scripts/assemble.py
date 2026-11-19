@@ -62,7 +62,7 @@ def main():
     if len(top) != 3: warns.append(f"top has {len(top)} entries, expected 3")
     ongoing = meta.get("ongoing", [])
     for g in ongoing:
-        if g.get("ref") and g["ref"] not in items and not g.get("external"): warns.append(f"ongoing ref {g['ref']} has no item today (fine if story had no news today)")
+        if g.get("ref") and "/" not in g["ref"] and g["ref"] not in items and not g.get("external"): warns.append(f"ongoing ref {g['ref']} has no item today (fine if story had no news today)")
         if BAD.search(json.dumps(g, ensure_ascii=False)): errors.append(f"ongoing {g.get('headline')}: advice or forbidden phrasing")
     for k in ("analysis", "watching", "comingUp", "patchWatch"):
         if BAD.search(json.dumps(meta.get(k, []), ensure_ascii=False)): errors.append(f"{k}: advice or forbidden phrasing")

@@ -84,37 +84,27 @@
   }
   function slug(s) { return String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
 
-  /* ---------- theme ---------- */
-  function initTheme() {
-    var saved = null; try { saved = localStorage.getItem('sb-theme'); } catch (e) {}
-    var theme = saved || (window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-    document.documentElement.setAttribute('data-theme', theme);
-    $('themeBtn').addEventListener('click', function () {
-      var next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', next);
-      try { localStorage.setItem('sb-theme', next); } catch (e) {}
-    });
-  }
-
 
   /* ---------- brief rendering ---------- */
   function itemCard(it, idx) {
     var id = it.id || ('item-' + idx);
     var s = it.sections || {};
-    var body = '';
     function sec(title, html) { return html ? '<h4>' + title + '</h4>' + html : ''; }
-    if (it.labelBasis) body += '<p class="muted"><strong>Label basis:</strong> ' + esc(it.labelBasis) + '</p>';
-    body += sec('What happened', fmt(s.happened));
-    body += sec('Technical detail', fmt(s.technical));
-    body += sec('Vendor and authority guidance', fmt(s.guidance));
-    body += sec('Differing accounts', fmt(s.differing));
-    body += sec('Still unknown', fmt(s.unknown));
+    var main = '';
+    if (it.labelBasis) main += '<p class="basis"><strong>Label basis:</strong> ' + esc(it.labelBasis) + '</p>';
+    main += sec('What happened', fmt(s.happened));
+    main += sec('Technical detail', fmt(s.technical));
+    var side = '';
+    side += sec('Vendor and authority guidance', fmt(s.guidance));
+    side += sec('Differing accounts', fmt(s.differing));
+    side += sec('Still unknown', fmt(s.unknown));
     if (it.sources && it.sources.length) {
-      body += '<h4>Sources</h4><ul class="srcs">' + it.sources.map(function (src) {
+      side += '<h4>Sources</h4><ul class="srcs">' + it.sources.map(function (src) {
         return '<li><a href="' + esc(safeUrl(src.url)) + '" target="_blank" rel="noopener noreferrer">' + esc(src.title || src.url) + '</a></li>';
       }).join('') + '</ul>';
     }
-    return '<details class="item" id="' + esc(id) + '" data-label="' + esc(it.label || '') + '"' + (it.open ? ' open' : '') + '>' +
+    var body = (main || side) ? '<div class="item-body"><div class="col-main">' + main + '</div>' + (side ? '<div class="col-side">' + side + '</div>' : '') + '</div>' : '<div class="item-body"><p class="muted">No further detail.</p></div>';
+    return '<details class="item" id="' + esc(id) + '" data-sev="' + esc(it.severity || '') + '" data-label="' + esc(it.label || '') + '"' + (it.open ? ' open' : '') + '>' +
       '<summary><span class="item-title">' + esc(it.headline) + '</span>' +
       '<div class="item-meta">' + labelTag(it.label) + sevTag(it.severity) +
       (it.uk ? '<span class="tag t-uk">UK</span>' : '') +
@@ -122,7 +112,7 @@
       (it.firstReported ? '<span class="cov">First reported ' + esc(it.firstReported) + '</span>' : '') +
       '</div>' +
       (it.summary ? '<p class="item-summary">' + esc(it.summary) + '</p>' : '') +
-      '</summary><div class="item-body">' + (body || '<p class="muted">No further detail.</p>') + '</div></details>';
+      '</summary>' + body + '</details>';
   }
 
   function renderBrief(b, isSample) {
@@ -137,7 +127,7 @@
     // top stories
     $('top3').innerHTML = (b.top || []).map(function (t, i) {
       var link = t.ref ? '<a href="#' + esc(state.current) + '/' + esc(t.ref) + '" data-jump="' + esc(t.ref) + '">Read full story →</a>' : '';
-      return '<div class="top-card ' + sevClass(t.severity) + '"><h3><span class="rank">' + (i + 1) + '</span>' + esc(t.headline) + '</h3>' +
+      return '<div class="top-card' + (i === 0 ? ' lead' : '') + '" data-sev="' + esc(t.severity || '') + '"><span class="rank">' + (i + 1) + '</span><h3>' + esc(t.headline) + '</h3>' +
         '<div class="item-meta nopad">' + labelTag(t.label) + sevTag(t.severity) + (t.coverage ? '<span class="cov">' + esc(t.coverage) + '</span>' : '') + '</div>' +
         '<p>' + esc(t.summary) + '</p>' + (link ? '<p>' + link + '</p>' : '') + '</div>';
     }).join('') || '<p class="muted">Nothing major today.</p>';
@@ -146,8 +136,8 @@
     var og = b.ongoing || [];
     $('ongoingSection').hidden = !og.length;
     $('ongoing').innerHTML = og.map(function (o) {
-      var link = o.ref ? ' <a href="#' + esc(state.current) + '/' + esc(o.ref) + '" data-jump="' + esc(o.ref) + '">Details →</a>' : '';
-      return '<div class="ongoing-card">' +
+      var link = !o.ref ? '' : (o.ref.indexOf('/') > 0 ? ' <a href="#' + esc(o.ref) + '">Earlier report →</a>' : ' <a href="#' + esc(state.current) + '/' + esc(o.ref) + '" data-jump="' + esc(o.ref) + '">Details →</a>');
+      return '<div class="ongoing-card" data-sev="' + esc(o.severity || '') + '">' +
         '<div class="item-meta nopad"><b>' + esc(o.headline) + '</b></div>' +
         '<div class="item-meta nopad">' + labelTag(o.label) + sevTag(o.severity) +
         '<span class="cov">' + (o.since ? 'Since ' + esc(o.since) : '') + (o.status ? ' · ' + esc(o.status) : '') + '</span></div>' +
@@ -167,7 +157,7 @@
         var list = items.filter(function (it) { return catOf(it) === cat.id; });
         if (!list.length) return;
         present.push(cat);
-        html += '<section class="cat" id="cat-' + cat.id + '" data-cat="' + cat.id + '" aria-labelledby="h-' + cat.id + '">' +
+        html += '<section class="cat" id="cat-' + cat.id + '" data-cat="' + cat.id + '" data-nav="' + esc(cat.title) + '" aria-labelledby="h-' + cat.id + '">' +
           '<h2 id="h-' + cat.id + '">' + esc(cat.title) + ' <span class="count">' + list.length + '</span></h2>' +
           list.map(function (it) { return itemCard(it, it._i); }).join('') + '</section>';
       });
@@ -215,9 +205,6 @@
     $('analysisSection').hidden = !an.length;
     $('analysis').innerHTML = an.map(function (x) { return '<li><strong>' + esc(x.title || '') + '</strong> ' + esc(x.text || '') + '</li>'; }).join('');
 
-    $('sectionNav').hidden = present.length < 2;
-    $('sectionNav').innerHTML = present.map(function (c) { var t = c.id.indexOf('Section') > 0 ? c.id : 'cat-' + c.id; return '<a href="#' + t + '" data-scroll="' + t + '">' + esc(c.title) + '</a>'; }).join('');
-
     // filters
     var labels = {}; items.forEach(function (it) { if (it.label) labels[it.label] = 1; });
     var fl = Object.keys(labels);
@@ -234,6 +221,27 @@
 
     $('brief').hidden = false;
     $('status').hidden = true;
+    buildNav();
+  }
+
+  function buildNav() {
+    var els = Array.prototype.filter.call($('brief').querySelectorAll('[data-nav]'), function (e) { return !e.hidden; });
+    $('sectionNav').hidden = els.length < 2;
+    $('sectionNav').innerHTML = '<span class="rail-title">On this page</span>' + els.map(function (e) {
+      var n = e.querySelectorAll('details.item').length;
+      return '<a href="#' + e.id + '" data-scroll="' + e.id + '">' + esc(e.getAttribute('data-nav')) + (n ? '<span class="n">' + n + '</span>' : '') + '</a>';
+    }).join('');
+    if (!('IntersectionObserver' in window)) return;
+    if (state.spy) state.spy.disconnect();
+    state.spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        Array.prototype.forEach.call($('sectionNav').querySelectorAll('a'), function (a) {
+          a.classList.toggle('on', a.getAttribute('data-scroll') === en.target.id);
+        });
+      });
+    }, { rootMargin: '-10% 0px -80% 0px' });
+    els.forEach(function (e) { state.spy.observe(e); });
   }
 
   function applyFilter() {
@@ -329,6 +337,5 @@
   window.addEventListener('hashchange', route);
 
   /* ---------- boot ---------- */
-  initTheme();
   loadIndex().then(route);
 })();
