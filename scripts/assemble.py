@@ -4,6 +4,7 @@ Usage: assemble.py --items /tmp/notes/items --meta /tmp/notes/meta.json --date Y
 items/*.json: one item per file (see DATA-FORMAT.md) with extra private keys evidence, outlets, primarySourceRead, unreadable (removed here).
 meta.json: {"top": [ids], "ongoing": [..], "analysis": [..], "patchWatch": [..], "comingUp": [..], "watching": [..], "indexTitle": "..."}"""
 import argparse, glob, json, re, sys
+from urllib.parse import urlparse
 from datetime import datetime, timezone
 
 CATS = ["outage", "attack", "breach", "leak", "claim", "supply-chain", "vuln", "law", "other", "geopolitics", "ai", "infra-attack", "surveillance", "tech"]
@@ -34,16 +35,20 @@ def main():
         if it.get("label") not in LABELS: errors.append(f"{iid}: bad label {it.get('label')}")
         if it.get("severity") not in SEVS: errors.append(f"{iid}: bad severity {it.get('severity')}")
         if it.get("category") not in CATS: errors.append(f"{iid}: bad category {it.get('category')}")
-        if not it.get("evidence"): warns.append(f"{iid}: no evidence quotes")
+        if not it.get("labelBasis"): errors.append(f"{iid}: missing labelBasis")
+        if not it.get("evidence"):
+            if it.get("severity") in ("Critical", "High") or iid in meta.get("top", []): errors.append(f"{iid}: High/Critical or top story has no evidence quotes")
+            else: warns.append(f"{iid}: no evidence quotes")
         if it.get("primarySourceRead") is False: warns.append(f"{iid}: primary source not read")
         for k, lim in LIMITS.items():
             n = words((it.get("sections") or {}).get(k, ""))
-            if n > lim * 1.6: errors.append(f"{iid}: section {k} is {n} words (limit {lim}); shorten it")
-            elif n > lim * 1.3: warns.append(f"{iid}: section {k} is {n} words (limit {lim})")
+            if n > lim * 1.3: errors.append(f"{iid}: section {k} is {n} words (limit {lim}); shorten it")
+            elif n > lim * 1.1: warns.append(f"{iid}: section {k} is {n} words (limit {lim})")
         if BAD.search(json.dumps(it, ensure_ascii=False)): errors.append(f"{iid}: contains advice or forbidden phrasing")
     def cov(it):
-        n = it.get("outlets")
-        return f"Covered by {n} outlet{'s' if n != 1 else ''}" if isinstance(n, int) and n > 0 else ""
+        doms = {urlparse(x.get("url", "")).netloc.lower().removeprefix("www.") for x in it.get("sources", []) if x.get("url")}
+        n = len(doms)
+        return f"Covered by {n} outlet{'s' if n != 1 else ''}" if n > 0 else ""
     out_items = []
     for it in sorted(items.values(), key=lambda x: (CATS.index(x["category"]) if x.get("category") in CATS else 99, SEVS.index(x["severity"]) if x.get("severity") in SEVS else 99)):
         o = {k: v for k, v in it.items() if k not in PRIVATE}

@@ -20,7 +20,7 @@ def main():
         try:
             for p in parts[:-1]: cur = cur.setdefault(p, {})
             old = cur.get(parts[-1])
-            cur[parts[-1]] = fix
+            cur[parts[-1]] = int(fix) if isinstance(old, int) and fix.strip().isdigit() else fix
         except Exception as e:
             print(f"UNAPPLIED {iid}: {field} ({e})"); unapplied += 1; continue
         json.dump(it, open(path, "w"), ensure_ascii=False, indent=1)
