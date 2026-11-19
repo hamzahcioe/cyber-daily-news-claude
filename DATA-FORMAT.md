@@ -27,20 +27,19 @@ Add `"sample": true` to an entry to show the sample-data banner. Remove sample e
                     "differing": "each party's account, attributed (optional)",
                     "unknown": "text" },
       "sources": [ {"title":"...","url":"https://..."} ] } ],
+  "analysis": [ {"title": "short label", "text": "cross-story observation, at most 60 words, no recommendations"} ],
   "patchWatch": [ {product, cve, cvss, exploited: "yes|no|unknown", fixed, ref} ],
   "comingUp": [ {date, text} ],
-  "claims": [ {claim, status: "unconfirmed|confirmed|denied|disputed", firstSeen, updated, note, ref} ],
-  "watching": [ "developing story and what would change it" ],
-  "sourcesSwept": "sources read, and any that could not be read"
+  "watching": [ "developing story and what would change it" ]
 }
 Text fields support blank-line paragraphs, `inline code`, **bold**, and ``` fenced blocks. HTML is escaped.
 Items with "uk": true also appear in the UK focus section.
 
-## data/ticker.json  (rewritten hourly)
-{"updated":"2026-11-19T09:00:00Z","items":[{"time":"ISO time","text":"headline","severity":"High","label":"CONFIRMED","url":"#2026-11-19/item-id"}]}
-Empty `items` shows "No major headlines right now". The page re-fetches this every hour.
 
 ## data/feed.xml  (optional RSS 2.0 feed of briefs, written by the daily task; linked from the page head)
 
 ## about.html
 Static methodology page. Edit by hand.
+
+## Item files (private working format, then published)
+Researchers write /tmp/notes/items/<id>.json with extra private keys `outlets`, `evidence`, `primarySourceRead`, `unreadable`. scripts/assemble.py removes them, adds `coverage`, and builds `top` entries from item ids. Required item fields: id, headline, summary, label, severity, category, sources. Optional: labelBasis, uk, microsoft, firstReported, sections.

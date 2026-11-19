@@ -2,7 +2,6 @@
    Data (all relative to this folder):
      data/index.json          list of briefs, newest first
      data/briefs/YYYY-MM-DD.json   one file per day
-     data/ticker.json         headline ticker, refreshed hourly
    See DATA-FORMAT.md for the schemas. */
 (function () {
   'use strict';
@@ -31,7 +30,6 @@
     'VENDOR-ACKNOWLEDGED': { cls: 't-vendor', text: 'VENDOR-ACKNOWLEDGED' },
     'UNCONFIRMED CLAIM': { cls: 't-unconfirmed', text: 'UNCONFIRMED CLAIM' }
   };
-  var TICKER_REFRESH_MS = 60 * 60 * 1000;
 
   var $ = function (id) { return document.getElementById(id); };
   var state = { index: [], current: null, brief: null, filter: 'ALL' };
@@ -98,32 +96,6 @@
     });
   }
 
-  /* ---------- ticker ---------- */
-  function renderTicker(data) {
-    var track = $('tickerTrack');
-    var items = (data && data.items) || [];
-    if (!items.length) { track.innerHTML = '<span class="ticker-empty">No major headlines right now.</span>'; track.style.animation = 'none'; track.style.paddingLeft = '0'; $('tickerUpdated').textContent = data && data.updated ? 'Checked ' + ago(data.updated) : ''; return; }
-    track.style.animation = ''; track.style.paddingLeft = '';
-    track.innerHTML = items.map(function (it) {
-      var href = it.url ? (/^https?:/i.test(it.url) ? safeUrl(it.url) : esc(it.url)) : '#';
-      var ext = /^https?:/i.test(it.url || '') ? ' target="_blank" rel="noopener noreferrer"' : '';
-      var time = it.time ? new Date(it.time).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' }) : '';
-      return '<a class="ticker-item" href="' + href + '"' + ext + '>' +
-        (time ? '<time>' + esc(time) + '</time>' : '') +
-        (it.severity ? sevTag(it.severity) : '') +
-        (it.label ? labelTag(it.label) : '') +
-        '<span>' + esc(it.text) + '</span></a>';
-    }).join('');
-    // scroll speed roughly proportional to length
-    var chars = items.reduce(function (n, it) { return n + (it.text || '').length + 20; }, 0);
-    track.style.setProperty('--dur', Math.max(30, Math.round(chars / 7)) + 's');
-    $('tickerUpdated').textContent = data.updated ? 'Updated ' + ago(data.updated) : '';
-  }
-  function loadTicker() {
-    getJSON('data/ticker.json').then(renderTicker).catch(function () {
-      $('tickerTrack').innerHTML = '<span class="ticker-empty">Ticker unavailable.</span>';
-    });
-  }
 
   /* ---------- brief rendering ---------- */
   function itemCard(it, idx) {
@@ -131,6 +103,7 @@
     var s = it.sections || {};
     var body = '';
     function sec(title, html) { return html ? '<h4>' + title + '</h4>' + html : ''; }
+    if (it.labelBasis) body += '<p class="muted"><strong>Label basis:</strong> ' + esc(it.labelBasis) + '</p>';
     body += sec('What happened', fmt(s.happened));
     body += sec('Technical detail', fmt(s.technical));
     body += sec('Vendor and authority guidance', fmt(s.guidance));
@@ -237,15 +210,10 @@
     $('comingSection').hidden = !cu.length;
     $('coming').innerHTML = cu.map(function (c) { return '<li><span class="when">' + esc(c.date) + '</span><div>' + esc(c.text) + '</div></li>'; }).join('');
 
-    // claim tracker
-    var cl = b.claims || [];
-    $('claimsSection').hidden = !cl.length;
-    $('claimsTable').innerHTML = cl.length ? '<thead><tr><th>Claim</th><th>Status</th><th>First seen</th><th>Updated</th><th>Note</th></tr></thead><tbody>' +
-      cl.map(function (c) {
-        var st = String(c.status || 'unconfirmed').toLowerCase();
-        var name = c.ref ? '<a href="#' + esc(state.current) + '/' + esc(c.ref) + '" data-jump="' + esc(c.ref) + '">' + esc(c.claim) + '</a>' : esc(c.claim);
-        return '<tr><td>' + name + '</td><td><span class="cs cs-' + esc(st) + '">' + esc(st) + '</span></td><td>' + esc(c.firstSeen || '') + '</td><td>' + esc(c.updated || '') + '</td><td>' + esc(c.note || '') + '</td></tr>';
-      }).join('') + '</tbody>' : '';
+    // analysis
+    var an = b.analysis || [];
+    $('analysisSection').hidden = !an.length;
+    $('analysis').innerHTML = an.map(function (x) { return '<li><strong>' + esc(x.title || '') + '</strong> ' + esc(x.text || '') + '</li>'; }).join('');
 
     $('sectionNav').hidden = present.length < 2;
     $('sectionNav').innerHTML = present.map(function (c) { var t = c.id.indexOf('Section') > 0 ? c.id : 'cat-' + c.id; return '<a href="#' + t + '" data-scroll="' + t + '">' + esc(c.title) + '</a>'; }).join('');
@@ -259,12 +227,10 @@
       return '<button class="chip" data-filter="' + esc(l) + '" aria-pressed="' + (l === 'ALL') + '">' + (l === 'ALL' ? 'All' : esc(l.charAt(0) + l.slice(1).toLowerCase())) + '</button>';
     }).join('');
 
-    // watching / swept
+    // watching
     var w = b.watching || [];
     $('watchingSection').hidden = !w.length;
     $('watching').innerHTML = w.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('');
-    $('sweptSection').hidden = !b.sourcesSwept;
-    $('swept').textContent = b.sourcesSwept || '';
 
     $('brief').hidden = false;
     $('status').hidden = true;
@@ -364,8 +330,5 @@
 
   /* ---------- boot ---------- */
   initTheme();
-  loadTicker();
-  setInterval(loadTicker, TICKER_REFRESH_MS);
-  document.addEventListener('visibilitychange', function () { if (!document.hidden) loadTicker(); });
   loadIndex().then(route);
 })();

@@ -10,12 +10,6 @@
 </head>
 <body>
 
-<div class="ticker" role="region" aria-label="Breaking headlines">
-  <div class="ticker-label">LIVE</div>
-  <div class="ticker-viewport"><div class="ticker-track" id="tickerTrack"><span class="ticker-empty">Loading headlines…</span></div></div>
-  <div class="ticker-updated" id="tickerUpdated"></div>
-</div>
-
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="#" id="brand">Security Brief</a>
@@ -47,6 +41,11 @@
     <section aria-labelledby="top-h">
       <h2 id="top-h">Top stories</h2>
       <div class="top3" id="top3"></div>
+    </section>
+
+    <section id="analysisSection" aria-labelledby="an-h" hidden>
+      <h2 id="an-h">Analysis</h2>
+      <ul class="plain" id="analysis"></ul>
     </section>
 
     <section id="ongoingSection" aria-labelledby="ong-h" hidden>
@@ -87,20 +86,12 @@
     <div id="globalHeader" class="group-head" hidden><h2 class="group-title">Global tech</h2></div>
     <div id="categoriesGlobal"></div>
 
-    <section id="claimsSection" aria-labelledby="claims-h" hidden>
-      <h2 id="claims-h">Claim tracker</h2>
-      <div class="table-wrap"><table class="patch" id="claimsTable"></table></div>
-    </section>
 
     <section id="watchingSection" aria-labelledby="watch-h" hidden>
       <h2 id="watch-h">Watching</h2>
       <ul class="plain" id="watching"></ul>
     </section>
 
-    <section id="sweptSection" aria-labelledby="swept-h" hidden>
-      <h2 id="swept-h">Sources swept</h2>
-      <p class="muted" id="swept"></p>
-    </section>
   </article>
 </main>
 
