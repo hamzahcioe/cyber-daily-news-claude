@@ -5,12 +5,12 @@
   "severity": "High",
   "since": "2026-11-19",
   "status": "Open",
-  "latest": "Patches published; exploitation reported for Roller and attempts for Java4Shell.",
+  "latest": "Patches published; exploitation reported for Roller and attempts for Java4Shell; PoC for NGINX HTTP/2 bug.",
   "ref": "nginx2root-rce",
   "log": [
    {
     "date": "2026-11-19",
-    "text": "F5/NGINX, Apache, OpenJDK vendors, Drupal and PHP each published fixes; public PoCs reported for NGINX and Roller."
+    "text": "F5 patched five NGINX flaws; Apache, Drupal and PHP also issued fixes."
    }
   ]
  },
@@ -20,12 +20,12 @@
   "severity": "High",
   "since": "2026-11-19",
   "status": "Developing",
-  "latest": "US interim licensing rule; Tencent and Alibaba say they are affected; Alibaba says it trains on in-house chips.",
+  "latest": "US interim licensing rule; Nvidia halts licensed H200 shipments to China; Southeast Asia data-centre licences required.",
   "ref": "us-ai-chip-export-curbs",
   "log": [
    {
     "date": "2026-11-19",
-    "text": "Rule reported; Alibaba and Tencent comment on impact."
+    "text": "Rule and company responses reported."
    }
   ]
  },
@@ -35,12 +35,57 @@
   "severity": "Medium",
   "since": "2026-11-19",
   "status": "Open",
-  "latest": "Commission confirmed the attack took systems offline.",
+  "latest": "Commission confirmed the attack took staff systems offline.",
   "ref": "eu-commission-ai-cyberattack",
   "log": [
    {
     "date": "2026-11-19",
     "text": "Commission confirms incident."
+   }
+  ]
+ },
+ {
+  "headline": "Crimean Bridge strikes and Russian retaliation pledges",
+  "label": "CONFIRMED",
+  "severity": "High",
+  "since": "2026-11-19",
+  "status": "Developing",
+  "latest": "Bridge reported struck three times in a week; Putin rules out energy truce and pledges response.",
+  "ref": "crimean-bridge-attack",
+  "log": [
+   {
+    "date": "2026-11-19",
+    "text": "Latest strike and Russian statements reported."
+   }
+  ]
+ },
+ {
+  "headline": "Houthi missile strikes on Saudi Arabia",
+  "label": "CONFIRMED",
+  "severity": "High",
+  "since": "2026-11-19",
+  "status": "Developing",
+  "latest": "Houthi missile reported to have damaged PIF Tower in Riyadh.",
+  "ref": "houthi-riyadh-strikes",
+  "log": [
+   {
+    "date": "2026-11-19",
+    "text": "Strike on Riyadh financial district reported."
+   }
+  ]
+ },
+ {
+  "headline": "US-Iran tensions and IAEA access to bombed nuclear sites",
+  "label": "CONFIRMED",
+  "severity": "High",
+  "since": "2026-11-19",
+  "status": "Developing",
+  "latest": "US, UK, France and Germany press Iran at IAEA to allow inspections.",
+  "ref": "2026-11-19/us-iran-iaea",
+  "log": [
+   {
+    "date": "2026-11-19",
+    "text": "Western states press Iran at IAEA."
    }
   ]
  }
