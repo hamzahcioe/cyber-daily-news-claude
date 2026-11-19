@@ -1,16 +1,16 @@
 [
  {
-  "headline": "Critical flaws in web and Java infrastructure software: NGINX, Roller, Java4Shell, Drupal, PHP",
+  "headline": "Critical flaws in web and Java infrastructure software: NGINX, Roller, Java4Shell, PHP",
   "label": "CONFIRMED",
   "severity": "High",
   "since": "2026-11-19",
   "status": "Open",
-  "latest": "Patches published; exploitation reported for Roller and attempts for Java4Shell; PoC for NGINX HTTP/2 bug.",
+  "latest": "Patches published; exploitation reported for Roller and probing for Java4Shell; public PoC for NGINX HTTP/2 bug.",
   "ref": "nginx2root-rce",
   "log": [
    {
     "date": "2026-11-19",
-    "text": "F5 patched five NGINX flaws; Apache, Drupal and PHP also issued fixes."
+    "text": "F5 patched five NGINX flaws; Apache, OpenJDK and PHP also issued fixes."
    }
   ]
  },
@@ -20,8 +20,8 @@
   "severity": "High",
   "since": "2026-11-19",
   "status": "Developing",
-  "latest": "US interim licensing rule; Nvidia halts licensed H200 shipments to China; Southeast Asia data-centre licences required.",
-  "ref": "us-ai-chip-export-curbs",
+  "latest": "BIS interim rule requires licences for advanced AI chips to data centres in five countries.",
+  "ref": "us-chip-export-rules-asia",
   "log": [
    {
     "date": "2026-11-19",
@@ -35,7 +35,7 @@
   "severity": "Medium",
   "since": "2026-11-19",
   "status": "Open",
-  "latest": "Commission confirmed the attack took staff systems offline.",
+  "latest": "Commission says HR, reimbursement and translation systems were taken offline.",
   "ref": "eu-commission-ai-cyberattack",
   "log": [
    {
@@ -45,12 +45,27 @@
   ]
  },
  {
+  "headline": "Equinor cyberattack",
+  "label": "CONFIRMED",
+  "severity": "Medium",
+  "since": "2026-11-19",
+  "status": "Open",
+  "latest": "Attack on IT systems still ongoing on 19 November; production reported normal.",
+  "ref": "equinor-cyberattack",
+  "log": [
+   {
+    "date": "2026-11-19",
+    "text": "Equinor reports ongoing attack, detected 17 November."
+   }
+  ]
+ },
+ {
   "headline": "Crimean Bridge strikes and Russian retaliation pledges",
   "label": "CONFIRMED",
   "severity": "High",
   "since": "2026-11-19",
   "status": "Developing",
-  "latest": "Bridge reported struck three times in a week; Putin rules out energy truce and pledges response.",
+  "latest": "Bridge struck repeatedly 16-19 November; Putin pledges a harsher response.",
   "ref": "crimean-bridge-attack",
   "log": [
    {
@@ -65,27 +80,12 @@
   "severity": "High",
   "since": "2026-11-19",
   "status": "Developing",
-  "latest": "Houthi missile reported to have damaged PIF Tower in Riyadh.",
+  "latest": "Suspected Houthi missile reported to have hit PIF Tower in Riyadh.",
   "ref": "houthi-riyadh-strikes",
   "log": [
    {
     "date": "2026-11-19",
-    "text": "Strike on Riyadh financial district reported."
-   }
-  ]
- },
- {
-  "headline": "US-Iran tensions and IAEA access to bombed nuclear sites",
-  "label": "CONFIRMED",
-  "severity": "High",
-  "since": "2026-11-19",
-  "status": "Developing",
-  "latest": "US, UK, France and Germany press Iran at IAEA to allow inspections.",
-  "ref": "2026-11-19/us-iran-iaea",
-  "log": [
-   {
-    "date": "2026-11-19",
-    "text": "Western states press Iran at IAEA."
+    "text": "Second strike on KAFD landmark in under two weeks."
    }
   ]
  }
