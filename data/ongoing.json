@@ -1,1 +1,100 @@
-[]
+[
+ {
+  "headline": "Java4Shell (CVE-2026-114938) OpenJDK flaw: probing, vendor patches rolling out",
+  "label": "CONFIRMED",
+  "severity": "High",
+  "since": "2026-11-17",
+  "status": "open",
+  "latest": "Exploit attempts reported by several labs; no confirmed compromise; some vendor fixes still pending.",
+  "ref": "java4shell",
+  "log": [
+   {
+    "date": "2026-11-17",
+    "text": "OpenJDK fix released."
+   },
+   {
+    "date": "2026-11-19",
+    "text": "SecurityWeek reports probing; Keycloak images updated."
+   }
+  ]
+ },
+ {
+  "headline": "NGINX 'nginx2root' flaws: public PoC, no reported exploitation",
+  "label": "CONFIRMED",
+  "severity": "High",
+  "since": "2026-11-18",
+  "status": "open",
+  "latest": "Fixes in 1.31.9/1.30.7; CERT-Bund, JPCERT/CC and others issued warnings.",
+  "ref": "nginx2root",
+  "log": [
+   {
+    "date": "2026-11-18",
+    "text": "Five flaws disclosed and fixed."
+   },
+   {
+    "date": "2026-11-19",
+    "text": "National CERT advisories published."
+   }
+  ]
+ },
+ {
+  "headline": "Apache Roller RCE (CVE-2026-129448) exploited",
+  "label": "CONFIRMED",
+  "severity": "High",
+  "since": "2026-11-17",
+  "status": "open",
+  "latest": "ASF says actively exploited; fixed in 6.1.6 or later.",
+  "ref": "apache-roller-exploited",
+  "log": [
+   {
+    "date": "2026-11-17",
+    "text": "ASF advisory states active exploitation."
+   }
+  ]
+ },
+ {
+  "headline": "PHP critical security release due 19 November",
+  "label": "VENDOR-ACKNOWLEDGED",
+  "severity": "High",
+  "since": "2026-11-18",
+  "status": "open",
+  "latest": "Pre-announced for all supported versions; CVE-2026-115560 RCE expected.",
+  "ref": "php-critical-release",
+  "log": [
+   {
+    "date": "2026-11-18",
+    "text": "PHP team pre-announced release."
+   }
+  ]
+ },
+ {
+  "headline": "N-able Mail Assure hosted cloud server breach",
+  "label": "VENDOR-ACKNOWLEDGED",
+  "severity": "Medium",
+  "since": "2026-11-17",
+  "status": "open",
+  "latest": "Portal and APIs still offline at 08:00 UTC on 19 Nov; attacker undisclosed.",
+  "ref": "n-able-cloud-breach",
+  "log": [
+   {
+    "date": "2026-11-18",
+    "text": "N-able confirmed unauthorised access."
+   }
+  ]
+ },
+ {
+  "headline": "TfL Oyster photocard site offline after account compromise",
+  "label": "CONFIRMED",
+  "severity": "High",
+  "since": "2026-11-16",
+  "status": "open",
+  "latest": "About 265,000 accounts may be affected.",
+  "ref": "tfl-oyster-breach",
+  "log": [
+   {
+    "date": "2026-11-16",
+    "text": "Site taken offline."
+   }
+  ]
+ }
+]
