@@ -22,7 +22,7 @@ def main():
     ap.add_argument("--date", required=True); ap.add_argument("--out", required=True)
     ap.add_argument("--clusters"); ap.add_argument("--selection")
     a = ap.parse_args()
-    errors, warns = [], []
+    errors, warns, adj = [], [], []
     items = {}
     for p in sorted(glob.glob(a.items.rstrip("/") + "/*.json")):
         try: it = json.load(open(p))
@@ -37,6 +37,18 @@ def main():
         if it.get("severity") not in SEVS: errors.append(f"{iid}: bad severity {it.get('severity')}")
         if it.get("category") not in CATS: errors.append(f"{iid}: bad category {it.get('category')}")
         if not it.get("labelBasis"): errors.append(f"{iid}: missing labelBasis")
+        ev = it.get("evidence", [])
+        if not isinstance(ev, list) or any(not isinstance(e, dict) or not e.get("fact") or not e.get("quote") or not e.get("url") for e in ev):
+            errors.append(f"{iid}: evidence must be a list of objects with fact, quote and url; repair the format, do not delete it")
+        # automatic label rule: no primary source read and fewer than 3 independent sites cited -> cannot stand as CONFIRMED or VENDOR-ACKNOWLEDGED
+        doms = {urlparse(x.get("url", "")).netloc.lower().removeprefix("www.") for x in it.get("sources", []) if isinstance(x, dict) and x.get("url")}
+        if it.get("primarySourceRead") is not True and it.get("label") in ("CONFIRMED", "VENDOR-ACKNOWLEDGED"):
+            if len(doms) < 3:
+                adj.append(f"{iid}: label {it['label']} -> UNCONFIRMED CLAIM (primary source not read, {len(doms)} independent sites)")
+                it["label"] = "UNCONFIRMED CLAIM"
+            else:
+                adj.append(f"{iid}: kept {it['label']} on {len(doms)} sites; basis note added (primary source not read)")
+            it["labelBasis"] = (str(it.get("labelBasis", "")).rstrip(".") + ". Primary source not read; based on secondary reporting.").strip()
         if not it.get("evidence"):
             if it.get("severity") in ("Critical", "High") or iid in meta.get("top", []): errors.append(f"{iid}: High/Critical or top story has no evidence quotes")
             else: warns.append(f"{iid}: no evidence quotes")
@@ -92,6 +104,7 @@ def main():
     if len(s) > 120_000: warns.append(f"brief is {len(s)//1000} KB (target under 100 KB)")
     open(a.out, "w").write(s)
     print(f"items {len(out_items)}; size {len(s)//1000} KB; errors {len(errors)}; warnings {len(warns)}")
+    for x in adj: print("  ADJUSTED", x)
     for e in errors: print("  ERROR", e)
     for w in warns: print("  WARN", w)
     sys.exit(1 if errors else 0)
