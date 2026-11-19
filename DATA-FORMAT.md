@@ -43,3 +43,6 @@ Static methodology page. Edit by hand.
 
 ## Item files (private working format, then published)
 Researchers write /tmp/notes/items/<id>.json with extra private keys `outlets`, `evidence`, `primarySourceRead`, `unreadable`. scripts/assemble.py removes them, adds `coverage`, and builds `top` entries from item ids. Required item fields: id, headline, summary, label, severity, category, sources. Optional: labelBasis, uk, microsoft, firstReported, sections.
+
+## alsoReported
+Built by assemble.py from clusters that were not researched: `[{headline, url, outlets, category, regions}]`, at most 25. Headline only; not independently researched.

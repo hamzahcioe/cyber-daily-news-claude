@@ -20,6 +20,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--items", required=True); ap.add_argument("--meta", required=True)
     ap.add_argument("--date", required=True); ap.add_argument("--out", required=True)
+    ap.add_argument("--clusters"); ap.add_argument("--selection")
     a = ap.parse_args()
     errors, warns = [], []
     items = {}
@@ -68,16 +69,26 @@ def main():
         if BAD.search(json.dumps(meta.get(k, []), ensure_ascii=False)): errors.append(f"{k}: advice or forbidden phrasing")
     for x in meta.get("analysis", []):
         if words(x.get("text", "")) > 80: warns.append(f"analysis '{x.get('title')}' is {words(x.get('text',''))} words (limit 60)")
+    also = []
+    if a.clusters and a.selection:
+        try:
+            cl = json.load(open(a.clusters)); cl = cl if isinstance(cl, list) else cl.get("clusters", [])
+            chosen = {x.get("cluster") for x in json.load(open(a.selection))}
+            for c in cl:
+                if c.get("cluster") in chosen or not c.get("urls") or not c.get("title"): continue
+                also.append({"headline": c["title"], "url": c["urls"][0], "outlets": c.get("outlets"), "category": c.get("category_guess"), "regions": c.get("regions", [])})
+                if len(also) >= 25: break
+        except Exception as ex: warns.append(f"alsoReported skipped: {ex}")
     d = datetime.strptime(a.date, "%Y-%m-%d")
     mon = d.weekday() == 0
     brief = {"date": a.date, "title": ("Security digest - " if mon else "Security brief - ") + d.strftime("%A ") + str(d.day) + d.strftime(" %B %Y"),
              "generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
              "top": top, "ongoing": ongoing, "items": out_items, "analysis": meta.get("analysis", []),
-             "patchWatch": meta.get("patchWatch", []), "comingUp": meta.get("comingUp", []), "watching": meta.get("watching", [])}
+             "alsoReported": also, "patchWatch": meta.get("patchWatch", []), "comingUp": meta.get("comingUp", []), "watching": meta.get("watching", [])}
     if meta.get("indexTitle"): brief["indexTitle"] = meta["indexTitle"]
     s = json.dumps(brief, ensure_ascii=False, indent=1)
     cap = 40 if len(items) > 20 else 30
-    if len(items) > (20 if mon else 14): warns.append(f"{len(items)} items exceeds the cap")
+    if len(items) > (30 if mon else 22): warns.append(f"{len(items)} items exceeds the cap")
     if len(s) > 120_000: warns.append(f"brief is {len(s)//1000} KB (target under 100 KB)")
     open(a.out, "w").write(s)
     print(f"items {len(out_items)}; size {len(s)//1000} KB; errors {len(errors)}; warnings {len(warns)}")

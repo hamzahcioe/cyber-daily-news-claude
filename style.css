@@ -167,3 +167,9 @@ table.patch tr:last-child td{border-bottom:0}
   .content{padding:1.5rem 1.1rem 2.5rem}
   .ongoing{grid-template-columns:1fr}
 }
+
+/* also reported */
+.also-note{margin:-.4rem 0 .8rem;font-size:.9rem}
+.also{list-style:none;margin:0;padding:0;columns:2 420px;column-gap:2rem}
+.also li{break-inside:avoid;padding:.55rem 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:.15rem}
+.also a{font-weight:500}

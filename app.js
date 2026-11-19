@@ -214,6 +214,15 @@
       return '<button class="chip" data-filter="' + esc(l) + '" aria-pressed="' + (l === 'ALL') + '">' + (l === 'ALL' ? 'All' : esc(l.charAt(0) + l.slice(1).toLowerCase())) + '</button>';
     }).join('');
 
+    // also reported
+    var ar = b.alsoReported || [];
+    $('alsoSection').hidden = !ar.length;
+    $('also').innerHTML = ar.map(function (x) {
+      var host = ''; try { host = new URL(x.url).hostname.replace(/^www\./, ''); } catch (e) {}
+      return '<li><a href="' + esc(safeUrl(x.url)) + '" target="_blank" rel="noopener noreferrer">' + esc(x.headline) + '</a>' +
+        '<span class="cov">' + esc(host) + (x.outlets > 1 ? ' · ' + esc(x.outlets) + ' outlets' : '') + '</span></li>';
+    }).join('');
+
     // watching
     var w = b.watching || [];
     $('watchingSection').hidden = !w.length;
