@@ -3,7 +3,8 @@
 Usage: apply_fixes.py --verify /tmp/notes/verify.json --items /tmp/notes/items
 A failure with fix text 'DROP' deletes that item file. Otherwise 'field' is a dotted path inside the item (for example sections.happened or label)
 and 'fix' replaces the whole field value. Prints every change so it can be reviewed. Failures it cannot apply are listed as UNAPPLIED."""
-import argparse, json, os, sys
+import argparse, json, os, re, sys
+INSTR = re.compile(r"^\s*(change|replace|set|update|remove|add|delete|correct|amend|rewrite|use|state|note|revise|edit|downgrade|lower|should)\b|\bshould (be|read|say)\b|\binstead of\b", re.I)
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--verify", required=True); ap.add_argument("--items", required=True)
@@ -15,6 +16,7 @@ def main():
         if not os.path.exists(path): print(f"UNAPPLIED {iid}: no such item file ({field})"); unapplied += 1; continue
         if fix.strip().upper() == "DROP":
             os.remove(path); print(f"DROPPED {iid}"); applied += 1; continue
+        if INSTR.search(fix) and field not in ('label','severity'): print(f"UNAPPLIED {iid}: fix for {field} reads as an instruction, not replacement text; rewrite the field by hand: {fix[:120]}"); unapplied += 1; continue
         if not field or not fix: print(f"UNAPPLIED {iid}: missing field or fix"); unapplied += 1; continue
         it = json.load(open(path)); cur = it; parts = field.split(".")
         try:

@@ -45,11 +45,6 @@
   "region": "us"
  },
  {
-  "name": "SC World",
-  "url": "https://www.scworld.com/feed",
-  "region": "us"
- },
- {
   "name": "Security Affairs",
   "url": "https://securityaffairs.com/feed",
   "region": "europe"
@@ -271,11 +266,6 @@
   "region": "mena"
  },
  {
-  "name": "Middle East Eye",
-  "url": "https://www.middleeasteye.net/rss",
-  "region": "mena"
- },
- {
   "name": "Al-Monitor",
   "url": "https://www.al-monitor.com/rss",
   "region": "mena"
@@ -412,12 +402,6 @@
   "max": 6
  },
  {
-  "name": "Caixin Global",
-  "url": "https://www.caixinglobal.com/rss/",
-  "region": "east-asia",
-  "max": 8
- },
- {
   "name": "Nikkei Asia",
   "url": "https://asia.nikkei.com/rss/feed/nar",
   "region": "east-asia",
@@ -432,13 +416,6 @@
  {
   "name": "Global Times",
   "url": "https://www.globaltimes.cn/rss/outbrain.xml",
-  "region": "east-asia",
-  "state_media": true,
-  "max": 6
- },
- {
-  "name": "China Daily Business",
-  "url": "https://www.chinadaily.com.cn/rss/bizchina_rss.xml",
   "region": "east-asia",
   "state_media": true,
   "max": 6
@@ -482,12 +459,6 @@
   "max": 6
  },
  {
-  "name": "Canary Media",
-  "url": "https://www.canarymedia.org/rss.xml",
-  "region": "global",
-  "max": 6
- },
- {
   "name": "Energy Monitor",
   "url": "https://www.energymonitor.ai/feed/",
   "region": "global",
@@ -498,24 +469,6 @@
   "url": "https://reneweconomy.com.au/feed/",
   "region": "oceania",
   "max": 6
- },
- {
-  "name": "DW",
-  "url": "https://rss.dw.com/rdf/rss-en-all",
-  "region": "europe",
-  "max": 8
- },
- {
-  "name": "The Guardian World",
-  "url": "https://www.theguardian.com/world/rss",
-  "region": "uk",
-  "max": 8
- },
- {
-  "name": "The Guardian Business",
-  "url": "https://www.theguardian.com/business/rss",
-  "region": "uk",
-  "max": 8
  },
  {
   "name": "UN News",
@@ -531,21 +484,9 @@
   "max": 6
  },
  {
-  "name": "Times of Israel",
-  "url": "https://www.timesofisrael.com/feed/",
-  "region": "mena",
-  "max": 6
- },
- {
   "name": "Kyiv Independent",
   "url": "https://kyivindependent.com/feed/rss/",
   "region": "russia-ukraine",
-  "max": 6
- },
- {
-  "name": "Straits Times World",
-  "url": "https://www.straitstimes.com/news/world/rss.xml",
-  "region": "east-asia",
   "max": 6
  },
  {
@@ -585,12 +526,6 @@
   "max": 8
  },
  {
-  "name": "New Scientist",
-  "url": "https://www.newscientist.com/feed/home/",
-  "region": "uk",
-  "max": 8
- },
- {
   "name": "Scientific American",
   "url": "http://rss.sciam.com/ScientificAmerican-Global",
   "region": "us",
@@ -601,12 +536,6 @@
   "url": "https://api.quantamagazine.org/feed/",
   "region": "us",
   "max": 5
- },
- {
-  "name": "Ars Technica Science",
-  "url": "https://feeds.arstechnica.com/arstechnica/science",
-  "region": "us",
-  "max": 6
  },
  {
   "name": "Phys.org",
@@ -627,12 +556,6 @@
   "max": 6
  },
  {
-  "name": "ESA",
-  "url": "https://www.esa.int/rssfeed/Our_Activities/Space_Science",
-  "region": "europe",
-  "max": 4
- },
- {
   "name": "NASA",
   "url": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
   "region": "us",
@@ -648,42 +571,6 @@
   "name": "UK DSIT",
   "url": "https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology.atom",
   "region": "uk",
-  "max": 6
- },
- {
-  "name": "Times Higher Education",
-  "url": "https://www.timeshighereducation.com/rss",
-  "region": "uk",
-  "max": 6
- },
- {
-  "name": "Science|Business",
-  "url": "https://sciencebusiness.net/rss.xml",
-  "region": "europe",
-  "max": 6
- },
- {
-  "name": "AIP FYI",
-  "url": "https://www.aip.org/fyi/feed",
-  "region": "us",
-  "max": 5
- },
- {
-  "name": "CORDIS EU Research",
-  "url": "https://cordis.europa.eu/news/rss",
-  "region": "europe",
-  "max": 5
- },
- {
-  "name": "Euractiv",
-  "url": "https://www.euractiv.com/feed/",
-  "region": "europe",
-  "max": 6
- },
- {
-  "name": "National Geographic",
-  "url": "https://www.nationalgeographic.com/pages/feed",
-  "region": "global",
   "max": 6
  },
  {
@@ -711,15 +598,183 @@
   "max": 4
  },
  {
-  "name": "The Guardian Travel",
-  "url": "https://www.theguardian.com/travel/rss",
-  "region": "uk",
-  "max": 5
+  "name": "Azure status",
+  "url": "https://rssfeed.azure.status.microsoft/en-us/status/feed/",
+  "region": "global"
  },
  {
-  "name": "The Guardian Environment",
-  "url": "https://www.theguardian.com/environment/rss",
-  "region": "uk",
-  "max": 6
+  "name": "Microsoft Security Response Center",
+  "url": "https://msrc.microsoft.com/blog/feed",
+  "region": "global"
+ },
+ {
+  "name": "Atlassian status",
+  "url": "https://status.atlassian.com/history.rss",
+  "region": "global"
+ },
+ {
+  "name": "Okta status",
+  "url": "https://status.okta.com/history.rss",
+  "region": "global"
+ },
+ {
+  "name": "Slack status",
+  "url": "https://slack-status.com/feed/rss",
+  "region": "global"
+ },
+ {
+  "name": "Zoom status",
+  "url": "https://status.zoom.us/history.rss",
+  "region": "global"
+ },
+ {
+  "name": "Cloudflare blog",
+  "url": "https://blog.cloudflare.com/rss/",
+  "region": "global"
+ },
+ {
+  "name": "Kentik blog",
+  "url": "https://www.kentik.com/blog/feed/",
+  "region": "global"
+ },
+ {
+  "name": "DatacenterDynamics",
+  "url": "https://www.datacenterdynamics.com/en/rss/",
+  "region": "global"
+ },
+ {
+  "name": "TechCrunch",
+  "url": "https://techcrunch.com/feed/",
+  "region": "us"
+ },
+ {
+  "name": "Ars Technica",
+  "url": "https://feeds.arstechnica.com/arstechnica/index",
+  "region": "us"
+ },
+ {
+  "name": "The Verge",
+  "url": "https://www.theverge.com/rss/index.xml",
+  "region": "us"
+ },
+ {
+  "name": "Wired",
+  "url": "https://www.wired.com/feed/rss",
+  "region": "us"
+ },
+ {
+  "name": "Socket blog",
+  "url": "https://socket.dev/blog/rss.xml",
+  "region": "us"
+ },
+ {
+  "name": "Sansec research",
+  "url": "https://sansec.io/feed.xml",
+  "region": "europe"
+ },
+ {
+  "name": "Sonatype blog",
+  "url": "https://www.sonatype.com/blog/rss.xml",
+  "region": "us"
+ },
+ {
+  "name": "ReversingLabs blog",
+  "url": "https://www.reversinglabs.com/blog/rss.xml",
+  "region": "us"
+ },
+ {
+  "name": "Wiz blog",
+  "url": "https://www.wiz.io/feed/rss.xml",
+  "region": "global"
+ },
+ {
+  "name": "Google Threat Intelligence",
+  "url": "https://cloudblog.withgoogle.com/topics/threat-intelligence/rss/",
+  "region": "global"
+ },
+ {
+  "name": "ESET WeLiveSecurity",
+  "url": "https://www.welivesecurity.com/en/rss/feed/",
+  "region": "europe"
+ },
+ {
+  "name": "Sophos News",
+  "url": "https://news.sophos.com/en-us/feed/",
+  "region": "uk"
+ },
+ {
+  "name": "CSO Online",
+  "url": "https://www.csoonline.com/feed/",
+  "region": "us"
+ },
+ {
+  "name": "ransomware.live",
+  "url": "https://www.ransomware.live/rss.xml",
+  "region": "global"
+ },
+ {
+  "name": "BBC News World",
+  "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+  "region": "uk"
+ },
+ {
+  "name": "BBC News Business",
+  "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+  "region": "uk"
+ },
+ {
+  "name": "BBC News Technology",
+  "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+  "region": "uk"
+ },
+ {
+  "name": "BBC News Science and Environment",
+  "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+  "region": "uk"
+ },
+ {
+  "name": "BBC News Europe",
+  "url": "https://feeds.bbci.co.uk/news/world/europe/rss.xml",
+  "region": "europe"
+ },
+ {
+  "name": "BBC News Middle East",
+  "url": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml",
+  "region": "mena"
+ },
+ {
+  "name": "BBC News Asia",
+  "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
+  "region": "east-asia"
+ },
+ {
+  "name": "BBC Future",
+  "url": "https://www.bbc.com/future/feed.rss",
+  "region": "uk"
+ },
+ {
+  "name": "NPR News",
+  "url": "https://feeds.npr.org/1001/rss.xml",
+  "region": "us"
+ },
+ {
+  "name": "CNA Asia",
+  "url": "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml&category=6511",
+  "region": "east-asia"
+ },
+ {
+  "name": "ScienceDaily Top Science",
+  "url": "https://www.sciencedaily.com/rss/top/science.xml",
+  "region": "us"
+ },
+ {
+  "name": "Live Science",
+  "url": "https://www.livescience.com/feeds.xml",
+  "region": "us"
+ },
+ {
+  "name": "Inside Climate News",
+  "url": "https://insideclimatenews.org/feed/",
+  "region": "us"
  }
 ]

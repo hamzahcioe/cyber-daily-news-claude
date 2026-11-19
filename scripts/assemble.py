@@ -100,6 +100,9 @@ def main():
     if meta.get("indexTitle"): brief["indexTitle"] = meta["indexTitle"]
     s = json.dumps(brief, ensure_ascii=False, indent=1)
     cap = 40 if len(items) > 20 else 30
+    OTHER = {'world','geopolitics','infra-attack','surveillance','economy','nature'}
+    n_other = sum(1 for x in items.values() if x.get('category') in OTHER)
+    if items and n_other / len(items) > 0.45: warns.append(f"balance: {n_other} of {len(items)} items are world/politics/economy/nature ({round(100*n_other/len(items))}%; target 40%)")
     if len(items) > (50 if mon else 40): warns.append(f"{len(items)} items exceeds the cap")
     if len(s) > 120_000: warns.append(f"brief is {len(s)//1000} KB (target under 100 KB)")
     open(a.out, "w").write(s)
