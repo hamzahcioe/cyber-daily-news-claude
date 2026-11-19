@@ -1,1 +1,47 @@
-[]
+[
+ {
+  "headline": "Critical flaws in web and Java infrastructure software: NGINX, Roller, Java4Shell, Drupal, PHP",
+  "label": "CONFIRMED",
+  "severity": "High",
+  "since": "2026-11-19",
+  "status": "Open",
+  "latest": "Patches published; exploitation reported for Roller and attempts for Java4Shell.",
+  "ref": "nginx2root-rce",
+  "log": [
+   {
+    "date": "2026-11-19",
+    "text": "F5/NGINX, Apache, OpenJDK vendors, Drupal and PHP each published fixes; public PoCs reported for NGINX and Roller."
+   }
+  ]
+ },
+ {
+  "headline": "US AI chip export curbs and Chinese response",
+  "label": "CONFIRMED",
+  "severity": "High",
+  "since": "2026-11-19",
+  "status": "Developing",
+  "latest": "US interim licensing rule; Tencent and Alibaba say they are affected; Alibaba says it trains on in-house chips.",
+  "ref": "us-ai-chip-export-curbs",
+  "log": [
+   {
+    "date": "2026-11-19",
+    "text": "Rule reported; Alibaba and Tencent comment on impact."
+   }
+  ]
+ },
+ {
+  "headline": "European Commission AI-assisted cyberattack",
+  "label": "CONFIRMED",
+  "severity": "Medium",
+  "since": "2026-11-19",
+  "status": "Open",
+  "latest": "Commission confirmed the attack took systems offline.",
+  "ref": "eu-commission-ai-cyberattack",
+  "log": [
+   {
+    "date": "2026-11-19",
+    "text": "Commission confirms incident."
+   }
+  ]
+ }
+]
