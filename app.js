@@ -17,20 +17,22 @@
     { id: 'law',          title: 'Law enforcement and policy' },
     { id: 'other',        title: 'Other' }
   ];
-  var GLOBAL = [
-    { id: 'world',        title: 'Major international news' },
-    { id: 'economy',      title: 'Economy and trade' },
-    { id: 'geopolitics',  title: 'Geopolitics and tech' },
+  var TECH = [
     { id: 'ai',           title: 'AI developments' },
+    { id: 'tech',         title: 'Major tech news' },
     { id: 'energy',       title: 'Energy and climate tech' },
     { id: 'science',      title: 'Science and discovery' },
-    { id: 'research-policy', title: 'Research and innovation policy' },
+    { id: 'research-policy', title: 'Research and innovation policy' }
+  ];
+  var GLOBAL = [
+    { id: 'world',        title: 'Major international news' },
+    { id: 'geopolitics',  title: 'Geopolitics and tech' },
     { id: 'infra-attack', title: 'Physical and infrastructure attacks' },
     { id: 'surveillance', title: 'State spying and surveillance' },
-    { id: 'tech',         title: 'Major tech news' }
+    { id: 'economy',      title: 'Economy and trade' }
   ];
   var NATURE = [{ id: 'nature', title: 'Travel and nature' }];
-  var CATEGORIES = CYBER.concat(GLOBAL, NATURE);
+  var CATEGORIES = CYBER.concat(TECH, GLOBAL, NATURE);
   var LABELS = {
     'CONFIRMED': { cls: 't-confirmed', text: 'CONFIRMED' },
     'VENDOR-ACKNOWLEDGED': { cls: 't-vendor', text: 'VENDOR-ACKNOWLEDGED' },
@@ -175,6 +177,9 @@
     $('categoriesVuln').innerHTML = renderGroup(CYBER.filter(function (c) { return c.id === 'vuln'; }));
     $('categoriesCyber').innerHTML = cyberHtml || '<p class="muted">No cyber stories in this brief.</p>';
     $('categoriesCyberTail').innerHTML = renderGroup(CYBER.filter(function (c) { return TAIL[c.id]; }));
+    var techHtml = renderGroup(TECH);
+    $('categoriesTech').innerHTML = techHtml;
+    $('techHeader').hidden = !techHtml;
     var globalHtml = renderGroup(GLOBAL);
     $('categoriesGlobal').innerHTML = globalHtml;
     $('globalHeader').hidden = !globalHtml;
