@@ -5,16 +5,16 @@
   "severity": "High",
   "since": "2026-11-17",
   "status": "open",
-  "latest": "Versions 1.26.1 and 1.26.2 quarantined; how the upload was achieved is disputed.",
+  "latest": "Versions 1.26.1 and 1.26.2 quarantined; root cause not confirmed.",
   "ref": "agent-framework-pypi",
   "log": [
    {
     "date": "2026-11-17",
-    "text": "Malicious releases published and quarantined within the hour."
+    "text": "Malicious releases published and quarantined."
    },
    {
     "date": "2026-11-19",
-    "text": "Microsoft confirms removal and investigation; root cause unconfirmed."
+    "text": "Microsoft confirms removal and investigation; how the upload occurred is disputed."
    }
   ]
  },
@@ -24,12 +24,12 @@
   "severity": "Medium",
   "since": "2026-11-19",
   "status": "open",
-  "latest": "NVIDIA says it has seen no evidence of compromise; claim unverified.",
+  "latest": "Nvidia reports no sign of compromise of its own systems; claim unverified.",
   "ref": "gentlemen-nvidia",
   "log": [
    {
     "date": "2026-11-19",
-    "text": "Group lists NVIDIA; NVIDIA investigating possible third-party incident."
+    "text": "Group lists Nvidia; Nvidia says it is investigating."
    }
   ]
  },
@@ -49,6 +49,55 @@
    {
     "date": "2026-11-19",
     "text": "Scanning and exploitation attempts reported."
+   }
+  ]
+ },
+ {
+  "headline": "Optimizely script injection on 178+ websites",
+  "label": "CONFIRMED",
+  "severity": "High",
+  "since": "2026-11-16",
+  "status": "open",
+  "latest": "Optimizely says flaw fixed; Mandiant investigating.",
+  "ref": "optimizely-supply-chain",
+  "log": [
+   {
+    "date": "2026-11-16",
+    "text": "Malicious JavaScript injected into customer scripts."
+   },
+   {
+    "date": "2026-11-19",
+    "text": "Optimizely briefs customers; investigation continues."
+   }
+  ]
+ },
+ {
+  "headline": "Crimean Bridge strikes and Russian retaliation vow",
+  "label": "CONFIRMED",
+  "severity": "High",
+  "since": "2026-11-16",
+  "status": "open",
+  "latest": "Third strike in four days; Putin vows a 'much more painful' response.",
+  "ref": "crimean-bridge-strike",
+  "log": [
+   {
+    "date": "2026-11-19",
+    "text": "Ukraine's General Staff attributes latest strike to Neptune missiles; trains halted."
+   }
+  ]
+ },
+ {
+  "headline": "European Commission cyberattack",
+  "label": "CONFIRMED",
+  "severity": "Medium",
+  "since": "2026-11-09",
+  "status": "open",
+  "latest": "Staff systems disrupted for about 10 days; CERT-EU involved.",
+  "ref": "ec-cyberattack",
+  "log": [
+   {
+    "date": "2026-11-19",
+    "text": "Commission confirms attack and continuing disruption."
    }
   ]
  }
