@@ -73,6 +73,7 @@ h2 .count{font:500 .85rem var(--body);color:var(--muted);font-variant-numeric:ta
 .top-card p{margin:.7rem 0 0;color:#d6cfc7}
 .top-card .item-meta{padding:0}
 .top-card.lead{grid-row:span 2;padding:1.6rem 1.8rem 1.7rem;background:linear-gradient(180deg,var(--accent-bg),transparent 55%),var(--surface);border-color:#4a2a17}
+.top3[data-n="4"] .top-card.lead{grid-row:span 3}
 .top-card.lead .rank{color:var(--accent)}
 .top-card.lead h3{font-size:clamp(1.6rem,2.6vw,2.2rem);line-height:1.1;font-weight:800;font-stretch:85%;letter-spacing:-.02em}
 .top-card.lead p{font-size:1.05rem}

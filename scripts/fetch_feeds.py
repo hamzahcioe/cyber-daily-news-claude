@@ -9,10 +9,18 @@ from email.utils import parsedate_to_datetime
 
 UA = "Mozilla/5.0 (compatible; NewsBriefBot/1.0; +https://github.com/hamzahcioe/cyber-daily-news-claude)"
 
-def get(url, timeout=15):
+def get(url, timeout=20):
+    import time
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/rss+xml, application/atom+xml, application/xml, application/json, text/xml, */*"})
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.read()
+    for attempt in (1, 2):  # one retry: timeouts and 5xx are often transient
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return r.read()
+        except urllib.error.HTTPError as e:
+            if attempt == 2 or e.code < 500 and e.code != 429: raise
+        except Exception:
+            if attempt == 2: raise
+        time.sleep(2)
 
 def local(tag): return tag.rsplit('}', 1)[-1]
 
@@ -73,7 +81,7 @@ def do_feed(spec, cutoff, per_feed):
     keep = [e for e in entries if e[2] is None or e[2] >= cutoff]
     keep.sort(key=lambda e: e[2] or datetime.min.replace(tzinfo=timezone.utc), reverse=True)
     items = []
-    for title, link, d, summ in keep[:per_feed]:
+    for title, link, d, summ in keep[:spec.get("max", per_feed)]:
         items.append({"outlet": name + (" (state media)" if spec.get("state_media") else ""), "region": spec.get("region", ""), "title": clean(title, 160), "url": link, "published": d.isoformat() if d else None, "summary": clean(summ, 200)})
     return name, items, (None if entries else f"{name}: no entries parsed")
 

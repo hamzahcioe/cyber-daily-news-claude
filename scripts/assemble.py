@@ -7,7 +7,7 @@ import argparse, glob, json, re, sys
 from urllib.parse import urlparse
 from datetime import datetime, timezone
 
-CATS = ["outage", "attack", "breach", "leak", "claim", "supply-chain", "vuln", "law", "other", "geopolitics", "ai", "infra-attack", "surveillance", "tech"]
+CATS = ["outage", "attack", "breach", "leak", "claim", "supply-chain", "vuln", "law", "other", "geopolitics", "ai", "infra-attack", "surveillance", "tech", "world", "economy", "energy"]
 LABELS = {"CONFIRMED", "VENDOR-ACKNOWLEDGED", "UNCONFIRMED CLAIM"}
 SEVS = ["Critical", "High", "Medium", "Low", "Awareness"]
 PRIVATE = ["evidence", "outlets", "primarySourceRead", "unreadable"]
@@ -72,7 +72,7 @@ def main():
         it = items.get(tid)
         if not it: errors.append(f"top references unknown id {tid}"); continue
         top.append({"headline": it["headline"], "summary": it["summary"], "label": it["label"], "severity": it["severity"], "coverage": cov(it), "ref": tid})
-    if len(top) != 3: warns.append(f"top has {len(top)} entries, expected 3")
+    if len(top) != 4: warns.append(f"top has {len(top)} entries, expected 4")
     ongoing = meta.get("ongoing", [])
     for g in ongoing:
         if g.get("ref") and "/" not in g["ref"] and g["ref"] not in items and not g.get("external"): warns.append(f"ongoing ref {g['ref']} has no item today (fine if story had no news today)")
@@ -100,7 +100,7 @@ def main():
     if meta.get("indexTitle"): brief["indexTitle"] = meta["indexTitle"]
     s = json.dumps(brief, ensure_ascii=False, indent=1)
     cap = 40 if len(items) > 20 else 30
-    if len(items) > (30 if mon else 22): warns.append(f"{len(items)} items exceeds the cap")
+    if len(items) > (46 if mon else 36): warns.append(f"{len(items)} items exceeds the cap")
     if len(s) > 120_000: warns.append(f"brief is {len(s)//1000} KB (target under 100 KB)")
     open(a.out, "w").write(s)
     print(f"items {len(out_items)}; size {len(s)//1000} KB; errors {len(errors)}; warnings {len(warns)}")

@@ -1,80 +1,595 @@
 [
- {"name":"The Register","url":"https://www.theregister.com/headlines.atom","region":"uk"},
- {"name":"Computer Weekly","url":"https://www.computerweekly.com/rss/IT-security.xml","region":"uk"},
- {"name":"Infosecurity Magazine","url":"https://www.infosecurity-magazine.com/rss/news/","region":"uk"},
- {"name":"Sky News Technology","url":"https://feeds.skynews.com/feeds/rss/technology.xml","region":"uk"},
- {"name":"NCSC","url":"https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml","region":"uk"},
- {"name":"UKAuthority","url":"https://www.ukauthority.com/feed/","region":"uk"},
- {"name":"BleepingComputer","url":"https://www.bleepingcomputer.com/feed/","region":"global"},
- {"name":"The Hacker News","url":"https://feeds.feedburner.com/TheHackersNews","region":"global"},
- {"name":"SecurityWeek","url":"https://feeds.feedburner.com/securityweek","region":"global"},
- {"name":"Dark Reading","url":"https://www.darkreading.com/rss.xml","region":"us"},
- {"name":"SC World","url":"https://www.scworld.com/feed","region":"us"},
- {"name":"Security Affairs","url":"https://securityaffairs.com/feed","region":"europe"},
- {"name":"Help Net Security","url":"https://www.helpnetsecurity.com/feed/","region":"europe"},
- {"name":"Cybernews","url":"https://cybernews.com/feed/","region":"europe"},
- {"name":"Schneier on Security","url":"https://www.schneier.com/feed/atom/","region":"us"},
- {"name":"Krebs on Security","url":"https://krebsonsecurity.com/feed/","region":"us"},
- {"name":"The Record","url":"https://therecord.media/feed","region":"us"},
- {"name":"TechCrunch Security","url":"https://techcrunch.com/category/security/feed/","region":"us"},
- {"name":"Report URI","url":"https://blog.report-uri.com/rss/","region":"uk"},
- {"name":"Risky Business","url":"https://risky.biz/feeds/risky-bulletin/","region":"global"},
- {"name":"Citizen Lab","url":"https://citizenlab.ca/feed/","region":"global"},
- {"name":"Cisco Talos","url":"https://blog.talosintelligence.com/rss/","region":"global"},
- {"name":"Unit 42","url":"https://unit42.paloaltonetworks.com/feed/","region":"global"},
- {"name":"Securelist","url":"https://securelist.com/feed/","region":"global"},
- {"name":"Microsoft Security Blog","url":"https://www.microsoft.com/en-us/security/blog/feed/","region":"global"},
- {"name":"Google Project Zero","url":"https://googleprojectzero.blogspot.com/feeds/posts/default","region":"global"},
- {"name":"Check Point Research","url":"https://research.checkpoint.com/feed/","region":"global"},
- {"name":"Horizon3.ai","url":"https://horizon3.ai/feed/","region":"global"},
- {"name":"Malwarebytes","url":"https://www.malwarebytes.com/blog/feed/index.xml","region":"global"},
- {"name":"CISA advisories","url":"https://www.cisa.gov/cybersecurity-advisories/all.xml","region":"us"},
- {"name":"CISA KEV","url":"https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json","region":"us","kind":"cisa_kev"},
- {"name":"GitHub status","url":"https://www.githubstatus.com/history.atom","region":"global"},
- {"name":"Cloudflare status","url":"https://www.cloudflarestatus.com/history.atom","region":"global"},
- {"name":"Google Cloud status","url":"https://status.cloud.google.com/en/feed.atom","region":"global"},
- {"name":"AWS status","url":"https://status.aws.amazon.com/rss/all.rss","region":"global"},
- {"name":"404 Media","url":"https://www.404media.co/rss/","region":"us"},
- {"name":"The Intercept","url":"https://theintercept.com/feed/?rss","region":"us"},
- {"name":"ICIJ","url":"https://www.icij.org/feed/","region":"global"},
- {"name":"OCCRP","url":"https://www.occrp.org/en/rss","region":"global"},
- {"name":"Bellingcat","url":"https://www.bellingcat.com/feed/","region":"global"},
- {"name":"EFF Deeplinks","url":"https://www.eff.org/rss/updates.xml","region":"us"},
- {"name":"DataBreaches.net","url":"https://databreaches.net/feed/","region":"global"},
- {"name":"Correctiv","url":"https://correctiv.org/feed/","region":"europe"},
- {"name":"Netzpolitik","url":"https://netzpolitik.org/feed/","region":"europe"},
- {"name":"Golem","url":"https://rss.golem.de/rss.php?feed=RSS2.0","region":"europe"},
- {"name":"Next.ink","url":"https://next.ink/feed/","region":"europe"},
- {"name":"Euronews","url":"https://www.euronews.com/rss","region":"europe"},
- {"name":"France 24","url":"https://www.france24.com/en/rss","region":"global"},
- {"name":"Techmeme","url":"https://www.techmeme.com/feed.xml","region":"global"},
- {"name":"Semafor","url":"https://www.semafor.com/rss.xml","region":"global"},
- {"name":"The Information","url":"https://www.theinformation.com/feed","region":"global"},
- {"name":"CNBC Technology","url":"https://www.cnbc.com/id/19854910/device/rss/rss.html","region":"us"},
- {"name":"CBC Technology","url":"https://www.cbc.ca/webfeed/rss/rss-technology","region":"americas"},
- {"name":"Tecnoblog","url":"https://tecnoblog.net/feed/","region":"americas"},
- {"name":"Rest of World","url":"https://restofworld.org/feed/","region":"global"},
- {"name":"Al Jazeera","url":"https://www.aljazeera.com/xml/rss/all.xml","region":"mena"},
- {"name":"Middle East Eye","url":"https://www.middleeasteye.net/rss","region":"mena"},
- {"name":"Al-Monitor","url":"https://www.al-monitor.com/rss","region":"mena"},
- {"name":"Jerusalem Post","url":"https://www.jpost.com/rss/rssfeedsfrontpage.aspx","region":"mena"},
- {"name":"Meduza","url":"https://meduza.io/rss/en/all","region":"russia-ukraine"},
- {"name":"The Moscow Times","url":"https://www.themoscowtimes.com/rss/news","region":"russia-ukraine"},
- {"name":"Ukrinform","url":"https://www.ukrinform.net/rss/block-lastnews","region":"russia-ukraine","state_media":true},
- {"name":"TASS","url":"https://tass.com/rss/v2.xml","region":"russia-ukraine","state_media":true},
- {"name":"RIA Novosti","url":"https://ria.ru/export/rss2/archive/index.xml","region":"russia-ukraine","state_media":true},
- {"name":"SCMP Tech","url":"https://www.scmp.com/rss/36/feed","region":"east-asia"},
- {"name":"TechNode","url":"https://technode.com/feed/","region":"east-asia"},
- {"name":"Pandaily","url":"https://pandaily.com/feed/","region":"east-asia"},
- {"name":"KrASIA","url":"https://kr-asia.com/feed","region":"east-asia"},
- {"name":"iThome","url":"https://www.ithome.com.tw/rss","region":"east-asia"},
- {"name":"Taipei Times","url":"https://www.taipeitimes.com/xml/index.rss","region":"east-asia"},
- {"name":"DigiTimes","url":"https://www.digitimes.com/rss/daily.xml","region":"east-asia"},
- {"name":"Japan Times","url":"https://www.japantimes.co.jp/feed/","region":"east-asia"},
- {"name":"MediaNama","url":"https://www.medianama.com/feed/","region":"south-asia"},
- {"name":"Dawn","url":"https://www.dawn.com/feeds/home","region":"south-asia"},
- {"name":"iTnews","url":"https://www.itnews.com.au/RSS/rss.ashx","region":"oceania"},
- {"name":"ABC News Australia","url":"https://www.abc.net.au/news/feed/51120/rss.xml","region":"oceania"},
- {"name":"RNZ","url":"https://www.rnz.co.nz/rss/national.xml","region":"oceania"},
- {"name":"TechCabal","url":"https://techcabal.com/feed/","region":"africa"}
+ {
+  "name": "The Register",
+  "url": "https://www.theregister.com/headlines.atom",
+  "region": "uk"
+ },
+ {
+  "name": "Computer Weekly",
+  "url": "https://www.computerweekly.com/rss/IT-security.xml",
+  "region": "uk"
+ },
+ {
+  "name": "Infosecurity Magazine",
+  "url": "https://www.infosecurity-magazine.com/rss/news/",
+  "region": "uk"
+ },
+ {
+  "name": "Sky News Technology",
+  "url": "https://feeds.skynews.com/feeds/rss/technology.xml",
+  "region": "uk"
+ },
+ {
+  "name": "NCSC",
+  "url": "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml",
+  "region": "uk"
+ },
+ {
+  "name": "UKAuthority",
+  "url": "https://www.ukauthority.com/feed/",
+  "region": "uk"
+ },
+ {
+  "name": "BleepingComputer",
+  "url": "https://www.bleepingcomputer.com/feed/",
+  "region": "global"
+ },
+ {
+  "name": "The Hacker News",
+  "url": "https://feeds.feedburner.com/TheHackersNews",
+  "region": "global"
+ },
+ {
+  "name": "SecurityWeek",
+  "url": "https://feeds.feedburner.com/securityweek",
+  "region": "global"
+ },
+ {
+  "name": "Dark Reading",
+  "url": "https://www.darkreading.com/rss.xml",
+  "region": "us"
+ },
+ {
+  "name": "SC World",
+  "url": "https://www.scworld.com/feed",
+  "region": "us"
+ },
+ {
+  "name": "Security Affairs",
+  "url": "https://securityaffairs.com/feed",
+  "region": "europe"
+ },
+ {
+  "name": "Help Net Security",
+  "url": "https://www.helpnetsecurity.com/feed/",
+  "region": "europe"
+ },
+ {
+  "name": "Cybernews",
+  "url": "https://cybernews.com/feed/",
+  "region": "europe"
+ },
+ {
+  "name": "Schneier on Security",
+  "url": "https://www.schneier.com/feed/atom/",
+  "region": "us"
+ },
+ {
+  "name": "Krebs on Security",
+  "url": "https://krebsonsecurity.com/feed/",
+  "region": "us"
+ },
+ {
+  "name": "The Record",
+  "url": "https://therecord.media/feed",
+  "region": "us"
+ },
+ {
+  "name": "TechCrunch Security",
+  "url": "https://techcrunch.com/category/security/feed/",
+  "region": "us"
+ },
+ {
+  "name": "Report URI",
+  "url": "https://blog.report-uri.com/rss/",
+  "region": "uk"
+ },
+ {
+  "name": "Risky Business",
+  "url": "https://risky.biz/feeds/risky-bulletin/",
+  "region": "global"
+ },
+ {
+  "name": "Citizen Lab",
+  "url": "https://citizenlab.ca/feed/",
+  "region": "global"
+ },
+ {
+  "name": "Cisco Talos",
+  "url": "https://blog.talosintelligence.com/rss/",
+  "region": "global"
+ },
+ {
+  "name": "Unit 42",
+  "url": "https://unit42.paloaltonetworks.com/feed/",
+  "region": "global"
+ },
+ {
+  "name": "Securelist",
+  "url": "https://securelist.com/feed/",
+  "region": "global"
+ },
+ {
+  "name": "Microsoft Security Blog",
+  "url": "https://www.microsoft.com/en-us/security/blog/feed/",
+  "region": "global"
+ },
+ {
+  "name": "Google Project Zero",
+  "url": "https://googleprojectzero.blogspot.com/feeds/posts/default",
+  "region": "global"
+ },
+ {
+  "name": "Check Point Research",
+  "url": "https://research.checkpoint.com/feed/",
+  "region": "global"
+ },
+ {
+  "name": "Horizon3.ai",
+  "url": "https://horizon3.ai/feed/",
+  "region": "global"
+ },
+ {
+  "name": "Malwarebytes",
+  "url": "https://www.malwarebytes.com/blog/feed/index.xml",
+  "region": "global"
+ },
+ {
+  "name": "CISA advisories",
+  "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
+  "region": "us"
+ },
+ {
+  "name": "CISA KEV",
+  "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+  "region": "us",
+  "kind": "cisa_kev"
+ },
+ {
+  "name": "GitHub status",
+  "url": "https://www.githubstatus.com/history.atom",
+  "region": "global"
+ },
+ {
+  "name": "Cloudflare status",
+  "url": "https://www.cloudflarestatus.com/history.atom",
+  "region": "global"
+ },
+ {
+  "name": "Google Cloud status",
+  "url": "https://status.cloud.google.com/en/feed.atom",
+  "region": "global"
+ },
+ {
+  "name": "AWS status",
+  "url": "https://status.aws.amazon.com/rss/all.rss",
+  "region": "global"
+ },
+ {
+  "name": "404 Media",
+  "url": "https://www.404media.co/rss/",
+  "region": "us"
+ },
+ {
+  "name": "The Intercept",
+  "url": "https://theintercept.com/feed/?rss",
+  "region": "us"
+ },
+ {
+  "name": "ICIJ",
+  "url": "https://www.icij.org/feed/",
+  "region": "global"
+ },
+ {
+  "name": "OCCRP",
+  "url": "https://www.occrp.org/en/rss",
+  "region": "global"
+ },
+ {
+  "name": "Bellingcat",
+  "url": "https://www.bellingcat.com/feed/",
+  "region": "global"
+ },
+ {
+  "name": "EFF Deeplinks",
+  "url": "https://www.eff.org/rss/updates.xml",
+  "region": "us"
+ },
+ {
+  "name": "DataBreaches.net",
+  "url": "https://databreaches.net/feed/",
+  "region": "global"
+ },
+ {
+  "name": "Correctiv",
+  "url": "https://correctiv.org/feed/",
+  "region": "europe"
+ },
+ {
+  "name": "Netzpolitik",
+  "url": "https://netzpolitik.org/feed/",
+  "region": "europe"
+ },
+ {
+  "name": "Golem",
+  "url": "https://rss.golem.de/rss.php?feed=RSS2.0",
+  "region": "europe"
+ },
+ {
+  "name": "Next.ink",
+  "url": "https://next.ink/feed/",
+  "region": "europe"
+ },
+ {
+  "name": "Euronews",
+  "url": "https://www.euronews.com/rss",
+  "region": "europe"
+ },
+ {
+  "name": "France 24",
+  "url": "https://www.france24.com/en/rss",
+  "region": "global"
+ },
+ {
+  "name": "Techmeme",
+  "url": "https://www.techmeme.com/feed.xml",
+  "region": "global"
+ },
+ {
+  "name": "Semafor",
+  "url": "https://www.semafor.com/rss.xml",
+  "region": "global"
+ },
+ {
+  "name": "The Information",
+  "url": "https://www.theinformation.com/feed",
+  "region": "global"
+ },
+ {
+  "name": "CNBC Technology",
+  "url": "https://www.cnbc.com/id/19854910/device/rss/rss.html",
+  "region": "us"
+ },
+ {
+  "name": "CBC Technology",
+  "url": "https://www.cbc.ca/webfeed/rss/rss-technology",
+  "region": "americas"
+ },
+ {
+  "name": "Tecnoblog",
+  "url": "https://tecnoblog.net/feed/",
+  "region": "americas"
+ },
+ {
+  "name": "Rest of World",
+  "url": "https://restofworld.org/feed/",
+  "region": "global"
+ },
+ {
+  "name": "Al Jazeera",
+  "url": "https://www.aljazeera.com/xml/rss/all.xml",
+  "region": "mena"
+ },
+ {
+  "name": "Middle East Eye",
+  "url": "https://www.middleeasteye.net/rss",
+  "region": "mena"
+ },
+ {
+  "name": "Al-Monitor",
+  "url": "https://www.al-monitor.com/rss",
+  "region": "mena"
+ },
+ {
+  "name": "Jerusalem Post",
+  "url": "https://www.jpost.com/rss/rssfeedsfrontpage.aspx",
+  "region": "mena"
+ },
+ {
+  "name": "Meduza",
+  "url": "https://meduza.io/rss/en/all",
+  "region": "russia-ukraine"
+ },
+ {
+  "name": "The Moscow Times",
+  "url": "https://www.themoscowtimes.com/rss/news",
+  "region": "russia-ukraine"
+ },
+ {
+  "name": "Ukrinform",
+  "url": "https://www.ukrinform.net/rss/block-lastnews",
+  "region": "russia-ukraine",
+  "state_media": true
+ },
+ {
+  "name": "TASS",
+  "url": "https://tass.com/rss/v2.xml",
+  "region": "russia-ukraine",
+  "state_media": true
+ },
+ {
+  "name": "RIA Novosti",
+  "url": "https://ria.ru/export/rss2/archive/index.xml",
+  "region": "russia-ukraine",
+  "state_media": true
+ },
+ {
+  "name": "SCMP Tech",
+  "url": "https://www.scmp.com/rss/36/feed",
+  "region": "east-asia"
+ },
+ {
+  "name": "TechNode",
+  "url": "https://technode.com/feed/",
+  "region": "east-asia"
+ },
+ {
+  "name": "Pandaily",
+  "url": "https://pandaily.com/feed/",
+  "region": "east-asia"
+ },
+ {
+  "name": "KrASIA",
+  "url": "https://kr-asia.com/feed",
+  "region": "east-asia"
+ },
+ {
+  "name": "iThome",
+  "url": "https://www.ithome.com.tw/rss",
+  "region": "east-asia"
+ },
+ {
+  "name": "Taipei Times",
+  "url": "https://www.taipeitimes.com/xml/index.rss",
+  "region": "east-asia"
+ },
+ {
+  "name": "DigiTimes",
+  "url": "https://www.digitimes.com/rss/daily.xml",
+  "region": "east-asia"
+ },
+ {
+  "name": "Japan Times",
+  "url": "https://www.japantimes.co.jp/feed/",
+  "region": "east-asia"
+ },
+ {
+  "name": "MediaNama",
+  "url": "https://www.medianama.com/feed/",
+  "region": "south-asia"
+ },
+ {
+  "name": "Dawn",
+  "url": "https://www.dawn.com/feeds/home",
+  "region": "south-asia"
+ },
+ {
+  "name": "iTnews",
+  "url": "https://www.itnews.com.au/RSS/rss.ashx",
+  "region": "oceania"
+ },
+ {
+  "name": "ABC News Australia",
+  "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
+  "region": "oceania"
+ },
+ {
+  "name": "RNZ",
+  "url": "https://www.rnz.co.nz/rss/national.xml",
+  "region": "oceania"
+ },
+ {
+  "name": "TechCabal",
+  "url": "https://techcabal.com/feed/",
+  "region": "africa"
+ },
+ {
+  "name": "Liberty",
+  "url": "https://www.libertyhumanrights.org.uk/feed/",
+  "region": "uk"
+ },
+ {
+  "name": "Privacy International",
+  "url": "https://privacyinternational.org/rss.xml",
+  "region": "global"
+ },
+ {
+  "name": "Open Rights Group",
+  "url": "https://www.openrightsgroup.org/feed/",
+  "region": "uk"
+ },
+ {
+  "name": "SCMP China",
+  "url": "https://www.scmp.com/rss/4/feed",
+  "region": "east-asia",
+  "max": 8
+ },
+ {
+  "name": "SCMP Economy",
+  "url": "https://www.scmp.com/rss/92/feed",
+  "region": "east-asia",
+  "max": 8
+ },
+ {
+  "name": "CnTechPost",
+  "url": "https://cntechpost.com/feed/",
+  "region": "east-asia"
+ },
+ {
+  "name": "Sixth Tone",
+  "url": "https://www.sixthtone.com/rss",
+  "region": "east-asia",
+  "max": 6
+ },
+ {
+  "name": "Caixin Global",
+  "url": "https://www.caixinglobal.com/rss/",
+  "region": "east-asia",
+  "max": 8
+ },
+ {
+  "name": "Nikkei Asia",
+  "url": "https://asia.nikkei.com/rss/feed/nar",
+  "region": "east-asia",
+  "max": 10
+ },
+ {
+  "name": "The Diplomat",
+  "url": "https://thediplomat.com/feed/",
+  "region": "east-asia",
+  "max": 8
+ },
+ {
+  "name": "Global Times",
+  "url": "https://www.globaltimes.cn/rss/outbrain.xml",
+  "region": "east-asia",
+  "state_media": true,
+  "max": 6
+ },
+ {
+  "name": "China Daily Business",
+  "url": "https://www.chinadaily.com.cn/rss/bizchina_rss.xml",
+  "region": "east-asia",
+  "state_media": true,
+  "max": 6
+ },
+ {
+  "name": "Xinhua English",
+  "url": "http://www.xinhuanet.com/english/rss/worldrss.xml",
+  "region": "east-asia",
+  "state_media": true,
+  "max": 6
+ },
+ {
+  "name": "CGTN",
+  "url": "https://www.cgtn.com/subscribe/rss/section/world.xml",
+  "region": "east-asia",
+  "state_media": true,
+  "max": 6
+ },
+ {
+  "name": "pv magazine",
+  "url": "https://www.pv-magazine.com/feed/",
+  "region": "global",
+  "max": 8
+ },
+ {
+  "name": "Electrek",
+  "url": "https://electrek.co/feed/",
+  "region": "global",
+  "max": 8
+ },
+ {
+  "name": "CleanTechnica",
+  "url": "https://cleantechnica.com/feed/",
+  "region": "global",
+  "max": 8
+ },
+ {
+  "name": "Carbon Brief",
+  "url": "https://www.carbonbrief.org/feed/",
+  "region": "global",
+  "max": 6
+ },
+ {
+  "name": "Canary Media",
+  "url": "https://www.canarymedia.org/rss.xml",
+  "region": "global",
+  "max": 6
+ },
+ {
+  "name": "Energy Monitor",
+  "url": "https://www.energymonitor.ai/feed/",
+  "region": "global",
+  "max": 6
+ },
+ {
+  "name": "RenewEconomy",
+  "url": "https://reneweconomy.com.au/feed/",
+  "region": "oceania",
+  "max": 6
+ },
+ {
+  "name": "DW",
+  "url": "https://rss.dw.com/rdf/rss-en-all",
+  "region": "europe",
+  "max": 8
+ },
+ {
+  "name": "The Guardian World",
+  "url": "https://www.theguardian.com/world/rss",
+  "region": "uk",
+  "max": 8
+ },
+ {
+  "name": "The Guardian Business",
+  "url": "https://www.theguardian.com/business/rss",
+  "region": "uk",
+  "max": 8
+ },
+ {
+  "name": "UN News",
+  "url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml",
+  "region": "global",
+  "max": 6
+ },
+ {
+  "name": "Anadolu Agency",
+  "url": "https://www.aa.com.tr/en/rss/default?cat=world",
+  "region": "mena",
+  "state_media": true,
+  "max": 6
+ },
+ {
+  "name": "Times of Israel",
+  "url": "https://www.timesofisrael.com/feed/",
+  "region": "mena",
+  "max": 6
+ },
+ {
+  "name": "Kyiv Independent",
+  "url": "https://kyivindependent.com/feed/",
+  "region": "russia-ukraine",
+  "max": 6
+ },
+ {
+  "name": "Straits Times World",
+  "url": "https://www.straitstimes.com/news/world/rss.xml",
+  "region": "east-asia",
+  "max": 6
+ },
+ {
+  "name": "The Africa Report",
+  "url": "https://www.theafricareport.com/feed/",
+  "region": "africa",
+  "max": 6
+ },
+ {
+  "name": "AllAfrica",
+  "url": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",
+  "region": "africa",
+  "max": 6
+ },
+ {
+  "name": "MercoPress",
+  "url": "https://en.mercopress.com/rss",
+  "region": "americas",
+  "max": 6
+ },
+ {
+  "name": "Buenos Aires Times",
+  "url": "https://www.batimes.com.ar/feed",
+  "region": "americas",
+  "max": 5
+ }
 ]

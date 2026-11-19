@@ -57,6 +57,11 @@ def main():
         ok += 1; files.setdefault(iid, []).append(f"=== {u}\n{txt}\n")
     for iid, parts in files.items(): open(os.path.join(a.out, iid + ".txt"), "w").write("\n".join(parts))
     print(f"pages ok {ok}; failed {bad}; items {len(files)}")
+    from urllib.parse import urlparse
+    seen = {}
+    for (iid, u), txt in res:
+        if txt.startswith("FAILED"): seen.setdefault(urlparse(u).netloc.removeprefix("www."), txt[7:60])
+    for host, why in list(seen.items())[:20]: print("  PAGE FAILED", host, "-", why)
 
 if __name__ == "__main__":
     main()

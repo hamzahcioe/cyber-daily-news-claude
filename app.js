@@ -18,8 +18,11 @@
     { id: 'other',        title: 'Other' }
   ];
   var GLOBAL = [
+    { id: 'world',        title: 'Major international news' },
+    { id: 'economy',      title: 'Economy and trade' },
     { id: 'geopolitics',  title: 'Geopolitics and tech' },
     { id: 'ai',           title: 'AI developments' },
+    { id: 'energy',       title: 'Energy and climate tech' },
     { id: 'infra-attack', title: 'Physical and infrastructure attacks' },
     { id: 'surveillance', title: 'State spying and surveillance' },
     { id: 'tech',         title: 'Major tech news' }
@@ -125,6 +128,7 @@
     $('sampleBanner').hidden = !(isSample || b.sample);
 
     // top stories
+    $('top3').setAttribute('data-n', String((b.top || []).length));
     $('top3').innerHTML = (b.top || []).map(function (t, i) {
       var link = t.ref ? '<a href="#' + esc(state.current) + '/' + esc(t.ref) + '" data-jump="' + esc(t.ref) + '">Read full story →</a>' : '';
       return '<div class="top-card' + (i === 0 ? ' lead' : '') + '" data-sev="' + esc(t.severity || '') + '"><span class="rank">' + (i + 1) + '</span><h3>' + esc(t.headline) + '</h3>' +
@@ -163,8 +167,10 @@
       });
       return html;
     }
-    var cyberHtml = renderGroup(CYBER);
+    var TAIL = { law: 1, other: 1 };
+    var cyberHtml = renderGroup(CYBER.filter(function (c) { return !TAIL[c.id]; }));
     $('categoriesCyber').innerHTML = cyberHtml || '<p class="muted">No cyber stories in this brief.</p>';
+    $('categoriesCyberTail').innerHTML = renderGroup(CYBER.filter(function (c) { return TAIL[c.id]; }));
     var globalHtml = renderGroup(GLOBAL);
     $('categoriesGlobal').innerHTML = globalHtml;
     $('globalHeader').hidden = !globalHtml;
