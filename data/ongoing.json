@@ -6,7 +6,6 @@
   "since": "2026-11-17",
   "status": "open",
   "latest": "Exploit attempts reported by several labs; no confirmed compromise; some vendor fixes still pending.",
-  "ref": "java4shell",
   "log": [
    {
     "date": "2026-11-17",
@@ -25,7 +24,6 @@
   "since": "2026-11-18",
   "status": "open",
   "latest": "Fixes in 1.31.9/1.30.7; CERT-Bund, JPCERT/CC and others issued warnings.",
-  "ref": "nginx2root",
   "log": [
    {
     "date": "2026-11-18",
@@ -44,7 +42,6 @@
   "since": "2026-11-17",
   "status": "open",
   "latest": "ASF says actively exploited; fixed in 6.1.6 or later.",
-  "ref": "apache-roller-exploited",
   "log": [
    {
     "date": "2026-11-17",
@@ -58,12 +55,16 @@
   "severity": "High",
   "since": "2026-11-18",
   "status": "open",
-  "latest": "Pre-announced for all supported versions; CVE-2026-115560 RCE expected.",
+  "latest": "Pre-announced for all supported branches; not yet published at 13:07 UTC; CVE-2026-115560 expected.",
   "ref": "php-critical-release",
   "log": [
    {
     "date": "2026-11-18",
     "text": "PHP team pre-announced release."
+   },
+   {
+    "date": "2026-11-19",
+    "text": "Release window 14:00-14:30 UTC; fixed versions not yet listed."
    }
   ]
  },
@@ -74,7 +75,6 @@
   "since": "2026-11-17",
   "status": "open",
   "latest": "Portal and APIs still offline at 08:00 UTC on 19 Nov; attacker undisclosed.",
-  "ref": "n-able-cloud-breach",
   "log": [
    {
     "date": "2026-11-18",
@@ -89,7 +89,6 @@
   "since": "2026-11-16",
   "status": "open",
   "latest": "About 265,000 accounts may be affected.",
-  "ref": "tfl-oyster-breach",
   "log": [
    {
     "date": "2026-11-16",
