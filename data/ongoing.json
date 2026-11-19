@@ -1,46 +1,54 @@
 [
  {
-  "headline": "Crimean Bridge strikes and Russian retaliation threats",
-  "label": "CONFIRMED",
-  "severity": "Medium",
-  "since": "2026-11-16",
-  "status": "open",
-  "latest": "Third reported Ukrainian strike on the bridge's rail section this week; Putin has vowed a response.",
-  "ref": "crimean-bridge-strikes",
-  "log": [
-   {
-    "date": "2026-11-19",
-    "text": "Rail traffic halted after third strike in a week; Russia vows retaliation."
-   }
-  ]
- },
- {
   "headline": "Microsoft agent-framework PyPI compromise",
   "label": "CONFIRMED",
   "severity": "High",
-  "since": "2026-11-19",
+  "since": "2026-11-17",
   "status": "open",
-  "latest": "Versions 1.26.1 and 1.26.2 pulled; root cause unconfirmed.",
+  "latest": "Versions 1.26.1 and 1.26.2 quarantined; how the upload was achieved is disputed.",
   "ref": "agent-framework-pypi",
   "log": [
    {
+    "date": "2026-11-17",
+    "text": "Malicious releases published and quarantined within the hour."
+   },
+   {
     "date": "2026-11-19",
-    "text": "Credential-stealing releases reported and removed from the feed."
+    "text": "Microsoft confirms removal and investigation; root cause unconfirmed."
    }
   ]
  },
  {
-  "headline": "NVIDIA breach claim by Gentlemen ransomware",
+  "headline": "NVIDIA leak-site listing by Gentlemen ransomware",
   "label": "UNCONFIRMED CLAIM",
-  "severity": "Low",
+  "severity": "Medium",
   "since": "2026-11-19",
   "status": "open",
-  "latest": "NVIDIA says it is investigating; claim unverified.",
-  "ref": "gentlemen-nvidia-claim",
+  "latest": "NVIDIA says it has seen no evidence of compromise; claim unverified.",
+  "ref": "gentlemen-nvidia",
   "log": [
    {
     "date": "2026-11-19",
-    "text": "Group lists NVIDIA on leak site; NVIDIA investigating."
+    "text": "Group lists NVIDIA; NVIDIA investigating possible third-party incident."
+   }
+  ]
+ },
+ {
+  "headline": "Java4Shell OpenJDK flaw exploitation attempts",
+  "label": "CONFIRMED",
+  "severity": "High",
+  "since": "2026-11-17",
+  "status": "open",
+  "latest": "Oracle and OpenJDK fixes out; CISA alert issued; attempts reported, no confirmed intrusions.",
+  "ref": "java4shell",
+  "log": [
+   {
+    "date": "2026-11-17",
+    "text": "Patches released after pre-disclosure leak."
+   },
+   {
+    "date": "2026-11-19",
+    "text": "Scanning and exploitation attempts reported."
    }
   ]
  }
