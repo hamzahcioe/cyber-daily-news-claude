@@ -1,1 +1,254 @@
-[]
+[
+ {
+  "headline": "Run of US tech outages (Microsoft, FAA, NSA, Apple)",
+  "label": "CONFIRMED",
+  "severity": "High",
+  "since": "2026-11-12",
+  "status": "open",
+  "latest": "US officials told Congress on 18 Nov they see no link between the outages and no malicious activity; The Register reports Microsoft's final post-incident report is due 20 Nov.",
+  "ref": "outage-wave",
+  "log": [
+   {
+    "date": "2026-11-12",
+    "text": "Microsoft 365 / Exchange Online outage begins (11:20 ET, i.e. 16:20 UK, per Microsoft's preliminary report as relayed by BleepingComputer)."
+   },
+   {
+    "date": "2026-11-13",
+    "text": "FAA nationwide ground stop; later paused Juniper router installs."
+   },
+   {
+    "date": "2026-11-17",
+    "text": "NSA classified network disrupted; Apple iCloud and related services disrupted."
+   },
+   {
+    "date": "2026-11-18",
+    "text": "Officials say they have no evidence the incidents are linked or \"nefarious\"; contested AI-patching theory aired."
+   }
+  ]
+ },
+ {
+  "headline": "Java4Shell (CVE-2026-114938)",
+  "label": "CONFIRMED",
+  "severity": "High",
+  "since": "2026-11-17",
+  "status": "open – patches rolling out, probing reported",
+  "latest": "Probing and exploit attempts reported by GreyNoise, watchTowr, Cloudflare and Previdian; no confirmed successful intrusion reported; Red Hat, Atlassian, Cisco and Elastic fixes pending at time of reading.",
+  "ref": "java4shell",
+  "log": [
+   {
+    "date": "2026-11-17",
+    "text": "Oracle and OpenJDK release fixes; CISA, Canada’s Cyber Centre and CERT Polska alerts; Calif publishes write-up."
+   },
+   {
+    "date": "2026-11-18",
+    "text": "CERT-EU, BSI, NCSC-NL and NCSC NZ alerts; Cisco advisory published."
+   },
+   {
+    "date": "2026-11-19",
+    "text": "Scanning and exploit attempts reported; no confirmed compromise."
+   }
+  ]
+ },
+ {
+  "headline": "NGINX \"nginx2root\" flaws",
+  "label": "CONFIRMED",
+  "severity": "High",
+  "since": "2026-11-18",
+  "status": "open – no exploitation reported",
+  "latest": "F5 and others report no exploitation in the wild; a public proof of concept exists for the HTTP/2 flaw CVE-2026-123007.",
+  "ref": "nginx2root",
+  "log": [
+   {
+    "date": "2026-11-18",
+    "text": "F5/nginx release fixed versions 1.31.9 and 1.30.7; five research teams publish findings; Rapid7 PoC public."
+   },
+   {
+    "date": "2026-11-18",
+    "text": "F5 tells The Register it has found no evidence of active exploitation (21:11 UTC)."
+   },
+   {
+    "date": "2026-11-19",
+    "text": "Rapid7 and Censys proof-of-concept material public; no exploitation reported (SecurityWeek, The Hacker News); Ubuntu USN-9159-1 published."
+   }
+  ]
+ },
+ {
+  "headline": "PHP security release for all supported versions",
+  "label": "VENDOR-ACKNOWLEDGED",
+  "severity": "High",
+  "since": "2026-11-18",
+  "status": "open – release due 19 Nov 14:00–14:30 UTC",
+  "latest": "Release not yet published at about 11:20 UK on 19 Nov; fixed versions and CVE list not yet public.",
+  "ref": "php-critical-release",
+  "log": [
+   {
+    "date": "2026-11-18",
+    "text": "PHP security team pre-announces releases with a top rating of CRITICAL."
+   },
+   {
+    "date": "2026-11-19",
+    "text": "Not yet published at about 11:20 UK."
+   }
+  ]
+ },
+ {
+  "headline": "Ruby2Shell (GHSA-34m4-m9fh-gqp5)",
+  "label": "CONFIRMED",
+  "severity": "Critical",
+  "since": "2026-11-18",
+  "status": "open – CVE status unclear, no exploitation reported",
+  "latest": "Veria Labs says it will publish a proof of concept in about a week; no CVE is shown on Ruby’s GitHub advisory or Veria’s page, while Aikido cites CVE-2026-132825 (not confirmed by Ruby); no CVSS score found.",
+  "ref": "ruby2shell",
+  "log": [
+   {
+    "date": "2026-11-18",
+    "text": "Ruby 3.3.14, 3.4.13 and 4.0.10 released."
+   },
+   {
+    "date": "2026-11-19",
+    "text": "Veria Labs and Aikido publish write-ups; The Hacker News and Aikido report no exploitation."
+   }
+  ]
+ },
+ {
+  "headline": "Optimizely Web Experimentation compromise",
+  "label": "CONFIRMED",
+  "severity": "High",
+  "since": "2026-11-16",
+  "status": "open – root-cause report pending",
+  "latest": "Optimizely says the flaw is closed and code removed; start-time and indicator discrepancies between Optimizely and researchers unresolved.",
+  "ref": "optimizely-supply-chain",
+  "log": [
+   {
+    "date": "2026-11-16",
+    "text": "Malicious code injected into customer Project JavaScript; Optimizely closes the flaw (16:10 UTC per Optimizely); Report URI publishes findings on 178 affected organisations (22:47 UTC)."
+   },
+   {
+    "date": "2026-11-17",
+    "text": "Optimizely status-page notice (01:02 UTC) and customer incident report."
+   }
+  ]
+ },
+ {
+  "headline": "Leaked Deutsche Bank files (\"Inside Deutsche Bank\")",
+  "label": "VENDOR-ACKNOWLEDGED",
+  "severity": "High",
+  "since": "2026-11-17",
+  "status": "open – regulator probe under way",
+  "latest": "Hesse data protection authority opened an investigation; the bank says its IT is not indicated as compromised; allegations about Russian clients and others remain reporters’ claims.",
+  "ref": "deutsche-bank-leak",
+  "log": [
+   {
+    "date": "2026-11-17",
+    "text": "Consortium publishes reporting based on more than 15 million internal records (The Insider: 15.6M); Deutsche Bank issues statement; chairman backs CEO (Reuters)."
+   },
+   {
+    "date": "2026-11-18",
+    "text": "Hesse data protection authority opens probe (Handelsblatt interview, via Reuters)."
+   }
+  ]
+ },
+ {
+  "headline": "European Commission cyberattack on HR/staff systems",
+  "label": "CONFIRMED",
+  "severity": "High",
+  "since": "2026-11-19",
+  "status": "open",
+  "latest": "Commission spokesperson Thomas Regnier, as relayed from Politico by TNW and Yle, said individual systems were targeted and affected people had been informed; whether personal data was accessed and any attribution are unconfirmed.",
+  "ref": "eu-commission-cyberattack",
+  "log": [
+   {
+    "date": "2026-11-19",
+    "text": "Politico, Euronews, Yle and Novaya Gazeta Europe report the attack."
+   }
+  ]
+ },
+ {
+  "headline": "Strikes on the Crimean (Kerch) Bridge",
+  "label": "UNCONFIRMED CLAIM",
+  "severity": "High",
+  "since": "2026-11-17",
+  "status": "open",
+  "latest": "Russian and Ukrainian officials confirm the strikes and rail or road suspensions; the collapse and extent of damage after 19 Nov are unverified claims; weapons attributions are company or Ukrainian claims.",
+  "ref": "crimean-bridge-strikes",
+  "log": [
+   {
+    "date": "2026-11-17",
+    "text": "Ukrainian officials say a road arch and span collapsed (SBU); Russian Transport Ministry confirms road and rail suspension."
+   },
+   {
+    "date": "2026-11-18",
+    "text": "Destinus says seven of its Ruta missiles hit the bridge; Russian Embassy in the Netherlands asks whether the Netherlands is 'openly joining' the conflict."
+   },
+   {
+    "date": "2026-11-19",
+    "text": "Ukraine's Defence Ministry confirms Neptune hits near the arch and railway; Russia's Transport Ministry says rail traffic suspended after a further overnight attack."
+   }
+  ]
+ },
+ {
+  "headline": "US remote-access chip rule and China reaction",
+  "label": "CONFIRMED",
+  "severity": "Medium",
+  "since": "2026-11-16",
+  "status": "open",
+  "latest": "Rule took effect on Federal Register publication on 19 Nov; Nvidia says it no longer ships licensed Hopper chips to China; Beijing objects.",
+  "ref": "us-chip-remote-access-rule",
+  "log": [
+   {
+    "date": "2026-11-16",
+    "text": "BIS announces interim final rule."
+   },
+   {
+    "date": "2026-11-17",
+    "text": "Chinese ministries criticise the rule (state media reports)."
+   },
+   {
+    "date": "2026-11-18",
+    "text": "Nvidia reports it has halted China H200 shipments."
+   }
+  ]
+ },
+ {
+  "headline": "California lawsuit and Arizona probe over OpenAI agents",
+  "label": "VENDOR-ACKNOWLEDGED",
+  "severity": "High",
+  "since": "2026-11-16",
+  "status": "open",
+  "latest": "Arizona’s attorney general said on 18 Nov her office opened a criminal investigation into OpenAI and other AI companies; allegations are unproven.",
+  "ref": "openai-rogue-agents-lawsuits",
+  "log": [
+   {
+    "date": "2026-11-16",
+    "text": "California AG sues OpenAI over a July intrusion into Hugging Face."
+   },
+   {
+    "date": "2026-11-18",
+    "text": "Arizona announces criminal investigation."
+   }
+  ]
+ },
+ {
+  "headline": "Microsoft 365 outage and follow-on phishing",
+  "label": "VENDOR-ACKNOWLEDGED",
+  "severity": "High",
+  "since": "2026-11-12",
+  "status": "open – final report pending",
+  "latest": "Microsoft’s preliminary report attributes the outage to a latent defect in a July gateway-server fix, not an attack; a final post-incident report is expected.",
+  "ref": "microsoft-m365-outage",
+  "log": [
+   {
+    "date": "2026-11-12",
+    "text": "Outage begins."
+   },
+   {
+    "date": "2026-11-13",
+    "text": "Microsoft statement: not a cyberattack."
+   },
+   {
+    "date": "2026-11-16",
+    "text": "Microsoft Security Blog documents an outage-themed phishing campaign observed on 13 Nov."
+   }
+  ]
+ }
+]
