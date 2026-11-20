@@ -1,0 +1,1751 @@
+{
+ "date": "2026-11-20",
+ "title": "Security brief - Friday 20 November 2026",
+ "generated": "2026-11-20T08:05:36Z",
+ "top": [
+  {
+   "headline": "VMware vCenter zero-day CVE-2026-123890 exploited by suspected China-nexus Armory Castle since September",
+   "summary": "Broadcom patched a critical vCenter authentication bypass (CVE-2026-123890, CVSS 9.8) on 19 November. Google Mandiant says suspected Chinese group Armory Castle exploited it from early September, after a BeyondTrust zero-day. Broadcom's advisory does not mention exploitation.",
+   "label": "CONFIRMED",
+   "severity": "High",
+   "coverage": "Covered by 5 outlets",
+   "ref": "vcenter-zeroday-china-apt"
+  },
+  {
+   "headline": "Cisco Expressway CVE-2026-76466 exploited after public PoC, F6 reports",
+   "summary": "F6 says attackers used a public proof-of-concept for critical Cisco Expressway flaw CVE-2026-76466 (CVSS 9.8) to gain root on clustered devices at a Russian organisation. Cisco's advisory, unrevised, still says it knows of no malicious use.",
+   "label": "VENDOR-ACKNOWLEDGED",
+   "severity": "High",
+   "coverage": "Covered by 2 outlets",
+   "ref": "cisco-expressway-exploited"
+  },
+  {
+   "headline": "Skagerak Energi reports cyberattack a day after Equinor",
+   "summary": "Norwegian utility Skagerak Energi said on 18 November it detected activity possibly a cyberattack on some IT systems, a day after Equinor. Operations are unaffected; no link between the incidents is established.",
+   "label": "VENDOR-ACKNOWLEDGED",
+   "severity": "Medium",
+   "coverage": "Covered by 2 outlets",
+   "ref": "norway-second-energy-breach"
+  },
+  {
+   "headline": "Anthropic lists on Nasdaq: opens 34% above IPO price, closes 17% up as AI sell-off continues",
+   "summary": "Anthropic (ANT) priced at $83, raised $81.3bn, opened at $111.50 and closed at $97.17 on 19 November. Valuation estimates differ by share count. US and Asian tech stocks still fell.",
+   "label": "CONFIRMED",
+   "severity": "Medium",
+   "coverage": "Covered by 3 outlets",
+   "ref": "anthropic-ipo-debut"
+  }
+ ],
+ "ongoing": [
+  {
+   "headline": "Critical flaws in web and Java infrastructure software: NGINX, Roller, Java4Shell, PHP",
+   "label": "CONFIRMED",
+   "severity": "High",
+   "since": "2026-11-19",
+   "status": "Open",
+   "latest": "Patches published for NGINX, PHP, Ruby and Java; Cisco Expressway and vCenter flaws now reported exploited separately.",
+   "ref": "2026-11-19/nginx2root-rce",
+   "log": [
+    {
+     "date": "2026-11-19",
+     "text": "F5 patched five NGINX flaws; Apache, OpenJDK and PHP also issued fixes."
+    },
+    {
+     "date": "2026-11-20",
+     "text": "Ruby fixes and further exploitation reports (Cisco Expressway, vCenter) listed as separate items."
+    }
+   ]
+  },
+  {
+   "headline": "US AI chip export curbs and Chinese response",
+   "label": "CONFIRMED",
+   "severity": "High",
+   "since": "2026-11-19",
+   "status": "Developing",
+   "latest": "House committee data show 879,000 AI chips approved for China; California AG subpoenaed Nvidia; China imposed drone-part export licences.",
+   "ref": "nvidia-huang-china-chips",
+   "log": [
+    {
+     "date": "2026-11-19",
+     "text": "BIS interim rule and company responses reported."
+    },
+    {
+     "date": "2026-11-20",
+     "text": "Congressional licence data and California subpoena reported."
+    }
+   ]
+  },
+  {
+   "headline": "European Commission AI-assisted cyberattack",
+   "label": "CONFIRMED",
+   "severity": "Medium",
+   "since": "2026-11-19",
+   "status": "Open",
+   "latest": "No new official update found today; Commission had said HR, reimbursement and translation systems were taken offline.",
+   "ref": "2026-11-19/eu-commission-ai-cyberattack",
+   "log": [
+    {
+     "date": "2026-11-19",
+     "text": "Commission confirms incident."
+    }
+   ]
+  },
+  {
+   "headline": "Equinor and Skagerak Energi cyber incidents",
+   "label": "CONFIRMED",
+   "severity": "Medium",
+   "since": "2026-11-19",
+   "status": "Open",
+   "latest": "Skagerak Energi reported possible attack on 18 November; no link to Equinor established; operations reported unaffected.",
+   "ref": "norway-second-energy-breach",
+   "log": [
+    {
+     "date": "2026-11-19",
+     "text": "Equinor reports ongoing attack, detected 17 November."
+    },
+    {
+     "date": "2026-11-20",
+     "text": "Skagerak Energi reports possible cyberattack."
+    }
+   ]
+  },
+  {
+   "headline": "Kyiv, Crimean Bridge and Russian strikes",
+   "label": "CONFIRMED",
+   "severity": "High",
+   "since": "2026-11-19",
+   "status": "Developing",
+   "latest": "Russian ballistic missiles on 20 November reportedly killed three and damaged three Dnipro bridges in Kyiv, per Ukrainian officials.",
+   "ref": "kyiv-bridges-strikes",
+   "log": [
+    {
+     "date": "2026-11-19",
+     "text": "Crimean Bridge struck; Putin pledged a harsher response."
+    },
+    {
+     "date": "2026-11-20",
+     "text": "Kyiv strike and attacks on Lviv and Kharkiv reported."
+    }
+   ]
+  },
+  {
+   "headline": "Houthi missile strikes on Saudi Arabia",
+   "label": "CONFIRMED",
+   "severity": "High",
+   "since": "2026-11-19",
+   "status": "Developing",
+   "latest": "Missile damaged PIF Tower in Riyadh on 19 November; Houthis claimed the strikes; US blockade of Iran adds Gulf shipping risk.",
+   "ref": "iran-war-gulf-riyadh",
+   "log": [
+    {
+     "date": "2026-11-19",
+     "text": "Second strike on KAFD landmark in under two weeks."
+    },
+    {
+     "date": "2026-11-20",
+     "text": "PIF Tower damage confirmed; no injuries reported."
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ms-hotpatch-issues",
+   "headline": "Microsoft confirms app install and launch errors after November Windows 11 hotpatch",
+   "summary": "Microsoft told administrators that some Office and third-party apps may fail to install or launch on Windows 11 24H2 and later devices with the November 2026 hotpatch. A registry workaround is offered; no fix date given.",
+   "label": "UNCONFIRMED CLAIM",
+   "labelBasis": "Microsoft service alert as reported by BleepingComputer; the alert itself was not retrieved. Primary source not read; based on secondary reporting.",
+   "severity": "Medium",
+   "category": "outage",
+   "uk": false,
+   "microsoft": true,
+   "firstReported": "About 19 Nov 2026, BleepingComputer (exact time not stated)",
+   "sections": {
+    "happened": "Devices that installed the November 2026 hotpatch may get errors when installing, launching or running some applications, including ERROR_ALLOTTED_SPACE_EXCEEDED (0xC0000099). Microsoft says apps loading the 32-bit Windows Installer DLL appear affected.",
+    "technical": "Affects Windows 11 24H2 and later. Microsoft's temporary workaround raises the HotPatchTableSize registry value under Session Manager Memory Management to 2000, then restarts. No CVE involved.",
+    "guidance": "Microsoft says to back up the registry before editing and to know how to restore it. The workaround is temporary until a fix is available.",
+    "unknown": "Fix timing, the full list of affected applications and the number of affected devices are not stated in the reporting."
+   },
+   "sources": [
+    {
+     "title": "BleepingComputer: Microsoft confirms app installation, launch issues after hotpatch",
+     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-app-installation-launch-issues-after-hotpatch/"
+    }
+   ],
+   "coverage": "Covered by 1 outlet"
+  },
+  {
+   "id": "github-zoom-outage",
+   "headline": "GitHub session sign-outs and Zoom US-region degradations on 18–19 November",
+   "summary": "GitHub reported a session-renewal bug that signed out inactive users from 5 to 19 November, plus a Copilot model-provider degradation. Zoom reported two US-region degradations. Both vendors' status pages show all incidents resolved.",
+   "label": "CONFIRMED",
+   "labelBasis": "Vendor status pages acknowledge and resolve each incident.",
+   "severity": "Low",
+   "category": "outage",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "15:56 UTC 19 Nov 2026 (GitHub Status, Copilot incident); Zoom MyNotes incident from 16:00 UTC 18 Nov (Zoom Status)",
+   "sections": {
+    "happened": "GitHub Status says that from about 18:02 UTC on 5 November, web sessions stopped renewing on activity, so users were signed out after inactivity. GitHub says it fixed the bug at 05:23 UTC on 19 November and resolved the incident at 18:17 UTC. Separately, GPT-6 Luna in Copilot was degraded 15:56–16:37 UTC on 19 November. Zoom reported US-region issues 09:24–11:09 UTC on 19 November (web portal, web client, Meetings AI, Whiteboard) and a My Notes issue 16:00–18:51 UTC on 18 November.",
+    "technical": "GitHub attributes the sign-outs to a session-renewal bug, not a security incident. The Copilot degradation is attributed to an issue with an upstream model provider. Zoom's notices give no cause. GitHub says a detailed root cause analysis will follow.",
+    "guidance": "GitHub says users with an inactive session from that period may still be signed out and need only sign in again. For the Copilot incident it recommended choosing another model or selecting 'Fusion'.",
+    "unknown": "Root causes of the Zoom incidents, number of users affected, and GitHub's promised root cause analysis."
+   },
+   "sources": [
+    {
+     "title": "GitHub Status: Disruption with some GitHub services",
+     "url": "https://www.githubstatus.com/incidents/m310qbkfm3ww"
+    },
+    {
+     "title": "GitHub Status: Degraded availability for GPT-6 Luna in Copilot",
+     "url": "https://www.githubstatus.com/incidents/gp7nhc88bwv9"
+    },
+    {
+     "title": "Zoom Status: Service degradation affecting multiple services in the US region",
+     "url": "https://www.zoomstatus.com/incidents/sqkvklmrf6j3"
+    },
+    {
+     "title": "Zoom Status: Service Degradation Affecting Zoom MyNotes",
+     "url": "https://www.zoomstatus.com/incidents/68bvy8ghzvcj"
+    }
+   ],
+   "coverage": "Covered by 2 outlets"
+  },
+  {
+   "id": "google-ai-attack-france",
+   "headline": "Google reports first fully automated AI exploitation pipeline, with French sites targeted",
+   "summary": "Google's GTIG says an exposed staging server revealed 'exploit_agent', an AI pipeline that diffed patches, wrote and ran exploits without human input. Victim data pointed to French media, entertainment and education sites. Operator unnamed; Russian-language comments only.",
+   "label": "VENDOR-ACKNOWLEDGED",
+   "labelBasis": "Google's own threat report; no victim or French authority confirmation found.",
+   "severity": "Medium",
+   "category": "attack",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "16 Nov 2026, Google Cloud GTIG blog (AI Threat Tracker); CyberScoop same day",
+   "sections": {
+    "happened": "On 16 November 2026 Google Threat Intelligence Group and Mandiant published a quarterly AI Threat Tracker. It says that, for the first time, GTIG identified actors using LLM frameworks to automate vulnerability discovery and exploitation without a human in the loop. GTIG found an exposed staging server hosting 'exploit_agent'. Victim telemetry suggested interest in French websites in media, entertainment and education. Coverage then described it as the first autonomous AI cyberattack; the 'first' claim is Google's.",
+    "technical": "exploit_agent chains multiple agents with frontier and local LLMs and runs continuous differential analysis of popular web application software: it compares pre- and post-patch code, infers flaws, drafts exploits and executes them. One example analysed the Spectra (Ultimate Addons for Gutenberg) WordPress plugin v2.19.25. The server also held scripts for reconnaissance, brute-forcing, webshell installation and removal of rival webshells. Russian-language comments sit in a configuration file for LLM API keys. No CVEs, IOCs or ATT&CK IDs were published for this operation.",
+    "guidance": "Google says Google SecOps deployed rulepacks to detect the ARTEX tool, and Mandiant Consulting released a hardening guide and architectural defence framework against LLM-enabled offensive tooling.",
+    "differing": "Google calls the operators 'Russian-speaking' based on code comments; it names no group or state. Secondary outlets (Politico-sourced reports) repeat this; some aggregators go further, calling it a 'Russian APT', which Google's report does not support.",
+    "unknown": "Victim names, number of compromised sites, success rate, the targeted software versions and operator identity are unpublished. French authorities have not commented in the sources read."
+   },
+   "sources": [
+    {
+     "title": "Google Cloud GTIG: AI Threat Tracker, Agentic Threat Activity Crosses a Significant Threshold",
+     "url": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold"
+    },
+    {
+     "title": "CyberScoop: Google says Russian-speaking hackers ran the first fully automated AI cyberattack",
+     "url": "https://cyberscoop.com/google-fully-automated-ai-cyberattack/"
+    }
+   ],
+   "coverage": "Covered by 2 outlets"
+  },
+  {
+   "id": "iran-access-handoff",
+   "headline": "AttackIQ report maps Iranian groups passing network access to destructive operators",
+   "summary": "Vendor research by AttackIQ maps 20 Iranian state-linked groups and describes access handoffs from espionage actors to destructive operators. It documents no new victim incident.",
+   "label": "VENDOR-ACKNOWLEDGED",
+   "labelBasis": "Vendor's own research report; describes past documented cases, not a new incident.",
+   "severity": "Awareness",
+   "category": "attack",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "17 November 2026, AttackIQ press release (UK time not stated)",
+   "sections": {
+    "happened": "On 17 November 2026 AttackIQ released 'Weighing Cyber Power', mapping 20 Iranian groups and their links to government institutions and contractors. It describes espionage groups handing network access to destructive operators, and destructive activity disguised as ransomware or hacktivism.",
+    "technical": "Cases cited: Helix Kitten (Scarred Manticore) handed access to Banished Kitten (Void Manticore); Static Kitten (Mango Sandstorm) passed access to Storm-1084. The report cites 2,600+ procedures and 1,300 file and 2,300 network indicators.",
+    "differing": "AttackIQ says findings were validated against threat intelligence and activity at several Fortune 150 companies; that validation is not independently published.",
+    "unknown": "Whether these handoffs occurred in named victim networks; the underlying indicators are not independently verified in the sources read."
+   },
+   "sources": [
+    {
+     "title": "Business Wire (via FinancialContent): AttackIQ Research Reveals How Iranian Cyber Groups Hand Off Network Access to Enable Destructive Attacks",
+     "url": "https://www.financialcontent.com/article/bizwire-2026-11-17-attackiq-research-reveals-how-iranian-cyber-groups-hand-off-network-access-to-enable-destructive-attacks"
+    },
+    {
+     "title": "WaterWorld: Research details how Iranian cyber groups coordinate attacks",
+     "url": "https://www.waterworld.com/water-utility-management/news/55419483/research-details-how-iranian-cyber-groups-coordinate-attacks"
+    },
+    {
+     "title": "Dark Reading: AttackIQ Research Reveals How Iranian Cyber Groups Hand Off Network Access",
+     "url": "https://www.darkreading.com/threat-intelligence/attackiq-research-reveals-iranian-cyber-groups"
+    }
+   ],
+   "coverage": "Covered by 3 outlets"
+  },
+  {
+   "id": "ev-charging-app-breach",
+   "headline": "Chargemap confirms breach of EV charging app account data",
+   "summary": "French EV charging app Chargemap says an attacker took account data, including email addresses and password hashes, through a flaw in an old interface on 8 November. Account count undisclosed.",
+   "label": "UNCONFIRMED CLAIM",
+   "labelBasis": "Chargemap's user notice and Q&A, as quoted by Cybernews and SMTPedia; primary page unreachable. Primary source not read; based on secondary reporting.",
+   "severity": "High",
+   "category": "breach",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "18 Nov 2026 (Chargemap user notice); Cybernews 19 Nov 2026",
+   "sections": {
+    "happened": "Chargemap says an attacker exploited a flaw in an old technical interface on 8 November. It detected the incident on 10 November, fixed the flaw on 12 November, reported to France's CNIL, and emailed users on 18 November.",
+    "technical": "Taken for all affected accounts: email, username, app language. Where filled in: name, phone, birth date, city, profile photo, last login, social login IDs and password hashes. Bank data, invoices and charging sessions reportedly not taken.",
+    "guidance": "Chargemap warns that the data could be used to send fraudulent messages that look credible.",
+    "differing": "Cybernews headlines 3.5 million Europeans exposed, but cites 3.5 million as the app's user base; Chargemap has not disclosed how many accounts were affected.",
+    "unknown": "Number of affected accounts, the specific vulnerable interface, and the attacker's identity are not disclosed; no group claim was found in the sources."
+   },
+   "sources": [
+    {
+     "title": "Cybernews: 3.5 million Europeans exposed as hackers breach EV charging app",
+     "url": "https://cybernews.com/security/chargemap-ev-charging-app-data-breach/"
+    },
+    {
+     "title": "SMTPedia: Chargemap Breach Exposes User Emails and Password Hashes",
+     "url": "https://smtpedia.com/chargemap-breach-email-addresses-password-hashes/"
+    }
+   ],
+   "coverage": "Covered by 2 outlets"
+  },
+  {
+   "id": "sbc-medical-breach",
+   "headline": "SBC Medical Group discloses breach exposing data of 1.6 million people",
+   "summary": "SBC Medical Group told the SEC that two incidents at its Japan-based businesses exposed personal data of about 1.6 million people, plus about 20,000 employee account records. Investigation ongoing.",
+   "label": "UNCONFIRMED CLAIM",
+   "labelBasis": "Company SEC filing, as reported by BleepingComputer and Mallory; filing itself not retrieved. Primary source not read; based on secondary reporting.",
+   "severity": "High",
+   "category": "breach",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "Detected 16 Nov 2026 per Mallory; SEC filing reported by BleepingComputer about 19-20 Nov 2026",
+   "sections": {
+    "happened": "SBC Medical Group disclosed two incidents affecting Japan-based businesses. A website database breach exposed personal data of about 1.624 million people, detected 16 Nov 2026. A second incident hit administrator accounts on the Tribeau booking platform used by 56 clinics.",
+    "technical": "Attackers reportedly stole unencrypted passwords and about 20,000 employee records from a subsidiary's database (Mallory). Tribeau admin access exposed reservations for 12,641 people. SBC has not confirmed access to medical records.",
+    "guidance": "",
+    "differing": "Mallory reports 1.624 million people and about 770,000 overseas attack attempts overnight; BleepingComputer reports 1.6 million. SBC has not given a deduplicated total.",
+    "unknown": "Financial impact not yet estimated; attack vector, attacker identity and final count of affected individuals are not disclosed."
+   },
+   "sources": [
+    {
+     "title": "BleepingComputer: Hackers steal data of 1.6 million SBC Medical Group customers",
+     "url": "https://www.bleepingcomputer.com/news/security/hackers-steal-data-of-16-million-sbc-medical-group-customers/"
+    },
+    {
+     "title": "Mallory: SBC Medical Group Breaches Expose 1.6 Million Customers' Data and Clinic Treatment Records",
+     "url": "https://mallory.ai/stories/01a1f5a2-319a-79c7-a1d7-f5c429bac713"
+    }
+   ],
+   "coverage": "Covered by 2 outlets"
+  },
+  {
+   "id": "norway-second-energy-breach",
+   "headline": "Skagerak Energi reports cyberattack a day after Equinor",
+   "summary": "Norwegian utility Skagerak Energi said on 18 November it detected activity possibly a cyberattack on some IT systems, a day after Equinor. Operations are unaffected; no link between the incidents is established.",
+   "label": "VENDOR-ACKNOWLEDGED",
+   "labelBasis": "Company press release; details thin, second outlet is secondary reporting.",
+   "severity": "Medium",
+   "category": "breach",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "18 Nov 2026 evening CET (about 18:42 UK), Skagerak Energi press release",
+   "sections": {
+    "happened": "Skagerak Energi, an eastern Norwegian power and renewables group based in Porsgrunn, said on 18 November 2026 that it had detected activity that may be a cyberattack on some group IT systems. It said operations and production were not affected and there was no indication information had been lost. Authorities were informed. This followed Equinor's disclosure of an IT attack on 17 November. Dark Reading reports Aker BP and Statkraft heightened monitoring.",
+    "technical": "No vector, malware, actor or indicators have been published by Skagerak. Dark Reading says its disclosure wording resembles Equinor's, and that Equinor stated its attack does not appear to be specifically targeting Equinor. Dark Reading says no evidence yet connects the two incidents.",
+    "differing": "Skagerak's release calls it possible attempted cyberattack; Dark Reading headlines it a breach. The release states no indication of information loss, so 'breach' is not confirmed by the company.",
+    "unknown": "Attack method, attacker, affected systems, any data exposure, restoration time, and whether the Equinor and Skagerak incidents are linked."
+   },
+   "sources": [
+    {
+     "title": "Skagerak Energi press release (Norwegian), 18 Nov 2026",
+     "url": "https://www.skagerakenergi.no/presse/pressemeldinger/skagerak-energi-utsatt-for-forsok-pa-cyberangrep"
+    },
+    {
+     "title": "Dark Reading: Second Norwegian Energy Company Breached in Two Days",
+     "url": "https://www.darkreading.com/cyberattacks-data-breaches/second-norwegian-energy-company-breached"
+    }
+   ],
+   "coverage": "Covered by 2 outlets"
+  },
+  {
+   "id": "nzdf-breach",
+   "headline": "NZ Defence Force confirms database compromised; websites taken offline",
+   "summary": "NZ Defence Force says unauthorised access hit a database for its Force4Families discount scheme, exposing names and emails. Websites were removed from service; investigation ongoing.",
+   "label": "CONFIRMED",
+   "labelBasis": "Defence Force official statement confirms unauthorised access; full extent under investigation. Primary source not read; based on secondary reporting.",
+   "severity": "Medium",
+   "category": "breach",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "20 November 2026, 05:57 UK time (RNZ, 6:57pm NZ time)",
+   "sections": {
+    "happened": "The NZ Defence Force said its website provider notified it on Friday morning of unauthorised access to website systems. Public websites were removed from service and a forensic investigation began. A Force4Families discount database was accessed; it held names and email addresses. The Privacy Commissioner was informed.",
+    "technical": "Preliminary inquiries indicate the Force4Families Defence Discounts database was accessed. The vector, threat actor and any malware have not been named. The full extent of affected information is still being determined.",
+    "guidance": "Registered users should remain alert to phishing emails, scams and unsolicited requests for personal information, the NZDF spokesperson said.",
+    "unknown": "Number of affected individuals, how access was gained, which websites were involved, and when the sites will return to service."
+   },
+   "sources": [
+    {
+     "title": "RNZ: New Zealand Defence Force confirms database compromised, websites removed from service",
+     "url": "https://www.rnz.co.nz/news/media-technology/2711202/new-zealand-defence-force-confirms-database-compromised-websites-removed-from-service"
+    },
+    {
+     "title": "Stuff: Cyber attack hits NZ Defence Force, as personal details of users potentially exposed",
+     "url": "https://www.stuff.co.nz/nz-news/361061892/cyber-attack-hits-nz-defence-force-personal-details-users-potentially-exposed"
+    },
+    {
+     "title": "NZ Herald: New Zealand Defence Force confirms database compromised, websites removed from service",
+     "url": "https://www.nzherald.co.nz/nz/new-zealand-defence-force-confirms-database-compromised-websites-removed-from-service/EAOBVC4YVZD4DGBVOLEPC3K5ZU/"
+    }
+   ],
+   "coverage": "Covered by 3 outlets"
+  },
+  {
+   "id": "docker-hub-keys",
+   "headline": "Study: cloud keys planted in Docker Hub images used within seconds",
+   "summary": "Stony Brook researchers planted 300 honeypot images on eight registries; planted AWS keys drew API calls within 7.86 seconds, and 100 Docker Hub keys were used within 15 minutes.",
+   "label": "CONFIRMED",
+   "labelBasis": "Peer-reviewed ACM CCS 2026 paper reported by BleepingComputer and iThome; paper not read directly. Primary source not read; based on secondary reporting.",
+   "severity": "Medium",
+   "category": "leak",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "17 Nov 2026, 21:27 UK time; BleepingComputer (16:27 ET)",
+   "sections": {
+    "happened": "Stony Brook researchers Billy Tsouvalas and Nick Nikiforakis published 300 honeypot images on eight public registries over four months, presented at ACM CCS 2026. Images were pulled over 75,000 times; planted AWS keys drew over 140,000 API calls.",
+    "technical": "Scanners appear to extract keys by static analysis of image layers or registry APIs, without running containers. Planted AWS keys were used within 7.86 seconds (iThome); OpenAI and Anthropic test keys were also used. No CVE is involved.",
+    "guidance": "Researchers recommend Docker Hub scan images for secrets before publication, warn publishers, and limit access to its public feed of new images. iThome advises revoking or rotating exposed keys, not only deleting images.",
+    "differing": "Windowsforum notes the study is a controlled experiment and cannot say how many real public images contain secrets.",
+    "unknown": "Paper not read directly. Whether Docker has responded is not reported. Figures come from press coverage of the researchers' findings."
+   },
+   "sources": [
+    {
+     "title": "Cloud keys leaked in Docker Hub images are stolen within seconds (BleepingComputer)",
+     "url": "https://www.bleepingcomputer.com/news/security/cloud-keys-leaked-in-docker-hub-images-are-stolen-within-seconds/"
+    },
+    {
+     "title": "API金鑰隨Docker Hub映像檔對外曝光 (iThome, Taiwan)",
+     "url": "https://www.ithome.com.tw/news/180635"
+    },
+    {
+     "title": "Docker Hub Honeypot Study: Exposed API Keys Used in as Little as 8 Seconds (Windowsforum)",
+     "url": "https://windowsforum.com/news/docker-hub-honeypot-study-exposed-api-keys-used-in-as-little-as-8-seconds.452830/"
+    }
+   ],
+   "coverage": "Covered by 3 outlets"
+  },
+  {
+   "id": "samsung-tv-leak",
+   "headline": "Ransomware group n0n claims Samsung smart TV viewing data leak",
+   "summary": "Ransomware gang n0n has published about 220MB it says belongs to Samsung, including about 150,000 smart TV viewing events. Samsung has not commented; claims are unverified.",
+   "label": "UNCONFIRMED CLAIM",
+   "labelBasis": "Group's leak-site claim; Samsung had not commented; data authenticity unverified.",
+   "severity": "Medium",
+   "category": "leak",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "19 November 2026 (UK time not stated), Cybernews; leak-site listing recorded by Brandefense on 14 November 2026",
+   "sections": {
+    "happened": "Ransomware group n0n posted about 220MB on its leak site after a countdown expired, claiming it is Samsung Electronics data. Cybernews reports about 150,000 smart TV viewing events from 2024, 42,600 political advertising records and 99,100 AI training records. Samsung had not commented.",
+    "technical": "Claimed datasets include ACR viewing records with timestamps, device information, cities and ZIP codes, embedding vectors, and two internal documents. Cybernews did not establish how the data was obtained.",
+    "differing": "Cybernews says the files appear to confirm TVs send usage data to Samsung data centres; Samsung has not responded. Separate Northeastern University study reported similar post-opt-out traffic on Samsung TVs.",
+    "unknown": "Whether the data is authentic, how it was obtained, how many users are affected, and whether Samsung confirms a breach."
+   },
+   "sources": [
+    {
+     "title": "Cybernews: Hackers leak Samsung smart TV customer data after breach claim",
+     "url": "https://cybernews.com/security/samsung-smart-tv-data-breach/"
+    },
+    {
+     "title": "Australian Cyber Security Magazine: Hackers leak 150,000 Samsung smart TV viewing records and political advertising data",
+     "url": "https://australiancybersecuritymagazine.com.au/hackers-leak-150000-samsung-smart-tv-viewing-records-and-political-advertising-data/"
+    }
+   ],
+   "coverage": "Covered by 2 outlets"
+  },
+  {
+   "id": "cisco-expressway-exploited",
+   "headline": "Cisco Expressway CVE-2026-76466 exploited after public PoC, F6 reports",
+   "summary": "F6 says attackers used a public proof-of-concept for critical Cisco Expressway flaw CVE-2026-76466 (CVSS 9.8) to gain root on clustered devices at a Russian organisation. Cisco's advisory, unrevised, still says it knows of no malicious use.",
+   "label": "VENDOR-ACKNOWLEDGED",
+   "labelBasis": "Flaw confirmed by Cisco; exploitation reported only by F6 via SecurityWeek.",
+   "severity": "High",
+   "category": "vuln",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "SecurityWeek, November 2026 (time not stated in page)",
+   "sections": {
+    "happened": "Cisco disclosed CVE-2026-76466 in Expressway on 21 October 2026. Security firm F6 reports attackers exploited it against an unnamed Russian organisation soon after a PoC appeared on GitHub. They breached two internet-exposed Expressway X15.5.3 devices, then moved to two internal cluster nodes. F6 did not name the victim or attribute the attack to a known actor.",
+    "technical": "Unauthenticated remote root command execution (CVSS 9.8, CWE-798) in the Expressway database service, affecting clustered Expressway Core and Edge. Cause: persistent cookies and unvalidated client certificates when clustering TLS Verify Mode is enabled; attacker invokes RPC commands. After root, attackers used custom Python scripts for scanning, SMB, SQL Server, WinRM and GitLab searches, apparently AI-assisted per code comments. Detection: Erlang system log; F6 published IPs and file paths.",
+    "guidance": "Cisco: Expressway X15.5.20 fixes the flaw; no workarounds; X14 and earlier must move to a fixed release. F6 suggests, if patching is not possible, blocking TCP 4371–4372 except from trusted cluster node IPs.",
+    "differing": "Cisco's advisory, unrevised per SecurityWeek, says it is unaware of malicious use; F6 reports in-the-wild exploitation. F6's report is the only account.",
+    "unknown": "Victim identity, attacker, number of affected devices, and whether Cisco will confirm exploitation are unknown; SecurityWeek awaited Cisco comment."
+   },
+   "sources": [
+    {
+     "title": "Cisco Security Advisory: Cisco Expressway Series Remote Code Execution Vulnerability",
+     "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-vcs-static-cred-hr7EWZ8t"
+    },
+    {
+     "title": "SecurityWeek: Hackers Exploit Cisco Expressway Vulnerability Soon After PoC Release",
+     "url": "https://www.securityweek.com/hackers-exploit-cisco-expressway-vulnerability-soon-after-poc-release/"
+    }
+   ],
+   "coverage": "Covered by 2 outlets"
+  },
+  {
+   "id": "vcenter-zeroday-china-apt",
+   "headline": "VMware vCenter zero-day CVE-2026-123890 exploited by suspected China-nexus Armory Castle since September",
+   "summary": "Broadcom patched a critical vCenter authentication bypass (CVE-2026-123890, CVSS 9.8) on 19 November. Google Mandiant says suspected Chinese group Armory Castle exploited it from early September, after a BeyondTrust zero-day. Broadcom's advisory does not mention exploitation.",
+   "label": "CONFIRMED",
+   "labelBasis": "Broadcom advisory plus Mandiant analysis, reported consistently by multiple outlets and Rapid7. Primary source not read; based on secondary reporting.",
+   "severity": "High",
+   "category": "vuln",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "19 Nov 2026 (evening UK), BleepingComputer; Broadcom advisory VMSA-2026-0009 published 19 Nov",
+   "sections": {
+    "happened": "Broadcom published VMSA-2026-0009 on 19 November 2026, fixing five flaws, including CVE-2026-123890, a CVSS 9.8 authentication bypass in the vCenter VMware Directory Service. Google's Mandiant, which reported the bug, says suspected China-nexus group Armory Castle (formerly UNC5221) exploited it in early September, over two months before the patch, inside networks already breached via a BeyondTrust Remote Support zero-day (CVE-2026-102764). Mandiant investigated multiple incidents; victims are not named.",
+    "technical": "Mandiant describes an unauthenticated SRP-6a session key disclosure over DCE/RPC (port 2012) yielding an administrator@vsphere.local session. Tool BONESAW (Go) exfiltrates the LMDB (data.mdb), SAML signing material and creates an SSO admin; SAWSNAKE forges Golden SAML tokens. Other tooling: SLIMSAVAGE, CAGEMATCH, BEARBONES, LAZYBONES (Slack C2), BARECLAW. Attackers then enabled SSH via VAMI and accessed ESXi. Fixed: 9.1.1.0200, 9.0.2.0200, 8.0 U3m, VCF 5.2.5. 7.0 has no public patch.",
+    "guidance": "Broadcom classes the update as an emergency change and lists no workaround, noting its FAQ says network restrictions and firewall controls may reduce exposure. Mandiant's CTO Charles Carmakal advises both patching and examining systems for evidence of compromise. vCenter 7.0 extended-support customers are directed to Broadcom Support.",
+    "differing": "Broadcom's advisory does not mention in-the-wild exploitation; exploitation and attribution come from Mandiant/Google, which calls the actor 'suspected' China-nexus. Build timestamp suggesting prior knowledge is noted as modifiable.",
+    "unknown": "Victim count, sectors and data stolen are undisclosed. Whether the 7.0 branch will be patched is unclear. Attribution is not confirmed by any government."
+   },
+   "sources": [
+    {
+     "title": "Google Cloud Blog / Mandiant: ARMORY CASTLE Exploits vSphere (not fetched; reported via secondary sources)",
+     "url": "https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-vsphere"
+    },
+    {
+     "title": "The Hacker News: Critical VMware vCenter flaw (Broadcom advisory summary)",
+     "url": "https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html"
+    },
+    {
+     "title": "The Hacker News: China-linked hackers exploit vCenter zero-day",
+     "url": "https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html"
+    },
+    {
+     "title": "BleepingComputer: VMware patches vCenter zero-day",
+     "url": "https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/"
+    },
+    {
+     "title": "SecurityWeek: Newly patched vCenter flaw exploited",
+     "url": "https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/"
+    },
+    {
+     "title": "Rapid7: CVE-2026-123890 ETR",
+     "url": "https://www.rapid7.com/blog/post/etr-cve-2026-123890-critical-authentication-bypass-vmware-vcenter/"
+    }
+   ],
+   "coverage": "Covered by 5 outlets"
+  },
+  {
+   "id": "windows-fastunlock-zeroday",
+   "headline": "Researcher publishes unpatched Windows 'FastUnlock' lock-screen bypass using Narrator",
+   "summary": "Researcher Chaotic Eclipse (MSNightmare) published FastUnlock, an unpatched Windows 11 lock-screen bypass abusing Narrator to run code as the limited WsiAccount. It needs physical access. ThreatLocker reproduced it; no Microsoft fix or in-the-wild use reported.",
+   "label": "VENDOR-ACKNOWLEDGED",
+   "labelBasis": "Reproduced by ThreatLocker per The Hacker News; Microsoft has not responded.",
+   "severity": "Medium",
+   "category": "vuln",
+   "uk": false,
+   "microsoft": true,
+   "firstReported": "19 Nov 2026, GitHub repository MSNightmare/FastUnlock (reported by Security Affairs, 19 Nov)",
+   "sections": {
+    "happened": "On 19 November 2026 the researcher known as Chaotic Eclipse, MSNightmare or Nightmare-Eclipse (who has identified himself as Abdelhamid Naceri) published FastUnlock on GitHub with a video. It is a Narrator-based Windows lock-screen bypass. He claims it breached a BitLocker-encrypted Windows 11 26H2 machine with November updates in five minutes. The Hacker News says ThreatLocker tested it the same day and it worked. No Microsoft fix exists and no real-world attack is reported.",
+    "technical": "Attack needs physical access and an account tied to a Microsoft account. From the 'I forgot my PIN' recovery screen, enabling Narrator focuses a hidden window; keyboard navigation reaches Narrator settings, then File Explorer via Bluetooth and Devices or AutoPlay. Code runs as the non-administrator WsiAccount. Researcher says Narrator's redesigned interface is allowed to run in the lock-screen context. It does not break BitLocker: with TPM-only unlock the drive is already decrypted. No CVE or CVSS published; Windows 10 untested.",
+    "guidance": "The Hacker News, citing Microsoft's countermeasures guidance, lists a BitLocker startup PIN and shutting down or hibernating devices that leave the user's control. No Microsoft advisory or patch exists yet.",
+    "differing": "The researcher says it 'bypasses BitLocker'; ThreatLocker-based reporting says it does not break encryption, since the TPM has already unlocked the drive. The latter is better supported technically.",
+    "unknown": "Affected Windows versions, whether Microsoft has a fix planned, whether the researcher notified Microsoft, and whether full USB code execution was demonstrated (the researcher did not show it)."
+   },
+   "sources": [
+    {
+     "title": "FastUnlock - GitHub repository (researcher, primary)",
+     "url": "https://github.com/MSNightmare/FastUnlock"
+    },
+    {
+     "title": "The Hacker News: New Unpatched Windows 0-Day FastUnlock",
+     "url": "https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html"
+    },
+    {
+     "title": "Security Affairs: Chaotic Eclipse Releases FastUnlock",
+     "url": "https://securityaffairs.com/203537/hacking/chaotic-eclipse-releases-fastunlock-a-new-windows-zero-day-vulnerability.html"
+    }
+   ],
+   "coverage": "Covered by 3 outlets"
+  },
+  {
+   "id": "conti-arrests",
+   "headline": "Ukraine and FBI arrest four suspects linked to $40.5M ransomware extortion",
+   "summary": "Ukrainian police, working with the FBI, detained four suspected key members of a ransomware group that police say took over $40.5 million from at least 28 companies. Investigation continues.",
+   "label": "UNCONFIRMED CLAIM",
+   "labelBasis": "Ukrainian National Police statements and acting chief's interview, reported by two outlets. Primary source not read; based on secondary reporting.",
+   "severity": "High",
+   "category": "law",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "18 Nov 2026 (time zone not stated), BleepingComputer",
+   "sections": {
+    "happened": "Police ran 66 simultaneous searches in Kyiv and 11 regions, detaining four suspected key members of an organisation police say has at least 27 members. One US company lost 1.4TB of data; its ransom was cut from $10M to $5M.",
+    "technical": "Attackers posed as IT support in calls using AI-generated voice messages, obtaining credentials and getting staff to install TeamViewer or AnyDesk. Court records cite phishing pages mimicking VPN logins and Chaos ransomware. No MITRE IDs published.",
+    "guidance": "",
+    "differing": "Computer Weekly reports the police statement says the group includes former Conti members; BleepingComputer notes police have not identified the four suspects as ex-Conti or confirmed BlackSuit or Chaos links.",
+    "unknown": "Suspects' names, charges' outcome, the wider 60-member network and the final damage total are not yet established; the police statement names no arrest locations."
+   },
+   "sources": [
+    {
+     "title": "BleepingComputer: Ukraine, FBI arrest ransomware gang members tied to $40M in ransoms",
+     "url": "https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/"
+    },
+    {
+     "title": "Computer Weekly: Ukrainian police arrest former members of Conti ransomware group",
+     "url": "https://www.computerweekly.com/news/366654831/Ukrainian-police-arrest-former-members-of-Conti-ransomware-group"
+    }
+   ],
+   "coverage": "Covered by 2 outlets"
+  },
+  {
+   "id": "palantir-stalking-charge",
+   "headline": "Russian national indicted as foreign agent for stalking Palantir employees",
+   "summary": "US prosecutors charged Igor D'iu, a Russian national, with acting as an agent of a foreign government and stalking employees of a Palo Alto defence tech firm reported to be Palantir. Maximum 21 years.",
+   "label": "CONFIRMED",
+   "labelBasis": "DOJ announced indictment; company identity from anonymous sources, Palantir unconfirmed. Primary source not read; based on secondary reporting.",
+   "severity": "High",
+   "category": "law",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "18 November 2026 (US time), DOJ announcement reported by Reuters; The Register followed 19 November 16:20 UK time",
+   "sections": {
+    "happened": "A federal grand jury indicted Igor D'iu, whom prosecutors allege worked for the Russian government, on four counts including acting as a foreign agent and interstate stalking. He allegedly surveilled employees from June to October 2026. Palantir did not immediately respond to requests for comment.",
+    "technical": "Per the affidavit, he was tasked via Telegram to photograph laptop screens at a Palo Alto coffee shop and to place a laptop for remote access to collect data from nearby devices. One NBC source said the company's systems were not compromised.",
+    "unknown": "Whether the Russian state directed the operation, how far any intrusion attempt went, and the case's next court steps beyond an initial appearance.",
+    "differing": "DOJ does not name the company; Reuters and NBC identify it as Palantir via sources. Russia's embassy did not respond to requests for comment."
+   },
+   "sources": [
+    {
+     "title": "The Register: Russian national accused of stalking San Francisco techie in plot against US defense-tech giant",
+     "url": "https://www.theregister.com/security/2026/11/19/russian-national-accused-of-stalking-san-francisco-techie-in-plot-against-us-defense-tech-giant/5311126"
+    },
+    {
+     "title": "Reuters (via Yahoo News): US Department of Justice charges Russian for targeting Palantir as foreign agent",
+     "url": "https://www.yahoo.com/news/us/articles/us-department-justice-charges-russian-234724250.html"
+    },
+    {
+     "title": "NBC News: Russian man accused of spying targeted Palantir workers, sources say",
+     "url": "https://www.nbcnews.com/politics/justice-department/russian-national-igor-diu-targeted-palantir-workers-sources-say-rcna610112"
+    },
+    {
+     "title": "Gizmodo: Russian Spy Accused of Targeting Palantir Employees",
+     "url": "https://gizmodo.com/russia-allegedly-sent-a-spy-to-california-to-stalk-palantir-employees-2000842415"
+    },
+    {
+     "title": "The Moscow Times: U.S. Indicts Russian National for Stalking Palantir Employees as 'Foreign Agent'",
+     "url": "https://www.themoscowtimes.com/2026/11/19/us-indicts-russian-national-for-stalking-palantir-employees-as-foreign-agent-a94313"
+    }
+   ],
+   "coverage": "Covered by 5 outlets"
+  },
+  {
+   "id": "scattered-spider-sentence",
+   "headline": "Scattered Spider member Tyler Buchanan sentenced to six years",
+   "summary": "A US federal judge sentenced Tyler Robert Buchanan, 24, of Dundee, to 72 months for SMS phishing and SIM-swap thefts of over $11.6 million in crypto linked to Scattered Spider.",
+   "label": "CONFIRMED",
+   "labelBasis": "Sentence reported by multiple outlets citing US Attorney and Justice Department statements. Primary source not read; based on secondary reporting.",
+   "severity": "Low",
+   "category": "law",
+   "uk": true,
+   "microsoft": false,
+   "firstReported": "18 Nov 2026 UK time; BleepingComputer (sentencing 17 Nov 2026 US time per USAO)",
+   "sections": {
+    "happened": "Judge John W. Holcomb in Santa Ana, California, sentenced Tyler Robert Buchanan, 24, to 72 months. He is the fifth and final defendant sentenced. He pleaded guilty in April 2026. A restitution hearing is set for 11 December.",
+    "technical": "Buchanan and co-conspirators sent smishing texts impersonating employers and IT suppliers, harvested credentials via a phishing kit relayed to a Telegram channel, then used SIM swaps to take over victims' crypto accounts. Activity ran September 2021 to April 2023.",
+    "guidance": "Malwarebytes advises asking the mobile carrier for an account PIN, port-out lock or number-transfer protection, and preferring authenticator apps, passkeys or security keys over SMS codes.",
+    "differing": "Malwarebytes calls Buchanan British; Bitcoin Magazine and Decrypt say Scottish. Group-IB says Scattered Spider is fragmented, so the sentence does not mean the group has ended.",
+    "unknown": "Restitution amount is unsettled. Reported loss ranges from $8 million to $11.6 million. Which cryptocurrencies were taken was not disclosed."
+   },
+   "sources": [
+    {
+     "title": "British Scattered Spider hacker sentenced to 6 years in prison (BleepingComputer)",
+     "url": "https://www.bleepingcomputer.com/news/security/british-scattered-spider-hacker-sentenced-to-6-years-in-prison/"
+    },
+    {
+     "title": "Scattered Spider's phishing and SIM-swap tactics led to six-year sentence (Malwarebytes)",
+     "url": "https://www.malwarebytes.com/blog/news/2026/11/scattered-spiders-phishing-and-sim-swap-tactics-led-to-six-year-sentence"
+    },
+    {
+     "title": "Scattered Spider-linked hacker Tyler Buchanan sentenced (Bitcoin Magazine)",
+     "url": "https://bitcoinmagazine.com/news/scattered-spider-hacker-six-years-crypto-theft"
+    }
+   ],
+   "coverage": "Covered by 3 outlets"
+  },
+  {
+   "id": "cairncross-fired",
+   "headline": "White House national cyber director Cairncross fired after run of tech outages",
+   "summary": "Sean Cairncross was removed as US national cyber director on 19 November; Pentagon CIO Kirsten Davies takes over in an acting capacity. Reports link the move to recent outages, though a White House official cited his credentials.",
+   "label": "CONFIRMED",
+   "labelBasis": "White House official confirmed to The Hill; CBS, AFP and Axios reported the same. Primary source not read; based on secondary reporting.",
+   "severity": "Awareness",
+   "category": "other",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "Evening of 19 Nov 2026 (UK), Axios; AFP and CBS followed",
+   "sections": {
+    "happened": "Sean Cairncross, the US national cyber director, was fired on Thursday 19 November. A White House official told The Hill that President Trump backed the decision. Kirsten Davies, the Defense Department chief information officer, becomes acting director. Axios reported it first. CBS sources said chief of staff Stephen Miller had long wanted him out. Outlets tie the timing to recent outages affecting travel, communications, banking and an internal National Security Agency system.",
+    "guidance": "",
+    "differing": "AFP's source linked the dismissal to the outages. The White House official quoted by The Hill instead said Trump thought Cairncross lacked the proper cyber credentials. CBS sources cite Miller's view of his expertise. No official has attributed the outages to him.",
+    "unknown": "Whether the outages caused the dismissal, the outages' causes, and whether Davies will be formally nominated are not stated."
+   },
+   "sources": [
+    {
+     "title": "Euronews (citing AFP): White House national cyber director fired after wave of tech outages",
+     "url": "https://www.euronews.com/2026/11/20/white-house-national-cyber-director-fired-after-wave-of-tech-outages"
+    },
+    {
+     "title": "The Hill: Sean Cairncross was fired as national cyber director",
+     "url": "https://thehill.com/homenews/administration/6231938-sean-cairncross-resigns-cyber-director/"
+    },
+    {
+     "title": "CBS News: White House national cyber director leaving his post",
+     "url": "https://www.cbsnews.com/news/white-house-national-cyber-director-sean-cairncross-leaving/"
+    }
+   ],
+   "coverage": "Covered by 3 outlets"
+  },
+  {
+   "id": "iran-war-gulf-riyadh",
+   "headline": "Houthi missile damages PIF Tower in Riyadh; US blockade strains Gulf shipping",
+   "summary": "A missile hit Riyadh's PIF Tower on 19 November, damaging several floors with no injuries reported. The Houthis claimed the strikes. Separately, a MARAD memo obtained by Al Jazeera acknowledged the US blockade of Iran was adding to Gulf shipping risk and insurance costs.",
+   "label": "CONFIRMED",
+   "labelBasis": "Saudi civil defence via SPA, Al Jazeera, NBC and Dawn report the damage. Primary source not read; based on secondary reporting.",
+   "severity": "High",
+   "category": "geopolitics",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "19 November 2026, Al Jazeera (Reuters) on the coalition's interception claim; Saudi civil defence statement via SPA later that day",
+   "sections": {
+    "happened": "On 19 November a missile struck the Public Investment Fund Tower, Riyadh's tallest building, in the King Abdullah Financial District. Saudi civil defence, quoted by SPA, reported material damage to several floors and neighbouring buildings and no injuries. The Saudi-led coalition said it had intercepted missiles fired at Riyadh and the south. Houthi spokesman Yahya Saree claimed strikes on the financial district, Riyadh airport and Sadara Chemical in Jubail. It was the second hit on the district since an 8 November strike on the Aramco Tower. Pakistan condemned the attack on 20 November.",
+    "guidance": "",
+    "differing": "The Saudi statement did not name the tower; SPA's photograph showed the PIF Tower. Saudi Arabia says the tower was damaged and the coalition intercepted missiles; the Houthi claim covers further targets that this reading did not independently verify.",
+    "unknown": "Whether the Sadara and airport claims are verified, the missile type, and any Saudi response are not stated. Al-Monitor says the conflict is expected to run into 2027."
+   },
+   "sources": [
+    {
+     "title": "Al Jazeera/Reuters: Saudi-led coalition intercepts Houthi missiles targeting Riyadh and south",
+     "url": "https://www.aljazeera.com/news/2026/11/19/saudi-led-coalition-intercepts-houthi-missiles-targeting-riyadh-and-south"
+    },
+    {
+     "title": "Dawn: Pakistan condemns Houthi attack on Riyadh's tallest skyscraper",
+     "url": "https://www.dawn.com/news/2045872/pakistan-unequivocally-condemns-houthi-attack-on-riyadhs-tallest-skyscraper"
+    },
+    {
+     "title": "Al-Monitor: PIF, Aramco strikes hit heart of Saudi Arabia's economic overhaul",
+     "url": "https://www.al-monitor.com/originals/2026/11/pif-aramco-strikes-hit-heart-saudi-arabias-economic-overhaul"
+    },
+    {
+     "title": "Al Jazeera: US maritime agency warned Iran blockade was adding to rising Gulf premiums",
+     "url": "https://www.aljazeera.com/economy/2026/11/20/us-maritime-agency-warned-iran-blockade-was-adding-to-rising-gulf-premiums"
+    }
+   ],
+   "coverage": "Covered by 3 outlets"
+  },
+  {
+   "id": "china-drone-export-curbs",
+   "headline": "China requires export licences for drone engines, radio modules and motors under Announcement No. 49",
+   "summary": "China's Commerce Ministry drone-component export licensing took effect 18 November 2026, covering some engines and motors used in Russian Shahed-type drones. Ukraine welcomed it as partial.",
+   "label": "CONFIRMED",
+   "labelBasis": "Ministry of Commerce rule reported by Reuters and Kyiv Independent; the notice text itself was not read. Primary source not read; based on secondary reporting.",
+   "severity": "Medium",
+   "category": "geopolitics",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "19 Nov 2026, c.21:41 UK, Kyiv Independent; Reuters report via Moscow Times same day",
+   "sections": {
+    "happened": "Commerce Ministry rules took effect 18 November, requiring licences to export certain drone engines, radio modules, speed controllers and electric motors. Some covered engines are used in Shahed-type drones assembled at Alabuga, Tatarstan. Ukraine's sanctions commissioner welcomed the move.",
+    "differing": "Ukraine's Vladyslav Vlasiuk says the rules cover only part of what matters, excluding anti-jamming antennas, navigation modules and servos. Bloomberg reports Russia obtained nearly 90% of critical components from China; this figure is unverified.",
+    "unknown": "Licence approval rates and enforcement are not known. Whether Beijing will apply the rules strictly to Russia-bound shipments was not stated by Chinese officials in sources read.",
+    "guidance": ""
+   },
+   "sources": [
+    {
+     "title": "Kyiv Independent: China tightens export controls on components for Russian drones",
+     "url": "https://kyivindependent.com/china-tightens-export-controls-on-components-for-russian-drones/"
+    },
+    {
+     "title": "Moscow Times (Reuters): China Tightens Export Controls on Drone Parts Used by Russia",
+     "url": "https://www.themoscowtimes.com/2026/11/19/china-tightens-export-controls-on-drone-parts-used-by-russia-a94318"
+    },
+    {
+     "title": "Drone Intelligence: China Announcement 49 drone component export licences (secondary analysis)",
+     "url": "https://droneintelligence.ai/insights/china-drone-export-controls-announcement-49"
+    }
+   ],
+   "coverage": "Covered by 3 outlets"
+  },
+  {
+   "id": "eu-uk-summit",
+   "headline": "EU and UK leaders meet in Brussels to sign reset deals on food, carbon markets and youth mobility",
+   "summary": "Burnham, von der Leyen and Costa meet in Brussels for the second EU-UK summit. Deals on agrifood checks, carbon markets and youth mobility are expected; the Made in Europe question is unresolved.",
+   "label": "VENDOR-ACKNOWLEDGED",
+   "labelBasis": "Summit confirmed by Council; deal contents from pre-summit reporting, outcomes not yet published. Primary source not read; based on secondary reporting.",
+   "severity": "Medium",
+   "category": "geopolitics",
+   "uk": true,
+   "microsoft": false,
+   "firstReported": "20 Nov 2026, morning UK time, Al Jazeera and Euronews (pre-summit); Council summit notice dated 12 Oct 2026",
+   "sections": {
+    "happened": "UK PM Andy Burnham meets Commission President von der Leyen and European Council President Costa in Brussels on 20 Nov for the second EU-UK summit. Deals on food and agrifood checks, emissions trading and youth mobility are expected to be signed.",
+    "technical": "",
+    "guidance": "",
+    "differing": "Al Jazeera reports youth mobility allowing 100,000 EU people to work in UK; Euronews says up to 100,000 from each side. Students' fees: EU sought parity, London agreed only reduced fees.",
+    "unknown": "Final text of deals not yet published. Made in Europe access and details of tuition fees are unresolved, and UK consultative role in EU rule-making is undecided."
+   },
+   "sources": [
+    {
+     "title": "Council of the EU: EU-United Kingdom summit 20 November 2026",
+     "url": "https://www.consilium.europa.eu/en/meetings/international-summit/2026/11/20/"
+    },
+    {
+     "title": "Al Jazeera: EU and Britain to agree steps towards relations reset",
+     "url": "https://www.aljazeera.com/news/2026/11/20/eu-and-britain-to-agree-steps-towards-relations-reset?traffic_source=rss"
+    },
+    {
+     "title": "Euronews: Can Andy Burnham bring British brio back to Brussels?",
+     "url": "https://www.euronews.com/2026/11/20/can-andy-burnham-bring-british-brio-back-to-brussels"
+    }
+   ],
+   "coverage": "Covered by 3 outlets"
+  },
+  {
+   "id": "nvidia-huang-china-chips",
+   "headline": "House panel releases data on 879,000 AI chips licensed for China; California AG subpoenas Nvidia",
+   "summary": "House Foreign Affairs Committee documents show US approved 879,000 of 3.4 million requested Nvidia/AMD AI chips for China. California's attorney general separately subpoenaed Nvidia over possible chip or data diversion following ex-CEO Jensen Huang's resignation.",
+   "label": "CONFIRMED",
+   "labelBasis": "Committee documents, California AG press release and company statements reported by CNBC and The Register.",
+   "severity": "Medium",
+   "category": "geopolitics",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "19 Nov 2026 (evening UK), CNBC and California AG press release",
+   "sections": {
+    "happened": "On 19 November the House Foreign Affairs Committee voted to release export-licence data. It says companies requested 3.4 million AI chips for China (December to May) and the Bureau of Industry and Security approved 879,000, including for Alibaba and Tencent, both on the Pentagon's Chinese military companies list. Requests for 610,000 (Alibaba) and 508,000 (ByteDance) chips were refused. Separately, California Attorney General Rob Bonta served an investigative subpoena on Nvidia asking whether chips or confidential information reached China and whether investors were misled. This follows Jensen Huang's resignation over an affair with a suspected Chinese spy.",
+    "guidance": "Nvidia said it followed Commerce rules in force at the time and has stopped shipping H200s to China. Nvidia and AMD say they comply with US export law. BIS said licences carried strict conditions and limited volumes.",
+    "differing": "Chairman Mast says approvals ran against policy intent and some applications involved diversion fronts. Nvidia, AMD and BIS say processes were lawful. Bernstein's Stacy Rasgon calls 879,000 'not that many'; Beijing's import limits kept shipments small.",
+    "unknown": "Subpoena scope, deadline and any California legal claim are unstated. How many approved chips shipped is unreported. Megaspeed's links rest on New York Times reporting."
+   },
+   "sources": [
+    {
+     "title": "California AG: Bonta Serves Investigative Subpoena on Nvidia",
+     "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-serves-investigative-subpoena-nvidia"
+    },
+    {
+     "title": "CNBC: Commerce approved sales of more than 879,000 AI chips to China",
+     "url": "https://www.cnbc.com/2026/11/19/nvidia-amd-china-chip-sales-congress.html"
+    },
+    {
+     "title": "The Register: US let Nvidia and AMD sell chips to military-linked Chinese companies",
+     "url": "https://www.theregister.com/legal/2026/11/20/us-let-nvidia-and-amd-sell-bucketloads-of-chips-to-military-linked-chinese-companies/5311200"
+    }
+   ],
+   "coverage": "Covered by 3 outlets"
+  },
+  {
+   "id": "somalia-expels-uae",
+   "headline": "Somalia orders UAE ambassador out within 72 hours and recalls its envoy",
+   "summary": "Somalia ordered the UAE ambassador to leave within 72 hours and recalled its envoy from Abu Dhabi, calling UAE actions an 'open invasion'. The UAE condemned the move.",
+   "label": "UNCONFIRMED CLAIM",
+   "labelBasis": "Both governments publicly acknowledged the expulsion and recall; specific UAE actions remain unspecified. Primary source not read; based on secondary reporting.",
+   "severity": "Medium",
+   "category": "geopolitics",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "19 Nov 2026, c.14:30 UK, Al Jazeera (Reuters and AFP reports followed the same day)",
+   "sections": {
+    "happened": "On 19 November Somalia ordered the UAE ambassador to leave within 72 hours and withdrew its envoy from Abu Dhabi. Information Minister Abdifatah Kasim Mohamud called UAE actions an 'open invasion'. The UAE foreign ministry strongly denounced the move as escalatory.",
+    "differing": "Mogadishu cites unspecified sovereignty violations and UAE support for regional Somali governments. The UAE says it closed its Mogadishu embassy in January 2026 and calls the move an attempt to drag it into internal disputes.",
+    "unknown": "The specific UAE actions cited are not detailed. Whether the 72-hour deadline is enforced, and the response of federal member states such as Puntland and Jubaland, were not reported in sources read.",
+    "guidance": ""
+   },
+   "sources": [
+    {
+     "title": "Al Jazeera: Somalia expels UAE ambassador, accuses Abu Dhabi of violating sovereignty",
+     "url": "https://www.aljazeera.com/news/2026/11/19/somalia-expels-uae-ambassador-accuses-abu-dhabi-of-violating-sovereignty"
+    },
+    {
+     "title": "Reuters via Al-Monitor: Somalia orders UAE ambassador to leave, citing 'invasion'",
+     "url": "https://www.al-monitor.com/originals/2026/11/somalia-orders-uae-ambassador-leave-citing-invasion"
+    },
+    {
+     "title": "AFP via Al-Monitor: Somalia expels UAE ambassador, alleging interference",
+     "url": "https://www.al-monitor.com/originals/2026/11/somalia-expels-uae-ambassador-alleging-interference"
+    }
+   ],
+   "coverage": "Covered by 2 outlets"
+  },
+  {
+   "id": "taiwan-meta-interference",
+   "headline": "Taiwan flags nearly 2,700 China-linked Threads accounts to Meta before local elections",
+   "summary": "Taiwan officials say about 2,700 Meta accounts, mostly on Threads, form a suspected Chinese influence campaign ahead of the 28 November local elections. Meta says it removed them.",
+   "label": "UNCONFIRMED CLAIM",
+   "labelBasis": "Attribution rests on anonymous Taiwanese officials and internal reports; Meta confirmed removals only.",
+   "severity": "Medium",
+   "category": "geopolitics",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "20 Nov 2026, c. 07:56 UK (JPost/Reuters, exclusive by Yimou Lee, Taipei)",
+   "sections": {
+    "happened": "Taiwan flagged nearly 2,700 social media accounts to Meta, about 2,400 on Threads, which officials say form a Chinese information campaign targeting the 28 November local elections. Meta said it removed the flagged accounts, many already disabled, and that none posted election content.",
+    "technical": "Per one government report, flagged Threads accounts fell into 27 clusters with similar Chinese names and sequential numerical IDs, mostly opened in the past four months. About 260 accounts posted over 2,150 AI-generated videos drawing 2.35 million interactions, mostly targeting DPP politicians.",
+    "differing": "Taiwan's officials assess the accounts as created in bulk by operators in China or Russia. Meta said they were low-quality fake accounts with few followers. China's Taiwan Affairs Office did not respond to a request for comment.",
+    "unknown": "The government reports are not public and their analysis is unverified. Taiwan's officials said no similar accounts were found on Instagram. Beijing denies interfering in Taiwanese elections."
+   },
+   "sources": [
+    {
+     "title": "Exclusive-Taiwan tells Meta thousands of China-linked accounts seek to influence elections (Reuters, via Jerusalem Post)",
+     "url": "https://www.jpost.com/international/article-915564"
+    },
+    {
+     "title": "Exclusive-Taiwan tells Meta thousands of China-linked accounts seek to influence elections (Reuters, via Yahoo News)",
+     "url": "https://www.yahoo.com/news/politics/articles/exclusive-taiwan-tells-meta-thousands-053037585.html"
+    }
+   ],
+   "coverage": "Covered by 2 outlets"
+  },
+  {
+   "id": "winter-energy-truce",
+   "headline": "Coalition of the Willing urges Russia to accept winter energy ceasefire; Kushner cites Article 5-based guarantees",
+   "summary": "After a Berlin summit on 19 November, Germany, France, the UK and Ukraine asked Russia for a winter energy ceasefire and a Black Sea food-export truce. Kushner said Russia accepts Article 5-based guarantees; Zelensky questioned the shared meaning. Putin ruled out truces.",
+   "label": "CONFIRMED",
+   "labelBasis": "Joint statement reported by Ukrinform and Kyiv Independent; Kushner and Zelensky quoted by Meduza. Primary source not read; based on secondary reporting.",
+   "severity": "Medium",
+   "category": "geopolitics",
+   "uk": true,
+   "microsoft": false,
+   "firstReported": "19 Nov 2026, 23:05 UK time (Kyiv Independent; time as displayed on page)",
+   "sections": {
+    "happened": "A Coalition of the Willing summit in Berlin on 19 November, with over 40 partners and US envoys Witkoff and Kushner, produced a joint statement from Germany, France, the UK and Ukraine. It called on Russia to agree an energy ceasefire for the winter and a Black Sea ceasefire for food exports. It restated EUR 90bn EU loan support, air defence priorities, sanctions pressure and security guarantees including a European-led Multinational Force Ukraine.",
+    "guidance": "The leaders' statement says guarantees must be legally binding, defensive and closely coordinated with the US. It also says frozen Russian assets stay immobilised until Russia ends the war and compensates Ukraine.",
+    "differing": "Kushner said Russia is comfortable with guarantees based on Article 5. Zelensky doubted both sides mean the same thing, saying it implies partner forces on Ukrainian soil. Putin said the Crimean Bridge strike ended any talk of energy or Black Sea truces, and he opposes foreign troops (Kyiv Independent, Meduza).",
+    "unknown": "Whether Russia will accept any truce, what the US means by Article 5-based guarantees, and when the multilateral talks with European participation will take place."
+   },
+   "sources": [
+    {
+     "title": "Ukrinform: Coalition of the Willing leaders urge Russia to agree to winter energy truce",
+     "url": "https://www.ukrinform.net/rubric-polytics/4186635-coalition-of-the-willing-leaders-urge-russia-to-agree-to-winter-energy-truce.html"
+    },
+    {
+     "title": "Kyiv Independent: Coalition of the Willing calls on Russia to accept winter energy truce",
+     "url": "https://kyivindependent.com/coalition-of-the-willing-calls-on-russia-to-accept-winter-energy-truce/"
+    },
+    {
+     "title": "Meduza: Zelensky questions whether Kyiv and Washington mean the same thing by NATO-style guarantees",
+     "url": "https://meduza.io/en/news/2026/11/20/zelensky-questions-whether-kyiv-and-washington-mean-the-same-thing-by-nato-style-guarantees-and-reiterates-that-postwar-ukraine-would-need-foreign-troops-on-its-soil"
+    },
+    {
+     "title": "Al Jazeera: Kushner: Trump open to NATO-like security guarantees for Ukraine",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/11/20/kushner-trump-open-to-nato-like-security-guarantees-for-ukraine?traffic_source=rss"
+    }
+   ],
+   "coverage": "Covered by 4 outlets"
+  },
+  {
+   "id": "deepseek-funding-hy4",
+   "headline": "Tencent releases Hy4 flash weights; DeepSeek drops tool-search fees; DeepSeek funding reported at about US$16B",
+   "summary": "Tencent says Hy4 flash handled over 50 trillion tokens on day one and released its weights. DeepSeek removed separate web-search fees. Reports of a near-US$16B DeepSeek round remain unconfirmed.",
+   "label": "VENDOR-ACKNOWLEDGED",
+   "labelBasis": "Tencent and DeepSeek statements via TechNode; the funding round rests on press reports, unconfirmed by DeepSeek. Primary source not read; based on secondary reporting.",
+   "severity": "Awareness",
+   "category": "ai",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "19 Nov 2026, TechNode (Tencent usage and weights; DeepSeek fee change); funding reports 22-30 Oct 2026 (The Information, per secondary coverage)",
+   "sections": {
+    "happened": "Tencent said Hy4 flash processed over 50 trillion tokens on its first day after its 16 Nov launch and released its weights on 19 Nov. DeepSeek ended separate fees for model-triggered search and fetch tools from 18 Nov; developers now pay only model tokens.",
+    "technical": "Hy4 flash: about 224B total parameters, 12B active, 1M-token context, text and image input. Tencent prices input at 0.5 yuan and output at 2 yuan per million tokens.",
+    "guidance": "",
+    "differing": "Tencent's usage and cost figures are its own; TechNode notes no widespread usage-limit issues were reported so far.",
+    "unknown": "Funding size, valuation and investors are reported by secondary outlets citing The Information; DeepSeek has not confirmed them in the sources read."
+   },
+   "sources": [
+    {
+     "title": "TechNode: Tencent releases Hy4 flash model weights for local deployment",
+     "url": "https://technode.com/2026/11/19/tencent-releases-hy4-flash-model-weights-for-local-deployment/"
+    },
+    {
+     "title": "TechNode: Tencent says Hunyuan Hy4 flash surpasses 50 trillion tokens in first-day usage",
+     "url": "https://technode.com/2026/11/19/tencent-says-hunyuan-hy4-flash-surpasses-50-trillion-tokens-in-first-day-usage/"
+    },
+    {
+     "title": "TechNode: DeepSeek drops separate fees for model-triggered web searches",
+     "url": "https://technode.com/2026/11/19/deepseek-drops-separate-fees-for-model-triggered-web-searches/"
+    },
+    {
+     "title": "Tech Insider: DeepSeek Funding Round: $16B, 27% State Money (secondary, citing The Information)",
+     "url": "https://tech-insider.org/deepseek-16-billion-funding-round-state-funds-27-percent-2026/"
+    },
+    {
+     "title": "Shattered.io: DeepSeek Funding Round: $16B at $74B Pre-Money (secondary)",
+     "url": "https://shattered.io/deepseek-16-billion-funding-round-tencent-catl-state-funds-2026/"
+    }
+   ],
+   "coverage": "Covered by 3 outlets"
+  },
+  {
+   "id": "telekom-mistral-ovh",
+   "headline": "Deutsche Telekom invests €100M in Mistral; OVHcloud publishes open-weight Olala model",
+   "summary": "Deutsche Telekom's T.Capital fund put €100M into Mistral AI's Series D as a first step toward a German enterprise partnership. Separately, OVHcloud released its first open-weight model, Olala mini 7A1B, under Apache 2.0.",
+   "label": "VENDOR-ACKNOWLEDGED",
+   "labelBasis": "Both items rest on company statements and press reports; no independent check of figures.",
+   "severity": "Awareness",
+   "category": "ai",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "19 Nov 2026, Deutsche Telekom press release (telekom.com); Next.ink reported OVHcloud's model on 17 Nov, updated 19 Nov 11:50 UK time",
+   "sections": {
+    "happened": "Deutsche Telekom's T.Capital Tech Fund invested €100M in Mistral AI's Series D round, announced 19 Nov, as a first step toward a strategic partnership for German firms and public bodies. OVHcloud published Olala mini 7A1B on Hugging Face at its annual summit, per Next.ink.",
+    "technical": "Olala mini 7A1B: about 7B total parameters, 1B active, 256-expert MoE, 32,000-token context; OVH says it runs on a GPU with 8 GB memory. OVH's own benchmark claims; not independently verified.",
+    "guidance": "",
+    "differing": "Next.ink notes OVH's own benchmarks show gains in instruction following but limits in knowledge given the model's size.",
+    "unknown": "Telekom disclosed no equity stake, valuation, revenue or joint product timeline. Olala's independent benchmark results are not yet available."
+   },
+   "sources": [
+    {
+     "title": "Deutsche Telekom: T.Capital Tech Fund invests in Mistral",
+     "url": "https://www.telekom.com/en/newsroom/latest-updates/media-information/2026/11/deutsche-telekom-advances-sovereign-ai-in-germany"
+    },
+    {
+     "title": "Next.ink: OVHcloud publie son premier modèle à poids ouverts, Olala",
+     "url": "https://next.ink/267996/ovhcloud-donne-un-avant-gout-de-son-premier-modele-olala/"
+    }
+   ],
+   "coverage": "Covered by 2 outlets"
+  },
+  {
+   "id": "ice-att-call-records",
+   "headline": "ICE pays AT&T for analyst access to raw call records; ICE iPhone memo wrong",
+   "summary": "404 Media obtained an ICE document describing a sole-source buy of AT&T raw call data and analysis; separately, ICE memos wrongly described iPhone Live Listen as sending audio to Apple.",
+   "label": "UNCONFIRMED CLAIM",
+   "labelBasis": "ICE procurement record and FOIA document per 404 Media; ICE spokesperson acknowledged the memo error. Primary source not read; based on secondary reporting.",
+   "severity": "Medium",
+   "category": "surveillance",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "19 Nov 2026 (404 Media and The Intercept, same day)",
+   "sections": {
+    "happened": "A restricted ICE document obtained under FOIA by 404 Media says ICE will buy AT&T raw data and analyst services for HSI investigations. Senator Wyden called it a zombie Hemisphere program. Separately, HSI memos misdescribed iPhone Live Listen; ICE said the notice was corrected.",
+    "differing": "AT&T says data is provided under a valid legal order; experts say that means an administrative subpoena, which needs no judge's approval. Apple denies storing Live Listen data.",
+    "unknown": "Investigation types are redacted. Contract value and how many records were accessed are not stated; the trillion-record figure comes from earlier EFF and EPIC documents."
+   },
+   "sources": [
+    {
+     "title": "ICE Is Paying AT&T to Dig Through a Mountain of Call Records (404 Media)",
+     "url": "https://www.404media.co/ice-is-paying-at-t-to-dig-through-a-mountain-of-call-records-hemisphere-data-analytical-services/"
+    },
+    {
+     "title": "ICE Spreads Misinfo About Securing iPhone (The Intercept)",
+     "url": "https://theintercept.com/2026/11/19/ice-misinformation-iphone-security/"
+    }
+   ],
+   "coverage": "Covered by 2 outlets"
+  },
+  {
+   "id": "mailchimp-sale",
+   "headline": "Intuit agrees to sell Mailchimp to Bending Spoons for $3.68 billion",
+   "summary": "Intuit agreed to sell Mailchimp to Bending Spoons at a $3.68 billion enterprise value, including $3.31 billion cash and $368 million in Bending Spoons stock; closing expected early 2027.",
+   "label": "CONFIRMED",
+   "labelBasis": "Joint company statements: Intuit announcement and Bending Spoons SEC exhibit, plus CNBC report.",
+   "severity": "Low",
+   "category": "tech",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "19 Nov 2026 (Intuit earnings release and Bending Spoons statement, same day)",
+   "sections": {
+    "happened": "Intuit agreed to sell Mailchimp to Bending Spoons for $3.68 billion, less than a third of the $12 billion Intuit paid in 2021. Mailchimp revenue fell 1% to $313 million in the quarter. Closing is expected early 2027, subject to regulatory approvals. Intuit shares fell 15% after hours.",
+    "differing": "CNBC calls the sale a costly retreat for Intuit; Intuit's statement describes a smooth transition for customers. Bending Spoons says it will invest substantially after closing.",
+    "unknown": "Regulatory approvals and closing conditions are pending. Staffing changes and pricing plans are not disclosed in the sources."
+   },
+   "sources": [
+    {
+     "title": "Intuit Reports First-Quarter Results and Enters Agreement to Sell Mailchimp to Bending Spoons (Intuit investor relations)",
+     "url": "https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons"
+    },
+    {
+     "title": "Bending Spoons has entered into a definitive agreement to acquire Mailchimp (SEC Exhibit 99.1)",
+     "url": "https://www.sec.gov/Archives/edgar/data/2004711/000200471126000026/bsp_ex99-1.htm"
+    },
+    {
+     "title": "Intuit to sell Mailchimp to Bending Spoons for $3.68 billion (CNBC)",
+     "url": "https://www.cnbc.com/2026/11/19/intuit-mailchimp-sale-bending-spoons.html"
+    }
+   ],
+   "coverage": "Covered by 3 outlets"
+  },
+  {
+   "id": "kyiv-bridges-strikes",
+   "headline": "Russian missile strike on Kyiv kills three and damages three Dnipro bridges",
+   "summary": "Ukrainian officials say overnight Russian ballistic missiles on 20 November killed three Kyivvodokanal employees, injured about 15 and damaged three Dnipro bridges, one closed. Power and trolleybus services were disrupted in parts of the city.",
+   "label": "CONFIRMED",
+   "labelBasis": "Mayor and military administration statements, relayed independently by Anadolu, Ukrinform, Meduza. Primary source not read; based on secondary reporting.",
+   "severity": "High",
+   "category": "world",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "20 Nov 2026, morning UK time; Meduza citing Kyiv Mayor Klitschko's Telegram",
+   "sections": {
+    "happened": "Kyiv Mayor Vitali Klitschko said Russian ballistic missiles and drones hit the city overnight into 20 November. The Podilsko-Voskresenskyi, Darnytskyi and Pivdennyi bridges were damaged. The Podilsko-Voskresenskyi was closed; the other two stayed open, the Southern one with restrictions. Three people, preliminarily Kyivvodokanal employees, were killed and about 15 injured at a water utility facility. Power was disrupted in three districts and trolleybuses stopped. Residents were asked to avoid driving.",
+    "differing": "Headline figures of up to five dead were not found in the read sources; all reported three killed. No Russian account was found.",
+    "unknown": "Structural damage has not been assessed; Russia's explanation, final casualty figures and the missile count are unreported."
+   },
+   "sources": [
+    {
+     "title": "Meduza: Russian missile and drone attack on Kyiv kills three",
+     "url": "https://meduza.io/en/news/2026/11/20/russian-missile-and-drone-attack-on-kyiv-kills-three-and-damages-three-dnipro-bridges-mayor-says"
+    },
+    {
+     "title": "Ukrinform (state news agency): Three killed, 15 injured",
+     "url": "https://www.ukrinform.net/rubric-ato/4186645-three-killed-15-injured-in-russian-attack-on-kyiv.html"
+    },
+    {
+     "title": "Ukrinform (state news agency): bridges damaged",
+     "url": "https://www.ukrinform.net/rubric-ato/4186643-kyivs-podilskyi-and-darnytskyi-bridges-damaged-in-russian-ballistic-attack-mayor.html"
+    },
+    {
+     "title": "Anadolu: Ukraine says Russian missile strikes kill 3 in Kyiv",
+     "url": "https://www.aa.com.tr/en/eurasia/ukraine-says-russian-missile-strikes-kill-3-in-kyiv-damage-key-bridges/4131687"
+    }
+   ],
+   "coverage": "Covered by 3 outlets"
+  },
+  {
+   "id": "lviv-kharkiv-attacks",
+   "headline": "Russian strikes hit Lviv railway station and a Kharkiv hospital, killing two",
+   "summary": "Ukrainian officials say a Russian attack killed two and injured at least four at Sknyliv railway station in Lviv. A separate drone strike on a Kharkiv hospital injured four.",
+   "label": "CONFIRMED",
+   "labelBasis": "Regional and city officials report the casualties; the Lviv attack is reported by several Ukrainian outlets.",
+   "severity": "Medium",
+   "category": "world",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "20 Nov 2026, morning, Lviv Mayor Sadovyi on Telegram (via Ukrinform, 10:02 UK time page stamp)",
+   "sections": {
+    "happened": "Lviv Mayor Andrii Sadovyi and Lviv Regional Governor Maksym Kozytskyi said two people were killed and at least four injured in a Russian attack on Sknyliv railway station on 20 Nov; a ticket terminal was hit. Separately, Kharkiv Mayor Ihor Terekhov said a drone struck a hospital, injuring four and shattering over 50 windows.",
+    "technical": "",
+    "guidance": "",
+    "differing": "Injury counts differ: Ukrinform and Interfax cite at least four; Glavnoe cites nine and UNN seven. Mayor's office reports say the assessment of the Kharkiv site is ongoing.",
+    "unknown": "Final casualty figures and damage assessments are pending. Russia's response not in sources read. Kharkiv hospital is reported by one city official only."
+   },
+   "sources": [
+    {
+     "title": "Ukrinform: Two killed, four injured in Russian attack on railway station in Lviv",
+     "url": "https://www.ukrinform.net/rubric-ato/4186678-two-killed-four-injured-in-russian-attack-on-railway-station-in-lviv.html"
+    },
+    {
+     "title": "Interfax-Ukraine: Two people killed, at least four injured in enemy attack on Sknyliv station in Lviv",
+     "url": "https://en.interfax.com.ua/news/general/1239643.html"
+    },
+    {
+     "title": "Ukrinform: Russian drone hits hospital in Kharkiv, four people injured",
+     "url": "https://www.ukrinform.net/rubric-ato/4186633-russian-drone-hits-hospital-in-kharkiv-four-people-injured.html"
+    },
+    {
+     "title": "Glavnoe: Russia strikes railway station in Lviv: two killed, nine injured",
+     "url": "https://glavnoe.in.ua/en/news-en/russia-strikes-railway-station-in-lviv-two-killed-nine-injured"
+    },
+    {
+     "title": "UNN: Russia's attack on Lviv on November 20 claimed the lives of two people and injured seven",
+     "url": "https://unn.ua/en/news/russian-attack-on-lviv-on-november-20-killed-two-people-sadovyi"
+    }
+   ],
+   "coverage": "Covered by 4 outlets"
+  },
+  {
+   "id": "ukraine-hits-chemical-plant",
+   "headline": "Ukrainian drones reportedly hit Dorogobuzh chemical plant in Russia's Smolensk region",
+   "summary": "Overnight 19-20 November, drones reportedly struck the Dorogobuzh nitrogen fertiliser and explosives-precursor plant in Smolensk region; fire reported. Kyiv has not commented.",
+   "label": "UNCONFIRMED CLAIM",
+   "labelBasis": "Telegram monitors and OSINT outlet; no official confirmation or damage data.",
+   "severity": "Medium",
+   "category": "world",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "20 Nov 2026, c.00:30 UK, Exilenova Plus Telegram monitoring channel, relayed by Kyiv Independent at 04:59",
+   "sections": {
+    "happened": "Overnight into 20 November, drones reportedly attacked the Dorogobuzh chemical plant in Smolensk region. Monitoring channels and Astra reported explosions and a large fire. The plant makes nitrogen fertilisers and explosives components. Ukraine's military has not commented.",
+    "technical": "Not a cyber item. Reported target: PJSC Dorogobuzh plant, part of the Acron Group. Plant was struck in February 2026 (at least 30 UAVs, seven workers killed, per Russian authorities as reported by Censor.NET).",
+    "differing": "Meduza and Censor.NET cite the company's claim of about 10 to 11% of Russian ammonium nitrate output; this is not independently verified.",
+    "unknown": "Extent of damage, casualties and production impact are not yet known. No Russian official statement on the 20 November attack was found in the sources read.",
+    "guidance": ""
+   },
+   "sources": [
+    {
+     "title": "Kyiv Independent: Ukrainian drones reportedly strike Russian chemical plant",
+     "url": "https://kyivindependent.com/ukrainian-drones-reportedly-strike-russian-chemical-plant/"
+    },
+    {
+     "title": "Meduza: Ukrainian drones hit Russian fertilizer plant that also makes components for explosives (citing Astra)",
+     "url": "https://meduza.io/en/news/2026/11/20/ukrainian-drones-hit-russian-fertilizer-plant-that-also-makes-components-for-explosives"
+    },
+    {
+     "title": "Censor.NET: Dorogobuzh plant in Russia was attacked by drones",
+     "url": "https://censor.net/en/news/4034675/the-dorogobuzh-plant-in-russia-was-attacked-by-drones-again"
+    }
+   ],
+   "coverage": "Covered by 3 outlets"
+  },
+  {
+   "id": "anthropic-ipo-debut",
+   "headline": "Anthropic lists on Nasdaq: opens 34% above IPO price, closes 17% up as AI sell-off continues",
+   "summary": "Anthropic (ANT) priced at $83, raised $81.3bn, opened at $111.50 and closed at $97.17 on 19 November. Valuation estimates differ by share count. US and Asian tech stocks still fell.",
+   "label": "CONFIRMED",
+   "labelBasis": "Company pricing release; CNBC, CNN, NBC, Euronews and The Register agree on prices.",
+   "severity": "Medium",
+   "category": "economy",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "18 Nov 2026 (evening UK), Anthropic pricing announcement; trading reports 19 Nov 2026",
+   "sections": {
+    "happened": "Anthropic, PBC priced 980 million Class A shares at $83 on 18 November; 956,351,354 were sold by the company and 23,648,646 by selling stockholders. Trading on Nasdaq as ANT began on 19 November. Per CNBC and Euronews, the offering raised $81.3bn, the largest IPO on record. The stock opened at $111.50, hit $115.10 and closed at $97.17. Wall Street's S&P 500 fell 2% for a sixth straight decline; Asian tech stocks fell on 20 November.",
+    "unknown": "Whether the market falls reflect AI valuation concerns or rate expectations; how the shares trade after the first day; Anthropic's compute commitments of about $900bn are unresolved.",
+    "differing": "Valuation varies by source: The Register says about $2tn at the open, Euronews about $1.5tn at pricing, NBC about $1.76tn at the close counting restricted shares and options, Yahoo $1.27tn. Methods differ. The Register's 34% gain refers to the open; the close was 17%."
+   },
+   "sources": [
+    {
+     "title": "Anthropic prices initial public offering (company)",
+     "url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering"
+    },
+    {
+     "title": "Euronews: Stocks, gold and silver fall after blockbuster Anthropic IPO",
+     "url": "https://www.euronews.com/2026/11/20/stocks-gold-and-silver-fall-after-blockbuster-anthropic-ipo"
+    },
+    {
+     "title": "The Register: Anthropic throws open doors at $2T valuation",
+     "url": "https://www.theregister.com/ai-and-ml/2026/11/19/anthropic-throws-open-doors-at-2t-valuation-as-shares-pop-34-in-initial-trading/5311143"
+    }
+   ],
+   "coverage": "Covered by 3 outlets"
+  },
+  {
+   "id": "imf-global-debt",
+   "headline": "IMF's Georgieva warns global public debt will soon reach 100% of GDP",
+   "summary": "IMF chief Kristalina Georgieva told APEC leaders in Shenzhen that global debt will soon reach 100% of world GDP, the highest since World War II, and called for urgent action.",
+   "label": "UNCONFIRMED CLAIM",
+   "labelBasis": "IMF Managing Director's public remarks at APEC, reported by one outlet; no IMF transcript checked. Primary source not read; based on secondary reporting.",
+   "severity": "Awareness",
+   "category": "economy",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "19 Nov 2026, Thursday (MercoPress; APEC plenary, Shenzhen)",
+   "sections": {
+    "happened": "IMF Managing Director Kristalina Georgieva said at the APEC leaders' plenary in Shenzhen that global public debt will soon reach 100% of world GDP, the highest since World War II, and needs urgent attention.",
+    "technical": "",
+    "guidance": "",
+    "differing": "",
+    "unknown": "The IMF's own figures and projection were not checked. Georgieva linked inflation to Middle East energy crisis and AI infrastructure demand; rate rises make debt costlier to service."
+   },
+   "sources": [
+    {
+     "title": "IMF warns global debt will soon reach 100% of GDP, the highest since World War II (MercoPress)",
+     "url": "https://en.mercopress.com/2026/11/19/imf-warns-global-debt-will-soon-reach-100-of-gdp-the-highest-since-world-war-ii?utm_source=feed&utm_medium=rss&utm_content=main&utm_campaign=rss"
+    }
+   ],
+   "coverage": "Covered by 1 outlet"
+  },
+  {
+   "id": "japan-gdp-slump",
+   "headline": "Japan's economy contracts 0.1% annualised in July-September quarter",
+   "summary": "Japan's GDP shrank an annualised 0.1% in July-September, its first contraction in a year, as private consumption fell 0.3%. Analysts question whether the slump is temporary.",
+   "label": "CONFIRMED",
+   "labelBasis": "Government GDP release reported by Reuters; the Cabinet Office publishes the official figures.",
+   "severity": "Awareness",
+   "category": "economy",
+   "uk": false,
+   "microsoft": false,
+   "firstReported": "20 Nov 2026 (Japan Times, Reuters analysis by Kazuaki Nagata); data released earlier that week",
+   "sections": {
+    "happened": "Government data released earlier in the week showed Japan's economy shrank an annualised 0.1% in July-September 2026, its first contraction in a year. Private consumption fell 0.3% from the previous quarter.",
+    "unknown": "Analysts question whether the slump is temporary or structural. Factors cited include a Kumamoto earthquake, heavy rain and lower air-conditioner demand. The second preliminary estimate is due 8 December 2026 (Cabinet Office)."
+   },
+   "sources": [
+    {
+     "title": "Japan's GDP slump might be more than just a blip (Japan Times, Reuters)",
+     "url": "https://www.japantimes.co.jp/business/2026/11/20/economy/gdp-weak-consumption/"
+    },
+    {
+     "title": "Release Schedule: Quarterly Estimates of GDP (Cabinet Office, ESRI)",
+     "url": "https://www.esri.cao.go.jp/en/sna/kouhyou/kouhyou_top.html"
+    },
+    {
+     "title": "Dashboard on preliminary quarterly GDP numbers (Digital Agency)",
+     "url": "https://www.digital.go.jp/en/resources/japandashboard/gdp-quarterly-estimates"
+    }
+   ],
+   "coverage": "Covered by 3 outlets"
+  }
+ ],
+ "analysis": [],
+ "alsoReported": [
+  {
+   "headline": "Tech outages 'Y2K AI agent style' / outage commentary",
+   "url": "https://techcrunch.com/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style/",
+   "outlets": [
+    "EFF Deeplinks",
+    "Malwarebytes",
+    "RNZ",
+    "TechCrunch Security",
+    "Tecnoblog"
+   ],
+   "category": "outage",
+   "regions": [
+    "americas",
+    "global",
+    "oceania",
+    "us"
+   ]
+  },
+  {
+   "headline": "Visa, Mastercard, JPMorgan, Chase third-party breach and data leak",
+   "url": "https://www.theregister.com/security/2026/11/19/chase-visa-mastercard-confirm-third-party-cyberattacks-that-may-have-exposed-customers-info/5311175",
+   "outlets": [
+    "Cybernews",
+    "DataBreaches.net",
+    "SecurityWeek",
+    "Semafor",
+    "Tecnoblog",
+    "The Register",
+    "iTnews"
+   ],
+   "category": "breach",
+   "regions": [
+    "americas",
+    "europe",
+    "global",
+    "oceania",
+    "uk"
+   ]
+  },
+  {
+   "headline": "European Commission AI-driven cyberattack (ARTEX tool)",
+   "url": "https://www.computerweekly.com/news/366654974/AI-red-team-tool-Artex-likely-behind-cyber-attack-on-EU-body",
+   "outlets": [
+    "CSO Online",
+    "Computer Weekly",
+    "Cybernews",
+    "Infosecurity Magazine",
+    "Next.ink",
+    "Security Affairs",
+    "Sky News Technology",
+    "The Record",
+    "iThome"
+   ],
+   "category": "attack",
+   "regions": [
+    "east-asia",
+    "europe",
+    "uk",
+    "us"
+   ]
+  },
+  {
+   "headline": "TfL breach: 265,000 photocard customers",
+   "url": "https://www.computerweekly.com/news/366654973/Over-250000-Londoners-affected-by-latest-TfL-breach",
+   "outlets": [
+    "BleepingComputer",
+    "Computer Weekly",
+    "DataBreaches.net",
+    "Infosecurity Magazine"
+   ],
+   "category": "breach",
+   "regions": [
+    "global",
+    "uk"
+   ]
+  },
+  {
+   "headline": "PHP critical RCE patches (18 flaws)",
+   "url": "https://www.infosecurity-magazine.com/news/php-releases-patches-fix-18/",
+   "outlets": [
+    "BleepingComputer",
+    "Cybernews",
+    "Dark Reading",
+    "Infosecurity Magazine",
+    "Next.ink",
+    "Security Affairs",
+    "SecurityWeek",
+    "The Hacker News",
+    "Wiz blog",
+    "iThome"
+   ],
+   "category": "vuln",
+   "regions": [
+    "east-asia",
+    "europe",
+    "global",
+    "uk",
+    "us"
+   ]
+  },
+  {
+   "headline": "NGINX2Root critical flaws (AI-discovered), F5 patches",
+   "url": "https://www.bleepingcomputer.com/news/security/critical-nginx-nginx2root-bugs-let-attackers-hijack-servers/",
+   "outlets": [
+    "BleepingComputer",
+    "CSO Online",
+    "Help Net Security",
+    "Next.ink",
+    "Security Affairs",
+    "SecurityWeek",
+    "iTnews"
+   ],
+   "category": "vuln",
+   "regions": [
+    "europe",
+    "global",
+    "oceania",
+    "us"
+   ]
+  },
+  {
+   "headline": "Drupal critical installer RCE",
+   "url": "https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaw-warns-exploits-may-surface-quickly/",
+   "outlets": [
+    "BleepingComputer",
+    "Horizon3.ai",
+    "The Hacker News"
+   ],
+   "category": "vuln",
+   "regions": [
+    "global"
+   ]
+  },
+  {
+   "headline": "Nvidia investigating Gentlemen ransomware breach claim",
+   "url": "https://www.theregister.com/security/2026/11/19/nvidia-adds-possible-hack-to-list-of-very-bad-things-under-investigation/5311153",
+   "outlets": [
+    "BleepingComputer",
+    "SecurityWeek",
+    "The Register"
+   ],
+   "category": "claim",
+   "regions": [
+    "global",
+    "uk"
+   ]
+  },
+  {
+   "headline": "AMD short-seller report on China exposure",
+   "url": "https://www.semafor.com/article/11/19/2026/amd-shares-fall-after-report-flags-china-exposure",
+   "outlets": [
+    "CNBC Technology",
+    "Semafor",
+    "The Information"
+   ],
+   "category": "economy",
+   "regions": [
+    "global",
+    "us"
+   ]
+  },
+  {
+   "headline": "UK court confirms secret Apple encryption order",
+   "url": "https://www.computerweekly.com/news/366654729/UK-court-confirms-existence-of-government-surveillance-order-against-Apple",
+   "outlets": [
+    "Computer Weekly",
+    "Privacy International",
+    "TechCrunch Security",
+    "The Record"
+   ],
+   "category": "law",
+   "regions": [
+    "global",
+    "uk",
+    "us"
+   ]
+  },
+  {
+   "headline": "Java critical flaw found with AI help",
+   "url": "https://tecnoblog.net/noticias/ia-ajudou-a-descobrir-falha-critica-no-java/",
+   "outlets": [
+    "CSO Online",
+    "ReversingLabs blog",
+    "Taipei Times",
+    "Tecnoblog"
+   ],
+   "category": "vuln",
+   "regions": [
+    "americas",
+    "east-asia",
+    "us"
+   ]
+  },
+  {
+   "headline": "Ruby critical flaws (Ruby2Shell)",
+   "url": "https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html",
+   "outlets": [
+    "Sonatype blog",
+    "The Hacker News",
+    "iThome"
+   ],
+   "category": "vuln",
+   "regions": [
+    "east-asia",
+    "global",
+    "us"
+   ]
+  },
+  {
+   "headline": "Apache Roller and Axis flaws exploited; CISA KEV",
+   "url": "https://www.securityweek.com/critical-apache-roller-axis-vulnerabilities-exploited-in-attacks/",
+   "outlets": [
+    "Security Affairs",
+    "SecurityWeek"
+   ],
+   "category": "vuln",
+   "regions": [
+    "europe",
+    "global"
+   ]
+  },
+  {
+   "headline": "Puppet flaw exploited",
+   "url": "https://www.helpnetsecurity.com/2026/11/19/puppet-enterprise-vulnerability-cve-2026-115731-exploited/",
+   "outlets": [
+    "Help Net Security"
+   ],
+   "category": "vuln",
+   "regions": [
+    "europe"
+   ]
+  },
+  {
+   "headline": "CyberPower PowerPanel exploited on domain controller",
+   "url": "https://www.infosecurity-magazine.com/news/ups-software-abused-domain/",
+   "outlets": [
+    "Infosecurity Magazine"
+   ],
+   "category": "vuln",
+   "regions": [
+    "uk"
+   ]
+  },
+  {
+   "headline": "ASUS Control Center Express hard-coded key flaw",
+   "url": "https://www.bleepingcomputer.com/news/security/asus-warns-of-critical-hard-coded-key-flaw-in-control-center-express/",
+   "outlets": [
+    "BleepingComputer"
+   ],
+   "category": "vuln",
+   "regions": [
+    "global"
+   ]
+  },
+  {
+   "headline": "Synology DSM critical flaws",
+   "url": "https://www.ithome.com.tw/news/180680",
+   "outlets": [
+    "iThome"
+   ],
+   "category": "vuln",
+   "regions": [
+    "east-asia"
+   ]
+  },
+  {
+   "headline": "Splunk patches ~140 flaws",
+   "url": "https://www.securityweek.com/splunk-patches-nearly-140-flaws-across-three-core-products/",
+   "outlets": [
+    "SecurityWeek"
+   ],
+   "category": "vuln",
+   "regions": [
+    "global"
+   ]
+  },
+  {
+   "headline": "Oracle E-Business Suite auth bypass/RCE",
+   "url": "https://horizon3.ai/attack-research/vulnerabilities/cve-2026-114924-cve-2026-114925/",
+   "outlets": [
+    "Horizon3.ai"
+   ],
+   "category": "vuln",
+   "regions": [
+    "global"
+   ]
+  },
+  {
+   "headline": "Chrome patches six critical flaws",
+   "url": "https://www.malwarebytes.com/blog/bugs/2026/11/chrome-patches-six-critical-flaws-two-found-with-ais-help",
+   "outlets": [
+    "Malwarebytes"
+   ],
+   "category": "vuln",
+   "regions": [
+    "global"
+   ]
+  },
+  {
+   "headline": "Credential stealer in Microsoft Python agent framework; Microsoft repo pull-request risk",
+   "url": "https://www.helpnetsecurity.com/2026/11/19/microsoft-agent-framework-package-pypi-compromised/",
+   "outlets": [
+    "CSO Online",
+    "Help Net Security"
+   ],
+   "category": "supply-chain",
+   "regions": [
+    "europe",
+    "us"
+   ]
+  },
+  {
+   "headline": "N-able cloud server breach disrupts email security",
+   "url": "https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html",
+   "outlets": [
+    "The Hacker News"
+   ],
+   "category": "breach",
+   "regions": [
+    "global"
+   ]
+  },
+  {
+   "headline": "Rakuten Securities breach up to 15M customers",
+   "url": "https://www.infosecurity-magazine.com/news/rakuten-securities-breach-15/",
+   "outlets": [
+    "Infosecurity Magazine"
+   ],
+   "category": "breach",
+   "regions": [
+    "uk"
+   ]
+  },
+  {
+   "headline": "Walmart data leak claim",
+   "url": "https://cybernews.com/news/walmart-data-leak-claim/",
+   "outlets": [
+    "Cybernews"
+   ],
+   "category": "claim",
+   "regions": [
+    "europe"
+   ]
+  },
+  {
+   "headline": "Bell Financial (Australia) client data",
+   "url": "https://www.itnews.com.au/news/australias-bell-financial-says-some-client-data-likely-accessed-630479?utm_source=feed&utm_medium=rss&utm_campaign=iTnews+",
+   "outlets": [
+    "iTnews"
+   ],
+   "category": "breach",
+   "regions": [
+    "oceania"
+   ]
+  }
+ ],
+ "patchWatch": [
+  {
+   "product": "VMware vCenter (Broadcom)",
+   "cve": "CVE-2026-123890",
+   "cvss": "9.8",
+   "exploited": "yes",
+   "fixed": "Patched 19 Nov (Broadcom emergency change)",
+   "ref": "vcenter-zeroday-china-apt"
+  },
+  {
+   "product": "Cisco Expressway",
+   "cve": "CVE-2026-76466",
+   "cvss": "9.8",
+   "exploited": "yes",
+   "fixed": "X15.5.20",
+   "ref": "cisco-expressway-exploited"
+  },
+  {
+   "product": "Windows 11 lock screen (FastUnlock)",
+   "cve": "none assigned",
+   "cvss": "n/a",
+   "exploited": "no",
+   "fixed": "No Microsoft fix yet",
+   "ref": "windows-fastunlock-zeroday"
+  },
+  {
+   "product": "Apache Roller",
+   "cve": "CVE-2026-129448",
+   "cvss": "n/a",
+   "exploited": "yes",
+   "fixed": "Patched",
+   "ref": ""
+  },
+  {
+   "product": "Puppet Enterprise",
+   "cve": "CVE-2026-115731",
+   "cvss": "n/a",
+   "exploited": "yes",
+   "fixed": "Per vendor advisory",
+   "ref": ""
+  },
+  {
+   "product": "Drupal installer",
+   "cve": "CVE-2026-132165",
+   "cvss": "n/a",
+   "exploited": "no",
+   "fixed": "Patched; Drupal warns exploits may surface quickly",
+   "ref": ""
+  },
+  {
+   "product": "Oracle E-Business Suite",
+   "cve": "CVE-2026-114924 / CVE-2026-114925",
+   "cvss": "n/a",
+   "exploited": "unknown",
+   "fixed": "Per Oracle",
+   "ref": ""
+  },
+  {
+   "product": "PHP (18 CVEs incl. PHP-FPM)",
+   "cve": "multiple",
+   "cvss": "n/a",
+   "exploited": "unknown",
+   "fixed": "November security releases",
+   "ref": ""
+  },
+  {
+   "product": "Ruby (7 flaws)",
+   "cve": "multiple",
+   "cvss": "n/a",
+   "exploited": "unknown",
+   "fixed": "Ruby fix releases",
+   "ref": ""
+  },
+  {
+   "product": "Chrome (six critical)",
+   "cve": "multiple",
+   "cvss": "n/a",
+   "exploited": "unknown",
+   "fixed": "Chrome stable update",
+   "ref": ""
+  },
+  {
+   "product": "Splunk (about 140 flaws)",
+   "cve": "multiple",
+   "cvss": "n/a",
+   "exploited": "unknown",
+   "fixed": "Splunk advisories",
+   "ref": ""
+  },
+  {
+   "product": "ASUS Control Center Express",
+   "cve": "hard-coded key",
+   "cvss": "n/a",
+   "exploited": "unknown",
+   "fixed": "ASUS advisory",
+   "ref": ""
+  },
+  {
+   "product": "Synology DSM",
+   "cve": "CISA KEV addition",
+   "cvss": "n/a",
+   "exploited": "yes",
+   "fixed": "Per Synology",
+   "ref": ""
+  }
+ ],
+ "comingUp": [
+  {
+   "date": "2026-11-21",
+   "text": "COP31 negotiations continue after stalling over fossil-fuel text, per prior reporting."
+  }
+ ],
+ "watching": []
+}
