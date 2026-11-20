@@ -5,12 +5,16 @@
   "severity": "High",
   "since": "2026-11-19",
   "status": "Open",
-  "latest": "Patches published; exploitation reported for Roller and probing for Java4Shell; public PoC for NGINX HTTP/2 bug.",
-  "ref": "nginx2root-rce",
+  "latest": "Patches published for NGINX, PHP, Ruby and Java; Cisco Expressway and vCenter flaws now reported exploited separately.",
+  "ref": "2026-11-19/nginx2root-rce",
   "log": [
    {
     "date": "2026-11-19",
     "text": "F5 patched five NGINX flaws; Apache, OpenJDK and PHP also issued fixes."
+   },
+   {
+    "date": "2026-11-20",
+    "text": "Ruby fixes and further exploitation reports (Cisco Expressway, vCenter) listed as separate items."
    }
   ]
  },
@@ -20,12 +24,16 @@
   "severity": "High",
   "since": "2026-11-19",
   "status": "Developing",
-  "latest": "BIS interim rule requires licences for advanced AI chips to data centres in five countries.",
-  "ref": "us-chip-export-rules-asia",
+  "latest": "House committee data show 879,000 AI chips approved for China; California AG subpoenaed Nvidia; China imposed drone-part export licences.",
+  "ref": "nvidia-huang-china-chips",
   "log": [
    {
     "date": "2026-11-19",
-    "text": "Rule and company responses reported."
+    "text": "BIS interim rule and company responses reported."
+   },
+   {
+    "date": "2026-11-20",
+    "text": "Congressional licence data and California subpoena reported."
    }
   ]
  },
@@ -35,8 +43,8 @@
   "severity": "Medium",
   "since": "2026-11-19",
   "status": "Open",
-  "latest": "Commission says HR, reimbursement and translation systems were taken offline.",
-  "ref": "eu-commission-ai-cyberattack",
+  "latest": "No new official update found today; Commission had said HR, reimbursement and translation systems were taken offline.",
+  "ref": "2026-11-19/eu-commission-ai-cyberattack",
   "log": [
    {
     "date": "2026-11-19",
@@ -45,32 +53,40 @@
   ]
  },
  {
-  "headline": "Equinor cyberattack",
+  "headline": "Equinor and Skagerak Energi cyber incidents",
   "label": "CONFIRMED",
   "severity": "Medium",
   "since": "2026-11-19",
   "status": "Open",
-  "latest": "Attack on IT systems still ongoing on 19 November; production reported normal.",
-  "ref": "equinor-cyberattack",
+  "latest": "Skagerak Energi reported possible attack on 18 November; no link to Equinor established; operations reported unaffected.",
+  "ref": "norway-second-energy-breach",
   "log": [
    {
     "date": "2026-11-19",
     "text": "Equinor reports ongoing attack, detected 17 November."
+   },
+   {
+    "date": "2026-11-20",
+    "text": "Skagerak Energi reports possible cyberattack."
    }
   ]
  },
  {
-  "headline": "Crimean Bridge strikes and Russian retaliation pledges",
+  "headline": "Kyiv, Crimean Bridge and Russian strikes",
   "label": "CONFIRMED",
   "severity": "High",
   "since": "2026-11-19",
   "status": "Developing",
-  "latest": "Bridge struck repeatedly 16-19 November; Putin pledges a harsher response.",
-  "ref": "crimean-bridge-attack",
+  "latest": "Russian ballistic missiles on 20 November reportedly killed three and damaged three Dnipro bridges in Kyiv, per Ukrainian officials.",
+  "ref": "kyiv-bridges-strikes",
   "log": [
    {
     "date": "2026-11-19",
-    "text": "Latest strike and Russian statements reported."
+    "text": "Crimean Bridge struck; Putin pledged a harsher response."
+   },
+   {
+    "date": "2026-11-20",
+    "text": "Kyiv strike and attacks on Lviv and Kharkiv reported."
    }
   ]
  },
@@ -80,12 +96,16 @@
   "severity": "High",
   "since": "2026-11-19",
   "status": "Developing",
-  "latest": "Suspected Houthi missile reported to have hit PIF Tower in Riyadh.",
-  "ref": "houthi-riyadh-strikes",
+  "latest": "Missile damaged PIF Tower in Riyadh on 19 November; Houthis claimed the strikes; US blockade of Iran adds Gulf shipping risk.",
+  "ref": "iran-war-gulf-riyadh",
   "log": [
    {
     "date": "2026-11-19",
     "text": "Second strike on KAFD landmark in under two weeks."
+   },
+   {
+    "date": "2026-11-20",
+    "text": "PIF Tower damage confirmed; no injuries reported."
    }
   ]
  }
